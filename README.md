@@ -4,7 +4,9 @@ __A collection of tools for Feynman diagrams in scalar field theories__
 
 Phi4tools is an intuitive interface for visualizing, simplifying, and calculating Feynman diagrams in scalar field theories. In more detail, it is possible, using various commands, to display Nickel labels, symmetry factors, integrands, and numerical results associated with diagrams of scalar theories with quartic and cubic interactions.
 
-<img src="images/hero-image.png" width="490">
+<div align="center">
+  <img src="images/hero-image.png" width="490">
+</div>
 
 
 <!-- TABLE OF CONTENTS -->
