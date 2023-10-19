@@ -1,3 +1,5 @@
+[![DOI](https://zenodo.org/badge/707118129.svg)](https://zenodo.org/doi/10.5281/zenodo.10021884)
+
 # GSberveglieri/Phi4tools
 
 __A collection of tools for Feynman diagrams in scalar field theories__
