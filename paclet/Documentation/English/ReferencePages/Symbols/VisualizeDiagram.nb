@@ -1,0 +1,2561 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 13.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[    120060,       2553]
+NotebookOptionsPosition[    112147,       2383]
+NotebookOutlinePosition[    112914,       2409]
+CellTagsIndexPosition[    112833,       2404]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[TextData[{
+ "New in: ",
+ Cell["XX", "HistoryData",
+  CellTags->"New",ExpressionUUID->"91eb773b-316f-48b4-9df4-7d761bec9096"],
+ " | Modified in: ",
+ Cell[" ", "HistoryData",
+  CellTags->"Modified",ExpressionUUID->"13ac7ab0-283b-4a7c-82f8-8e0b69d77884"],
+ " | Obsolete in: ",
+ Cell[" ", "HistoryData",
+  CellTags->"Obsolete",ExpressionUUID->"20778d3b-3bb8-4c59-ba68-55659e3803b9"],
+ " | Excised in: ",
+ Cell[" ", "HistoryData",
+  CellTags->"Excised",ExpressionUUID->"49e79ea9-b8e2-4ce3-8f2b-c4d83cc6c094"]
+}], "History",
+ CellID->1912807343,ExpressionUUID->"710f3431-8513-4b9d-9e99-112334fca67c"],
+
+Cell[CellGroupData[{
+
+Cell["Categorization", "CategorizationSection",
+ CellID->1544066031,ExpressionUUID->"913d8a68-0245-4501-a64e-ddfd68150c92"],
+
+Cell["Symbol", "Categorization",
+ CellLabel->"Entity Type",
+ CellID->629198909,ExpressionUUID->"f2782160-a57e-4da2-a31b-531b052a9a1c"],
+
+Cell["GSberveglieri/Phi4tools", "Categorization",
+ CellLabel->"Paclet Name",
+ CellID->568644872,ExpressionUUID->"35ae502f-74e4-4f98-a1b9-b0b653f17816"],
+
+Cell["GSberveglieri`Phi4tools`", "Categorization",
+ CellLabel->"Context",
+ CellID->315505872,ExpressionUUID->"f8f6c953-9d2f-45bb-b1b9-9f3e6cfd2824"],
+
+Cell["GSberveglieri/Phi4tools/ref/VisualizeDiagram", "Categorization",
+ CellLabel->"URI",
+ CellID->1091602372,ExpressionUUID->"406f1567-fd88-49a1-9dff-3eaeedba178e"]
+}, Closed]],
+
+Cell[CellGroupData[{
+
+Cell["Keywords", "KeywordsSection",
+ CellID->1617330788,ExpressionUUID->"e1096a7d-013a-4d42-8c34-7c46f504caa7"],
+
+Cell["XXXX", "Keywords",
+ CellID->1501396857,ExpressionUUID->"fc3177fa-2694-422e-b84a-ef54ab241cd0"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Syntax Templates", "TemplatesSection",
+ CellID->1669046060,ExpressionUUID->"6ee78e05-6f29-4c1d-a705-1733832a8776"],
+
+Cell[BoxData[""], "Template",
+ CellLabel->"Additional Function Template",
+ CellID->1801952741,ExpressionUUID->"b1d48ece-002d-4b7a-bb09-71e8299c3841"],
+
+Cell[BoxData[""], "Template",
+ CellLabel->"Arguments Pattern",
+ CellID->1195939341,ExpressionUUID->"f9b46b3a-504d-40fa-b7ea-89b54e3082ab"],
+
+Cell[BoxData[""], "Template",
+ CellLabel->"Local Variables",
+ CellID->1126153175,ExpressionUUID->"6a0e5e04-79d7-4998-9171-eb257cd80d9c"],
+
+Cell[BoxData[""], "Template",
+ CellLabel->"Color Equal Signs",
+ CellID->901386455,ExpressionUUID->"54659ac7-0932-41c0-a6ef-a52f624eab15"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["VisualizeDiagram", "ObjectName",
+ CellID->1012041002,ExpressionUUID->"b7290767-0148-40e8-811b-69d1882be412"],
+
+Cell[TextData[{
+ Cell["   ", "ModInfo",ExpressionUUID->"5108a196-f8f1-4343-8962-0e0b0c997e05"],
+ Cell[BoxData[
+  RowBox[{
+   ButtonBox["VisualizeDiagram",
+    BaseStyle->"Link",
+    ButtonData->"paclet:GSberveglieri/Phi4tools/ref/VisualizeDiagram"], "[", 
+   RowBox[{
+    StyleBox["n", "TI"], ",", 
+    StyleBox["v3", "TI"], ",", 
+    StyleBox["v4", "TI"], ",", 
+    StyleBox["d", "TI"]}], "]"}]], "InlineFormula",ExpressionUUID->
+  "ea3565ed-ef07-4efc-9049-70bf031a2fde"],
+ " \[LineSeparator]draws the ",
+ Cell[BoxData[
+  StyleBox["d", "TI"]], "InlineFormula",ExpressionUUID->
+  "9e044ab3-61bf-4cc4-848b-cde593d066a9"],
+ "-th Feynman diagram of the ",
+ Cell[BoxData[
+  StyleBox["n", "TI"]], "InlineFormula",ExpressionUUID->
+  "57165667-1584-4ae5-bb0c-92238adcd8f1"],
+ "-point function ",
+ Cell[BoxData[
+  SuperscriptBox["\[CapitalGamma]", 
+   RowBox[{"(", 
+    StyleBox["n", "TI"], ")"}]]], "InlineFormula",ExpressionUUID->
+  "d2c5b403-9684-4fe5-b8fd-ff774fa33468"],
+ " with ",
+ Cell[BoxData[
+  StyleBox["v3", "TI"]], "InlineFormula",ExpressionUUID->
+  "b3033a39-5913-4416-91a1-a31f01e09249"],
+ " cubic vertices and ",
+ Cell[BoxData[
+  StyleBox["v4", "TI"]], "InlineFormula",ExpressionUUID->
+  "525e5fd2-a3bd-40dd-b4d3-f3bb546c25d3"],
+ " quartic vertices.\n",
+ Cell["   ", "ModInfo",ExpressionUUID->"0fb91383-3815-441f-ab47-18074aa25f80"],
+ Cell[BoxData[
+  RowBox[{
+   ButtonBox["VisualizeDiagram",
+    BaseStyle->"Link",
+    ButtonData->"paclet:GSberveglieri/Phi4tools/ref/VisualizeDiagram"], "[", 
+   RowBox[{
+    StyleBox["n", "TI"], ",", 
+    StyleBox["v3", "TI"], ",", 
+    StyleBox["v4", "TI"]}], "]"}]], "InlineFormula",ExpressionUUID->
+  "28b190a3-2741-413a-8dbc-a4f921262b2d"],
+ "\[LineSeparator]draws all Feynman diagrams of the ",
+ Cell[BoxData[
+  StyleBox["n", "TI"]], "InlineFormula",ExpressionUUID->
+  "641144a1-fcb6-4497-90b5-4147a8c7fda1"],
+ "-point function ",
+ Cell[BoxData[
+  SuperscriptBox["\[CapitalGamma]", 
+   RowBox[{"(", 
+    StyleBox["n", "TI"], ")"}]]], "InlineFormula",ExpressionUUID->
+  "6ac95d42-df90-401c-bc36-8e50bc217d2f"],
+ " with ",
+ Cell[BoxData[
+  StyleBox["v3", "TI"]], "InlineFormula",ExpressionUUID->
+  "60592e19-07d8-4dab-b124-f70310f83978"],
+ " cubic vertices and ",
+ Cell[BoxData[
+  StyleBox["v4", "TI"]], "InlineFormula",ExpressionUUID->
+  "c2e67688-e3af-430f-af61-6cbfeedf234b"],
+ " quartic vertices."
+}], "Usage",
+ CellChangeTimes->{{3.882951790074607*^9, 3.882951810992773*^9}},
+ CellID->1811307925,ExpressionUUID->"7f4741a0-beec-468c-b89d-b980d322990a"],
+
+Cell["The following options can be given:", "Notes",
+ CellChangeTimes->{3.868936369796582*^9},
+ CellID->2097911480,ExpressionUUID->"d6407122-11b2-4fd2-ab34-b7c395feaa03"],
+
+Cell[BoxData[GridBox[{
+   {Cell["      ", "ModInfo",ExpressionUUID->
+     "f1773f0b-6f57-4bb3-9330-af9ae65bc454"], "\"\<Substitutions\>\"", 
+    "\"\<Nothing\>\"", Cell[
+    "the type of subdiagrams to substitute", "TableText",ExpressionUUID->
+     "ae225654-d072-4a2b-87c9-ba38d4520901"]}
+  }]], "3ColumnTableMod",
+ CellID->110536163,ExpressionUUID->"f3bd4fc4-91c4-437a-84ef-f5f32c7f5353"],
+
+Cell[TextData[{
+ "Possible explicit settings for the ",
+ Cell[BoxData[
+ "\"\<Substitutions\>\""], "InlineFormula",ExpressionUUID->
+  "06c56c03-16ee-4fd9-a418-6f48eaca1265"],
+ " option include:"
+}], "Notes",
+ CellChangeTimes->{{3.868503290712326*^9, 3.868503291121231*^9}},
+ CellID->1467706269,ExpressionUUID->"f331e67c-df12-47b7-9edd-0514b0109e3d"],
+
+Cell[BoxData[GridBox[{
+   {Cell["      ", "ModInfo",ExpressionUUID->
+     "a68f9bcc-9eb0-4971-ab25-7a0b86ad45a6"], "\"\<Nothing\>\"", Cell[
+    "no substitution", "TableText",ExpressionUUID->
+     "4b569a49-e955-49d2-aca1-05f3353cad12"]},
+   {Cell["      ", "ModInfo",ExpressionUUID->
+     "c498e96d-34ee-4f97-8f95-907c3b47bc76"], "\"\<Sunsets\>\"", Cell[
+    "just sunsets subdiagrams", "TableText",ExpressionUUID->
+     "87d14de5-804c-462f-b885-6c07924bdedc"]},
+   {Cell["      ", "ModInfo",ExpressionUUID->
+     "674cc8f5-1686-4be7-ae1b-8124e6a4c720"], "\"\<Analytics\>\"", Cell[
+    "all analytic subdiagrams", "TableText",ExpressionUUID->
+     "2294c744-0a5a-49ea-acea-b8de66e832d5"]}
+  }]], "2ColumnTableMod",
+ CellChangeTimes->{{3.868504056815343*^9, 3.868504093332794*^9}, {
+  3.868936468618576*^9, 3.868936519882766*^9}},
+ CellID->1891466392,ExpressionUUID->"fbe03957-b6d0-46bb-8c3e-6cfc59edfd56"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Tech Notes", "TechNotesSection",
+ CellID->575528919,ExpressionUUID->"ac6e1d7b-5f93-41f3-a08c-438876dfdbdb"],
+
+Cell[TextData[ButtonBox["Feynman Diagram Evaluation",
+ BaseStyle->"Link",
+ ButtonData->
+  "paclet:GSberveglieri/Phi4tools/tutorial/FeynmanDiagramEvaluation"]], "Tutorials",
+ CellChangeTimes->{{3.88354885525525*^9, 3.883548888083745*^9}},
+ CellID->470718188,ExpressionUUID->"cc899cd2-cb3f-4521-99a1-aa40908a8229"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Related Demonstrations", "RelatedDemonstrationsSection",
+ CellID->582988230,ExpressionUUID->"067943e7-ef3d-45df-a11d-da70e6965d1c"],
+
+Cell["XXXX", "RelatedDemonstrations",
+ CellID->268943151,ExpressionUUID->"ebf0964e-0fdc-4f01-9da1-5ea841de2e40"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Related Links", "RelatedLinksSection",
+ CellID->1857922848,ExpressionUUID->"8133728c-96d4-48d0-b902-52f12599b8a2"],
+
+Cell["XXXX", "RelatedLinks",
+ CellID->1952614250,ExpressionUUID->"56ff0c0e-958d-4a30-b0a7-607e19ade2cd"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["See Also", "SeeAlsoSection",
+ CellID->906497442,ExpressionUUID->"41726d35-c314-4658-b8ac-eaea7c0dc946"],
+
+Cell[TextData[Cell[BoxData[
+ ButtonBox["InformationDiagram",
+  BaseStyle->"Link",
+  ButtonData->
+   "paclet:GSberveglieri/Phi4tools/ref/InformationDiagram"]], \
+"InlineFormula",ExpressionUUID->"bedb1d38-5458-40c9-af84-9d8cdeb6afaa"]], \
+"SeeAlso",
+ CellChangeTimes->{{3.88295183964673*^9, 3.882951852426819*^9}},
+ CellID->2103643374,ExpressionUUID->"3a851ab0-eee5-4ad8-848a-5decc1664034"],
+
+Cell[TextData[Cell[BoxData[
+ ButtonBox["IntegrandDiagram",
+  BaseStyle->"Link",
+  ButtonData->
+   "paclet:GSberveglieri/Phi4tools/ref/IntegrandDiagram"]], \
+"InlineFormula",ExpressionUUID->"8bdf5a4c-e1ea-471a-a73b-a076b9fbd7d0"]], \
+"SeeAlso",
+ CellChangeTimes->{{3.884854447770713*^9, 3.8848544618241463`*^9}},
+ CellID->683674005,ExpressionUUID->"34f7439f-1997-43a9-8dbb-b357c43a9b63"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Related Guides", "MoreAboutSection",
+ CellChangeTimes->{{3.843042374232973*^9, 3.843042375545676*^9}},
+ CellID->1428622572,ExpressionUUID->"e837e583-5aa4-43bf-b921-5b4e261a944d"],
+
+Cell["XXXX", "MoreAbout",
+ CellID->1399413050,ExpressionUUID->"d280b158-836f-49f2-a13d-6eaf48cd1149"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ InterpretationBox[GridBox[{
+    {
+     StyleBox["Examples", "PrimaryExamplesSection"], 
+     ButtonBox[
+      RowBox[{
+       RowBox[{"More", " ", "Examples"}], " ", "\[RightTriangle]"}],
+      BaseStyle->"ExtendedExamplesLink",
+      ButtonData:>"ExtendedExamples"]}
+   }],
+  $Line = 0; Null]], "PrimaryExamplesSection",
+ CellID->243180917,ExpressionUUID->"1bd1f3e0-41f0-4a4c-b683-e82546d5a7f6"],
+
+Cell[BoxData[
+ RowBox[{"Needs", "[", "\"\<GSberveglieri`Phi4tools`\>\"", "]"}]], "Input",
+ CellID->1961920283,ExpressionUUID->"483eac4f-0ef8-4894-b4c6-c98788b464c8"],
+
+Cell[TextData[{
+ "The ",
+ Cell[BoxData[
+  FormBox[
+   SuperscriptBox["60", "th"], TraditionalForm]],ExpressionUUID->
+  "68389a33-0044-428c-afa7-eeed6049e955"],
+ " Feynman diagram for ",
+ Cell[BoxData[
+  FormBox[
+   SuperscriptBox["\[CapitalGamma]", 
+    RowBox[{"(", "2", ")"}]], TraditionalForm]],ExpressionUUID->
+  "dcda4199-e7dc-48d1-9b7a-04a37b5804ad"],
+ " for the ",
+ Cell[BoxData[
+  FormBox[
+   SuperscriptBox["\[Phi]", "4"], TraditionalForm]],ExpressionUUID->
+  "a5042376-3d8a-4958-b426-d5f9890ab266"],
+ " theory with ",
+ Cell[BoxData[
+  StyleBox["v4", "TI"]], "InlineFormula",ExpressionUUID->
+  "10c7dddf-eebb-4262-b9ad-d77864c5ab8a"],
+ "=6 quartic vertices."
+}], "ExampleText",
+ CellChangeTimes->{{3.8689367291252413`*^9, 3.868936760690501*^9}},
+ CellID->844798558,ExpressionUUID->"ab29a4d1-9870-4532-8f43-50eecfff1d41"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"VisualizeDiagram", "[", 
+  RowBox[{"2", ",", "0", ",", "6", ",", "60"}], "]"}]], "Input",
+ CellChangeTimes->{{3.866704922845104*^9, 3.866704957105013*^9}, {
+  3.867752035134465*^9, 3.867752077092517*^9}, {3.8689366930723886`*^9, 
+  3.868936698169169*^9}},
+ CellLabel->"In[4]:=",
+ CellID->1571353638,ExpressionUUID->"5ef3f2f7-a1e5-47e9-8afa-809060b4f686"],
+
+Cell[BoxData[
+ GraphicsBox[
+  NamespaceBox["NetworkGraphics",
+   DynamicModuleBox[{Typeset`graph = HoldComplete[
+     Graph[{
+      GSberveglieri`Phi4tools`Private`o1, 0, GSberveglieri`Phi4tools`Private`o2, 1, 2, 3, 4,
+        5}, {Null, {{1, 2}, {3, 4}, {2, 4}, {2, 5}, {2, 6}, {4, 5}, {4, 6}, {
+       5, 7}, {5, 7}, {6, 8}, {6, 8}, {7, 8}, {7, 8}}}, {
+      EdgeStyle -> {
+        UndirectedEdge[GSberveglieri`Phi4tools`Private`o1, 0] -> Dashing[{0, Small}],
+          UndirectedEdge[GSberveglieri`Phi4tools`Private`o2, 1] -> 
+         Dashing[{0, Small}]}, GraphLayout -> "SpringEmbedding", 
+       VertexSize -> {0.15}}]]}, 
+    TagBox[GraphicsGroupBox[GraphicsComplexBox[CompressedData["
+1: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
+FQ3zPHCTol6dPVxOn77MFjtu4eFvqsNUtg==
+       "], {
+        {Hue[0.6, 0.7, 0.5], Opacity[0.7], 
+         {Dashing[{0, Small}], 
+          {Arrowheads[0.], ArrowBox[{1, 2}, 0.056648849505906686`]}}, 
+         {Arrowheads[0.], ArrowBox[{2, 4}, 0.056648849505906686`]}, 
+         {Arrowheads[0.], ArrowBox[{2, 5}, 0.056648849505906686`]}, 
+         {Arrowheads[0.], ArrowBox[{2, 6}, 0.056648849505906686`]}, 
+         {Dashing[{0, Small}], 
+          {Arrowheads[0.], ArrowBox[{3, 4}, 0.056648849505906686`]}}, 
+         {Arrowheads[0.], ArrowBox[{4, 5}, 0.056648849505906686`]}, 
+         {Arrowheads[0.], ArrowBox[{4, 6}, 0.056648849505906686`]}, 
+         {Arrowheads[0.], 
+          ArrowBox[BezierCurveBox[{
+           5, {0.535729582382686, 1.4602332934461635`}, 7}], 
+           0.056648849505906686`]}, 
+         {Arrowheads[0.], 
+          ArrowBox[BezierCurveBox[{
+           5, {0.49634369364856895`, 1.799663094762775}, 7}], 
+           0.056648849505906686`]}, 
+         {Arrowheads[0.], 
+          ArrowBox[BezierCurveBox[{
+           6, {0.501385887206048, 0.354571485896451}, 8}], 
+           0.056648849505906686`]}, 
+         {Arrowheads[0.], 
+          ArrowBox[BezierCurveBox[{
+           6, {0.542487783660024, 0.6945926854188944}, 8}], 
+           0.056648849505906686`]}, 
+         {Arrowheads[0.], 
+          ArrowBox[BezierCurveBox[{
+           7, {0.16414582853300272`, 1.0793919502893583`}, 8}], 
+           0.056648849505906686`]}, 
+         {Arrowheads[0.], 
+          ArrowBox[BezierCurveBox[{
+           7, {-0.159144736440708, 1.077747183648584}, 8}], 
+           0.056648849505906686`]}}, 
+        {Hue[0.6, 0.2, 0.8], EdgeForm[{GrayLevel[0], Opacity[0.7]}], 
+         DiskBox[1, 0.056648849505906686], DiskBox[2, 0.056648849505906686], 
+         DiskBox[3, 0.056648849505906686], DiskBox[4, 0.056648849505906686], 
+         DiskBox[5, 0.056648849505906686], DiskBox[6, 0.056648849505906686], 
+         DiskBox[7, 0.056648849505906686], 
+         DiskBox[8, 0.056648849505906686]}}]],
+     MouseAppearanceTag["NetworkGraphics"]],
+    AllowKernelInitialization->False]],
+  DefaultBaseStyle->{
+   "NetworkGraphics", FrontEnd`GraphicsHighlightColor -> Hue[0.8, 1., 0.6]},
+  FormatType->TraditionalForm,
+  FrameTicks->None]], "Output",
+ CellChangeTimes->{{3.868936693800397*^9, 3.868936698764173*^9}},
+ CellLabel->"Out[4]=",
+ CellID->424310728,ExpressionUUID->"b9291bf7-4a97-4549-aab7-9f210c113833"]
+}, Open  ]],
+
+Cell[TextData[{
+ "The complete list of Feynman diagrams for ",
+ Cell[BoxData[
+  FormBox[
+   SuperscriptBox["\[CapitalGamma]", 
+    RowBox[{"(", "2", ")"}]], TraditionalForm]],ExpressionUUID->
+  "832ee380-1ed7-42c3-bb00-cb2216c33aa7"],
+ " with ",
+ Cell[BoxData[
+  StyleBox["v4", "TI"]], "InlineFormula",ExpressionUUID->
+  "0d3c7011-e252-4451-8e85-55a304e68fd9"],
+ "=4 quartic vertices."
+}], "ExampleText",
+ CellChangeTimes->{{3.868936788098812*^9, 3.86893681473668*^9}},
+ CellID->1568208626,ExpressionUUID->"0332f90f-14ca-4202-b522-1745ff8f7edb"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"VisualizeDiagram", "[", 
+  RowBox[{"2", ",", "0", ",", "4"}], "]"}]], "Input",
+ CellChangeTimes->{{3.866704922845104*^9, 3.866704957105013*^9}, {
+  3.867752035134465*^9, 3.867752077092517*^9}, {3.8689366930723886`*^9, 
+  3.868936698169169*^9}, {3.868936831871984*^9, 3.8689368349755173`*^9}},
+ CellLabel->"In[5]:=",
+ CellID->874238471,ExpressionUUID->"bf6d0201-0600-48a1-975f-c436fbab84ad"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   GraphicsBox[
+    NamespaceBox["NetworkGraphics",
+     DynamicModuleBox[{Typeset`graph = HoldComplete[
+       Graph[{
+        GSberveglieri`Phi4tools`Private`o1, 0, GSberveglieri`Phi4tools`Private`o2, 1, 2, 
+         3}, {Null, {{1, 2}, {3, 2}, {2, 4}, {2, 4}, {4, 5}, {4, 6}, {5, 6}, {
+         5, 6}, {5, 6}}}, {
+        EdgeStyle -> {
+          UndirectedEdge[GSberveglieri`Phi4tools`Private`o1, 0] -> 
+           Dashing[{0, Small}], 
+           UndirectedEdge[GSberveglieri`Phi4tools`Private`o2, 0] -> 
+           Dashing[{0, Small}]}, GraphLayout -> "SpringEmbedding", 
+         VertexSize -> {0.15}}]]}, 
+      TagBox[GraphicsGroupBox[GraphicsComplexBox[CompressedData["
+1:eJw1UGlQEwcY3Qa0iLXKLQFFUTRYqFLAA8WHDpciilqpZrhD0NooVcTBKkRH
+UTwoFC0y4qQoDWdIguUojHRpuKtGaykQKaeiWcmW3ahTQqg2nWm/mTfvzzvm
+fYsTkncJOQRBBJvwL9+62ZCYEmIesC3zCveSrRGNQbM1zwPfwjjAj3rLG8eQ
++5aong3mAcR/13//N4OlbhyLV/Z2RoePg7Bvec8z7xBCxnq1HRUa/K8zVIgt
+71a9Bue44zfhl6eh2r+5eeUkBcfoutJG7jQ4eRe+y1BSMLRGj+SUGaHyOve4
+NoVCsFV1zzxfI9xdTkYaNlG4N9hJnWmeQhAcJElOFMqn6hfwwqbQzpkW2xIU
+2mcp6NDfDYirg7sNo8WvVpolK2INEJX02ojGtXDcJRSu1uhhO3VbOmnQolj8
+LbtAoIePXUee3ORPLhokd9IsIuMiLjZZUzjY45HjkMYi2tumj7uKQtjMqY4a
+MxbDGm/n2r0U7FJ9dx/OZRDbdyTs2BUKJ6jjR7IWMmhpEqjW3TPl6Ve4ZUdN
+4LpNYeSw7Uswd2JbpFemcd6Qrz4Zr4Nic8YzgfM09u1QJ7hW6mBTT3IyKoz4
+yadZ84LS4Q83Y/aaNUZs9H5rUbqARtOezvZu1RSaNQvDNwXTaLhsn38j3LRf
+NlIoEdA4J4tNVPcaoP3rYF5VKo25T3KY2ngDLGxyxIJTND7jOn+i6tejOolv
+xVyiEe8afKBYqEdTpN4Yep6G2Mt/beuEab/lamnIcRpR4R6ig1+x6HvAvfCG
+T2OEGyjun8HiNV2nTvChsXL/9WNReQz4/VW7Sjimvocb5V6LGDidrMgcaNMh
+TFR/0T92AnzpRKJHhg5x2h1/L0mWkOPWf7oRiiFM9r505fkXk5vn980dKBxG
+QZY46HRFCXmtlK9zEIxAK+9m8tLLSTErvdPoMQrmefXMmppKkpfmS2yfHEXR
+4ztNV7dXkSmZWdv2tT1Flr/DAWyVk/pG8SrB1Wcokhw1cy2Vk4NfbpSz8WPI
+HUtfIkhUkOniWYECIYNQHqsMclWQEvZmueI+A+Zs454dm+Skn2XZB63eLIrs
+LQJnqGTkfZ2DUHCDxY/vuKKt0gpym+UyJoLQw6KcehOjKyXrHu/8NML0R546
+9+xQwfekg7Vzm1uXHo/SzfxbZUUk8+jwsvyPXiFA4TLnReZtpIQ7nYj9YQgF
+72S7OUdLIFrqLc6VDCPtyYz2M23l+Li4I2590gh4Xms2HMqQwczHxd1v1SiI
+0KW2vEI5iOT1sJseRRl/3HrdHCWW+zgxu7ueolt2PqAmXYkYoVfdqevPkDb7
+gUElUUKyZe8Zu6QxEAc6PncNUGLoi3zP1P0MjtU7OldbKdHdniq6q2ZAmD/M
+rluuwLX4IzE/+7KImK/u6cmugp/2hnnITRZrh5nm2shKfF2ZUDmPo4e2odCu
++GwZzkVkfTiapEforPdfbbWXwrOg65T4Fz1Ou7Wqa+bdwjUXP2OVxyv8A4ec
+MEw=
+         "], {
+          {Hue[0.6, 0.7, 0.5], Opacity[0.7], 
+           {Dashing[{0, Small}], 
+            {Arrowheads[0.], ArrowBox[{1, 2}, 0.06685307462947844]}}, 
+           {Dashing[{0, Small}], 
+            {Arrowheads[0.], ArrowBox[{2, 3}, 0.06685307462947844]}}, 
+           {Arrowheads[0.], 
+            ArrowBox[BezierCurveBox[{
+             2, {1.3814626494836377`, 0.6833665888003893}, 4}], 
+             0.06685307462947844]}, 
+           {Arrowheads[0.], 
+            ArrowBox[BezierCurveBox[{
+             2, {1.3829228941224518`, 1.018581646375203}, 4}], 
+             0.06685307462947844]}, 
+           {Arrowheads[0.], ArrowBox[{4, 5}, 0.06685307462947844]}, 
+           {Arrowheads[0.], ArrowBox[{4, 6}, 0.06685307462947844]}, 
+           {Arrowheads[0.], 
+            ArrowBox[BezierCurveBox[{
+             5, {-0.1447721881075641, 0.8461385598327785}, 6}], 
+             0.06685307462947844]}, 
+           {Arrowheads[0.], ArrowBox[{5, 6}, 0.06685307462947844]}, 
+           {Arrowheads[0.], 
+            ArrowBox[BezierCurveBox[{
+             5, {0.14838192922701376`, 0.8473257368864224}, 6}], 
+             0.06685307462947844]}}, 
+          {Hue[0.6, 0.2, 0.8], EdgeForm[{GrayLevel[0], Opacity[0.7]}], 
+           DiskBox[1, 0.06685307462947844], DiskBox[2, 0.06685307462947844], 
+           DiskBox[3, 0.06685307462947844], DiskBox[4, 0.06685307462947844], 
+           DiskBox[5, 0.06685307462947844], 
+           DiskBox[6, 0.06685307462947844]}}]],
+       MouseAppearanceTag["NetworkGraphics"]],
+      AllowKernelInitialization->False]],
+    DefaultBaseStyle->{
+     "NetworkGraphics", FrontEnd`GraphicsHighlightColor -> Hue[0.8, 1., 0.6]},
+    
+    FormatType->TraditionalForm,
+    FrameTicks->None], ",", 
+   GraphicsBox[
+    NamespaceBox["NetworkGraphics",
+     DynamicModuleBox[{Typeset`graph = HoldComplete[
+       Graph[{
+        GSberveglieri`Phi4tools`Private`o1, 0, GSberveglieri`Phi4tools`Private`o2, 1, 2, 
+         3}, {Null, {{1, 2}, {3, 2}, {2, 4}, {2, 5}, {4, 5}, {4, 6}, {4, 6}, {
+         5, 6}, {5, 6}}}, {
+        EdgeStyle -> {
+          UndirectedEdge[GSberveglieri`Phi4tools`Private`o1, 0] -> 
+           Dashing[{0, Small}], 
+           UndirectedEdge[GSberveglieri`Phi4tools`Private`o2, 0] -> 
+           Dashing[{0, Small}]}, GraphLayout -> "SpringEmbedding", 
+         VertexSize -> {0.15}}]]}, 
+      TagBox[GraphicsGroupBox[GraphicsComplexBox[CompressedData["
+1:eJw10nkw3GcYwPG1u2SECRpHVrdawoqzjhpq8PycIY6UrjRKMEjjlizJpqnq
+xhVJRNTZ0da40gQbt6BGE000jhhXRhzrXKw9LHZFsHbTN3/knXnnnWfm+efz
+zlc3IingIh6Hw3mg++H9eHxSzWwF0QfQI/FX8M9ZhYTFMT49ngc4nNHvfq5W
+8HHP0nOAROPuwxf6k9HUKjHQ+T7rZWiuE3LIe6RZGNXSLqPYEbG/n5X/ExzH
+A4q1koJcowRS3b92JaWJIS3j08AU3UNYkJAszGli4GrtqlkXHoLmC19ZX7gY
+7ihus/cJUohpcTnkeYnhKM5UPjtZCsdanVrqzMSgY0SKLV6SwuXokBkNZbQ/
+X7q+5iuDG6PV57BVETyauB1q3ykD9Tw3A+cuEXBXxGXLrngsfNpZGGW4BU47
+RW826HhM8pXAlinYhBWLhL7uOjzmQTWNqWVsAm2Ld9achcduVAxFyiltwhM9
+E4tTygTsbbD32P5dIShx/GS59gTs1m8czhxBCFc0fV2cLxGw7/RVnGS0DXAY
+tsk0LiBgaTXMsqZpAYTO/eoeayMBJ6uRA6M4EeyciRxwuCuBb0SfGWXoiOBZ
+bZj/gxUJ2HVaUo9PbkOs1cONROdDuDn5S5h8wTaISwwbIioPAdqg5GbANqho
+nnx+miiFoO/vFz7W2obz9yfK2TFSkMV8acpc2gJig8aJgzEpkOvZQX82bYHW
+eBf931E5bFzQ657uKIC/XrVYCeTx2JFoAjtjlQ8hhqJtdQc8dsKuYHaqlA9r
+3dE15GQ8xqoaNmmk8oFiq9C+jP7HqKav1JzMh3eNBB0PNh4bYTQWXhfywOzg
+cqoBmYA5qGlZPBriwXm9/ZNhgQSMmDalON7KA83JsBfXkF+Nbqfd8G4B8nOt
+c1yQv+bJGZFH8SJYDuENPvgvbIh+9KIsgfVaYkMM8r+Ny+rPaVgC1dIfbIOQ
+Xzmp3KrNbBluedaL7JE/13IgnlG9DCFNNOpr5Kfmq3c+VGFD8LCqDRf5i8tD
+lXhX2NA+w2U1I/9WdxK/tnQdegKZDrPIv/b6LGl4cx0qWxU+ISK/aWeO6A9H
+LqR0sLyVkb/CWxjFZ3DBlTNMnUD+mg5mSX4XFzwCGBQ75Cd3LEpjOVzYsze/
+QEL+Jb3klLCjPHBTi/MORP7uXRPPID0eFOzVZTmi/uvShxWl9bNg/EA/oh31
+H2oMzVuzs5B3jTFCR/2vy0WVT+uyoMhnleaMfJO4V/F5P7PAivkycwT1vzjl
+OTolZMF0a/LeAuq///3x9qtX56Ai6VS1pZ8Mzv2XdUlDbR6aLz6OyET9u+25
+Pw/unYcFSmfye9R/KqmtNyF7BcJsjqwoXsdjPYYy9ab1FfDi8oomkS8z2yv8
+DXUViC73aKdR/0SvlLLqwVVI1la0BdQ/2ececcRrDXYMn/5UifpvG/z822Pj
+a+D2kjIYgPpPlOufUY3kQHqVKtMO9X87dfcp45AD/wOaMhxs
+         "], {
+          {Hue[0.6, 0.7, 0.5], Opacity[0.7], 
+           {Dashing[{0, Small}], 
+            {Arrowheads[0.], ArrowBox[{1, 2}, 0.060275343580987004`]}}, 
+           {Dashing[{0, Small}], 
+            {Arrowheads[0.], ArrowBox[{2, 3}, 0.060275343580987004`]}}, 
+           {Arrowheads[0.], ArrowBox[{2, 4}, 0.060275343580987004`]}, 
+           {Arrowheads[0.], ArrowBox[{2, 5}, 0.060275343580987004`]}, 
+           {Arrowheads[0.], ArrowBox[{4, 5}, 0.060275343580987004`]}, 
+           {Arrowheads[0.], 
+            ArrowBox[BezierCurveBox[{
+             4, {2.139482716036386, 1.1756679430952106`}, 6}], 
+             0.060275343580987004`]}, 
+           {Arrowheads[0.], 
+            ArrowBox[BezierCurveBox[{
+             4, {2.007428241918833, 0.8770686080202846}, 6}], 
+             0.060275343580987004`]}, 
+           {Arrowheads[0.], 
+            ArrowBox[BezierCurveBox[{
+             5, {2.007345873871336, 0.7738259202679381}, 6}], 
+             0.060275343580987004`]}, 
+           {Arrowheads[0.], 
+            ArrowBox[BezierCurveBox[{
+             5, {2.1396040003819214`, 0.4752393840432832}, 6}], 
+             0.060275343580987004`]}}, 
+          {Hue[0.6, 0.2, 0.8], EdgeForm[{GrayLevel[0], Opacity[0.7]}], 
+           DiskBox[1, 0.060275343580987004], DiskBox[2, 0.060275343580987004],
+            DiskBox[3, 0.060275343580987004], 
+           DiskBox[4, 0.060275343580987004], DiskBox[5, 0.060275343580987004],
+            DiskBox[6, 0.060275343580987004]}}]],
+       MouseAppearanceTag["NetworkGraphics"]],
+      AllowKernelInitialization->False]],
+    DefaultBaseStyle->{
+     "NetworkGraphics", FrontEnd`GraphicsHighlightColor -> Hue[0.8, 1., 0.6]},
+    
+    FormatType->TraditionalForm,
+    FrameTicks->None], ",", 
+   GraphicsBox[
+    NamespaceBox["NetworkGraphics",
+     DynamicModuleBox[{Typeset`graph = HoldComplete[
+       Graph[{
+        GSberveglieri`Phi4tools`Private`o1, 0, GSberveglieri`Phi4tools`Private`o2, 1, 2, 
+         3}, {Null, {{1, 2}, {3, 4}, {2, 4}, {2, 4}, {2, 5}, {4, 6}, {5, 6}, {
+         5, 6}, {5, 6}}}, {
+        EdgeStyle -> {
+          UndirectedEdge[GSberveglieri`Phi4tools`Private`o1, 0] -> 
+           Dashing[{0, Small}], 
+           UndirectedEdge[GSberveglieri`Phi4tools`Private`o2, 1] -> 
+           Dashing[{0, Small}]}, GraphLayout -> "SpringEmbedding", 
+         VertexSize -> {0.15}}]]}, 
+      TagBox[GraphicsGroupBox[GraphicsComplexBox[CompressedData["
+1:eJw1z3tM01cUB/CiFqcDZTycUcl4TAXGeA2HEeEIhMcIsI1tqTykBWUymVQM
+A8tQcEVJIWApj4IILcFNNoqUgsAE/BECDpA4x6PYQNiLUYTC71defQB2hz+8
+yc3NyT055/uxTWBHJu6g0WhBeLffN+doT/X3NZk6uEqfVFkw5+Du/SILvzIK
+BgOXTT8/vuuMvDiPJsL/Hzwdyyze2wSjtMQPQ/DfxV03ENOohDdzzrrnpGxk
+bGJ933duj9y3UTfvMNS1AKGruqp9zmoAOTs+q0IFuam0MP6napB43ShnZCzC
+Yy3rGnFZDXXRNuMTZ5fA8r8tv/zbamAZuJUZp0mwExhv/F2pBrfRnftfmlHw
+U2i9a+cDNSR8wB3f5FIQ4CiXmErVIGZUriRqKKhQ2t8ak6nBnn6j8mOGBlbF
+QbETWJfmmj4WDWmA/t3ovBn2xzM1eX0+Wlj3Dxh7gvPkOXw5S6oF1p1++izu
+W7Q2DLrZ6WCq30lWhHlc/JMMlEAHPYV7wvswr6JjvDVuhx4oEw23DD1vt3RR
+Xlf0wDoiP2GJ3sS3Wk88Q3+61vvA/CYJg5s3G6+jn/GunqN8RILNfOzBKPR3
+WI0reRwSaj1cuQr03/xRYL0WTMKLb00ucdDPMT+XHmRLwhRDtFOB/oiGeEUp
+nYRfPHh/bKHfNdhPQq0uwSHZweWv0R9JRg+eJ5egmrkl9EL/3gRxxjdYTxVY
+tInR3zLt7aDBftMZQVY/+peqhHb3cF5R+9iTePSvmUwWROC+BZ5xrTv6zS+q
+trYwT1IVo0eN/n44VlyCea2Hp6OZ6PeMUL5So+fiKduMk+h/ELL6yRp677Wo
+ZTVuC0BFHKYvN9RBeJ5vy79WKjiTPWH0c3g9rHe6kWmvVeB2i1Nb5yMBfsJM
+y8CrReAv9VoVcppg9zE7yRcTS+DgMl3ebZBCL3Pag/cUc1RqOzWzzXDpJoxe
+jqGAP8w2V6XKYCYvJm56lAJpbMGXIWIZbPY5ug5lakBaWCFMxprt4d51akUD
+ZiNxkZZXZUCV9W6cT9bCQMr42vvKZhDubh14/Y8WOni9fSTu4417RPZF6eAv
+PhW8gXl8/ZoDU37XgVhRJDjsK4FeDk/bFqAH6RFBqVNEPdCdfYqj2vSQQ+Ye
+uC6pgynvbK4I/Vf0/r8NN9QRTPFs6wz6xcc/C8wMryeS3hEeSkc/fyYsINlH
+QozMlRgNof9F1UNtKKeJaM8ttvxq23/HtlpokBLGSWkP89F/Ms3z+fBsM5Er
+fFaegv6ciW6nrlQZsb5r1P5P9NuUaNgWYhmxz792ddtvkzDvTIlkBC+kO9sb
+/bSR5/Ml2G9+t/DXC+h/WcMoFeE8sm0hy4D+io982Im4r6Fir27bz9LlPJ26
+1kRoky9MbvtpfK/IldMSIuz2OU47+s3yy2TasHriKMXVbft7ohSP/ND7P2Xr
+WfE=
+         "], {
+          {Hue[0.6, 0.7, 0.5], Opacity[0.7], 
+           {Dashing[{0, Small}], 
+            {Arrowheads[0.], ArrowBox[{1, 2}, 0.07072212092779355]}}, 
+           {Arrowheads[0.], 
+            ArrowBox[BezierCurveBox[{
+             2, {1.2595954942239276`, 1.2002222366265696`}, 4}], 
+             0.07072212092779355]}, 
+           {Arrowheads[0.], 
+            ArrowBox[BezierCurveBox[{
+             2, {1.2595977214022969`, 0.8726625649754218}, 4}], 
+             0.07072212092779355]}, 
+           {Arrowheads[0.], ArrowBox[{2, 5}, 0.07072212092779355]}, 
+           {Dashing[{0, Small}], 
+            {Arrowheads[0.], ArrowBox[{3, 4}, 0.07072212092779355]}}, 
+           {Arrowheads[0.], ArrowBox[{4, 6}, 0.07072212092779355]}, 
+           {Arrowheads[0.], 
+            ArrowBox[BezierCurveBox[{
+             5, {1.2596013603876068`, 0.17091914766510233`}, 6}], 
+             0.07072212092779355]}, 
+           {Arrowheads[0.], ArrowBox[{5, 6}, 0.07072212092779355]}, 
+           {Arrowheads[0.], 
+            ArrowBox[BezierCurveBox[{
+             5, {1.2596030884742286`, -0.1709138932295583}, 6}], 
+             0.07072212092779355]}}, 
+          {Hue[0.6, 0.2, 0.8], EdgeForm[{GrayLevel[0], Opacity[0.7]}], 
+           DiskBox[1, 0.07072212092779355], DiskBox[2, 0.07072212092779355], 
+           DiskBox[3, 0.07072212092779355], DiskBox[4, 0.07072212092779355], 
+           DiskBox[5, 0.07072212092779355], 
+           DiskBox[6, 0.07072212092779355]}}]],
+       MouseAppearanceTag["NetworkGraphics"]],
+      AllowKernelInitialization->False]],
+    DefaultBaseStyle->{
+     "NetworkGraphics", FrontEnd`GraphicsHighlightColor -> Hue[0.8, 1., 0.6]},
+    
+    FormatType->TraditionalForm,
+    FrameTicks->None], ",", 
+   GraphicsBox[
+    NamespaceBox["NetworkGraphics",
+     DynamicModuleBox[{Typeset`graph = HoldComplete[
+       Graph[{
+        GSberveglieri`Phi4tools`Private`o1, 0, GSberveglieri`Phi4tools`Private`o2, 3, 1, 
+         2}, {Null, {{1, 2}, {3, 4}, {2, 5}, {2, 5}, {2, 6}, {5, 6}, {5, 4}, {
+         6, 4}, {6, 4}}}, {
+        EdgeStyle -> {
+          UndirectedEdge[GSberveglieri`Phi4tools`Private`o2, 3] -> 
+           Dashing[{0, Small}], 
+           UndirectedEdge[GSberveglieri`Phi4tools`Private`o1, 0] -> 
+           Dashing[{0, Small}]}, GraphLayout -> "SpringEmbedding", 
+         VertexSize -> {0.15}}]]}, 
+      TagBox[GraphicsGroupBox[GraphicsComplexBox[CompressedData["
+1:eJw1iwsw1HkAx/9b+5chbOWQ7iqXJG0ddyqxfH9FKTTXXW0m6k7S9ZoeHmu6
+k7MXla70EOU610qrtOaQ2STRCivhQkieu+vRbmvr2N0Ra+O6mbvvzHc+853P
+fB3Cj367dxpFURs+9l8K48+nJidZklaFq6mHtwyyC9q4ut9MiHlAykMz6x5Q
+/0W+o7j//kd/Km1hqF70N06UXJN0z+6Bw4LMvPikSQSopAFS77e4ndlplvpx
+//8brAzK4xfSZJWuT+41vRd5k34sMY8mnSsLUiwDe5Guddm1z4smGbvVvx64
+2wvL+ps25Qya+Jl3G6zny9AjcNjdXssko9KLz+pzZQgJr9C0X2KSJeU96j8c
+5fAWQyHbwSRFZoWsxAQ5PGIP1Vk5MsmuvumnZANyBPlWbfNxZ5C8PU3x39e8
+BjOObVU8RZFtpTO9369UgjkeeD+tgSJr+ivdkwuU8FXbpoxdp8iVjX8drPtS
+hf0c29HJgxSZ+9XbJcckKuRHfgiu5lCkMeL5YifuG0S5dsyKYFGkdyO34oru
+DTxnSFqG66egOG3vEnpdjRZ7hZI1SpNok6j4o8sVmDqsRE49TXh+q5WrWhWo
+YleN+wloctr58S/CqD6Yht8NNYukCSdEkBBi2o/l4txq1lqaVPhJOFR6P47k
+xGTGWNFknuhZ1Dq7ARxelLZuazeTUC0JB1suD8Ax9IOx7g6T5C4tW3qIMYjV
+ztwz4w8YZFSU/PlQnxruav6xpScZJOtk91X/jUOw4VB73QIZhN2UX8a+NYQr
+kzeG3eYwSLCoujJCN4TwlvleQZ0UKTgz36XCQ4OuvHT9zSyKnN5p2/dJtAbV
+gri13B8oEqEVh/lma3CuK/p28jKKlMyZ94Bdo4EscOat9XdG8OjMBtNMdjeO
+r7UoKfhUCx73eQNL2QV+U4Slw2UtIl4cFtLnurDyXZJ4G1OH4rZoy3t2XRg+
+MRZjEqtDzQrfsu2XOjHyWjqpHdShkeNzwF/bgf2RARavtupR6GwQyX06kJwf
+ezFGoseoxcuH52NfYVPmU7GtwABnbgNpFD3Dpic5umWmE3hp3OzmOfIUzFlz
+Sn48MoEaxU/7y61q4ElfPVrdPIHjpY8NvBnVsN7ntaXZzYiGNev11zqeoNl+
+b9y+C0a4trHXd1lKoJoWu2CL0oiwE+bZfzqWQmrmn7Gd8wFs18bhi+/FcOpe
+lHX/sxEc0+ypGmttx/QBvV1Z1AjCO6yD7519CfsGulxYP4IViUHvFn/dhvaE
+L1SezlqkzeNJWU6tKFS01vona+ET6lHpYNUCVVswP3VIiwz/EPNJsxfIXiz1
+k3+jA6t0+Dbsm5EdcCtRX6qDKsVtAc+7CXs89LnXro+DJTKxJZFFSOQtXOZu
+YsCWnzVCuSAfhinhmrkxBoT11BeJmHdhPBBVRQ8YkLVZaO9qLUTx2GDiA+4E
+wtg+sx9lC3DIxsRlqHYC/N03iiLjMxCds4u/09sIvutVtqQsFRa/f5deU2QE
+Zeektqk9j38AAZYZ7w==
+         "], {
+          {Hue[0.6, 0.7, 0.5], Opacity[0.7], 
+           {Dashing[{0, Small}], 
+            {Arrowheads[0.], ArrowBox[{1, 2}, 0.06853427740986806]}}, 
+           {Arrowheads[0.], 
+            ArrowBox[BezierCurveBox[{
+             2, {2.290668822063914, 0.5331543385563973}, 5}], 
+             0.06853427740986806]}, 
+           {Arrowheads[0.], 
+            ArrowBox[BezierCurveBox[{
+             2, {2.441770828176764, 0.8349842868214467}, 5}], 
+             0.06853427740986806]}, 
+           {Arrowheads[0.], ArrowBox[{2, 6}, 0.06853427740986806]}, 
+           {Dashing[{0, Small}], 
+            {Arrowheads[0.], ArrowBox[{3, 4}, 0.06853427740986806]}}, 
+           {Arrowheads[0.], ArrowBox[{4, 5}, 0.06853427740986806]}, 
+           {Arrowheads[0.], 
+            ArrowBox[BezierCurveBox[{
+             4, {1.5231936834271116`, 0.3780531946284217}, 6}], 
+             0.06853427740986806]}, 
+           {Arrowheads[0.], 
+            ArrowBox[BezierCurveBox[{
+             4, {1.373790627086566, 0.0762230687060514}, 6}], 
+             0.06853427740986806]}, 
+           {Arrowheads[0.], ArrowBox[{5, 6}, 0.06853427740986806]}}, 
+          {Hue[0.6, 0.2, 0.8], EdgeForm[{GrayLevel[0], Opacity[0.7]}], 
+           DiskBox[1, 0.06853427740986806], DiskBox[2, 0.06853427740986806], 
+           DiskBox[3, 0.06853427740986806], DiskBox[4, 0.06853427740986806], 
+           DiskBox[5, 0.06853427740986806], 
+           DiskBox[6, 0.06853427740986806]}}]],
+       MouseAppearanceTag["NetworkGraphics"]],
+      AllowKernelInitialization->False]],
+    DefaultBaseStyle->{
+     "NetworkGraphics", FrontEnd`GraphicsHighlightColor -> Hue[0.8, 1., 0.6]},
+    
+    FormatType->TraditionalForm,
+    FrameTicks->None], ",", 
+   GraphicsBox[
+    NamespaceBox["NetworkGraphics",
+     DynamicModuleBox[{Typeset`graph = HoldComplete[
+       Graph[{
+        GSberveglieri`Phi4tools`Private`o1, 0, GSberveglieri`Phi4tools`Private`o2, 2, 1, 
+         3}, {Null, {{1, 2}, {3, 4}, {2, 5}, {2, 5}, {2, 4}, {5, 6}, {5, 6}, {
+         4, 6}, {4, 6}}}, {
+        EdgeStyle -> {
+          UndirectedEdge[GSberveglieri`Phi4tools`Private`o1, 0] -> 
+           Dashing[{0, Small}], 
+           UndirectedEdge[GSberveglieri`Phi4tools`Private`o2, 2] -> 
+           Dashing[{0, Small}]}, GraphLayout -> "SpringEmbedding", 
+         VertexSize -> {0.15}}]]}, 
+      TagBox[GraphicsGroupBox[GraphicsComplexBox[CompressedData["
+1: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
+
+         "], {
+          {Hue[0.6, 0.7, 0.5], Opacity[0.7], 
+           {Dashing[{0, Small}], 
+            {Arrowheads[0.], ArrowBox[{1, 2}, 0.07072212092779355]}}, 
+           {Arrowheads[0.], ArrowBox[{2, 4}, 0.07072212092779355]}, 
+           {Arrowheads[0.], 
+            ArrowBox[BezierCurveBox[{
+             2, {0.9211918616840815, 0.5146520886958551}, 5}], 
+             0.07072212092779355]}, 
+           {Arrowheads[0.], 
+            ArrowBox[BezierCurveBox[{
+             2, {0.5803262496733074, 0.5217869261159642}, 5}], 
+             0.07072212092779355]}, 
+           {Dashing[{0, Small}], 
+            {Arrowheads[0.], ArrowBox[{3, 4}, 0.07072212092779355]}}, 
+           {Arrowheads[0.], 
+            ArrowBox[BezierCurveBox[{
+             4, {1.9388728321166024`, 0.5217947865245699}, 6}], 
+             0.07072212092779355]}, 
+           {Arrowheads[0.], 
+            ArrowBox[BezierCurveBox[{
+             4, {1.5980067210140787`, 0.5146562547011427}, 6}], 
+             0.07072212092779355]}, 
+           {Arrowheads[0.], 
+            ArrowBox[BezierCurveBox[{
+             5, {1.2596013603876068`, 0.17091914766510233`}, 6}], 
+             0.07072212092779355]}, 
+           {Arrowheads[0.], 
+            ArrowBox[BezierCurveBox[{
+             5, {1.2596030884742286`, -0.1709138932295583}, 6}], 
+             0.07072212092779355]}}, 
+          {Hue[0.6, 0.2, 0.8], EdgeForm[{GrayLevel[0], Opacity[0.7]}], 
+           DiskBox[1, 0.07072212092779355], DiskBox[2, 0.07072212092779355], 
+           DiskBox[3, 0.07072212092779355], DiskBox[4, 0.07072212092779355], 
+           DiskBox[5, 0.07072212092779355], 
+           DiskBox[6, 0.07072212092779355]}}]],
+       MouseAppearanceTag["NetworkGraphics"]],
+      AllowKernelInitialization->False]],
+    DefaultBaseStyle->{
+     "NetworkGraphics", FrontEnd`GraphicsHighlightColor -> Hue[0.8, 1., 0.6]},
+    
+    FormatType->TraditionalForm,
+    FrameTicks->None], ",", 
+   GraphicsBox[
+    NamespaceBox["NetworkGraphics",
+     DynamicModuleBox[{Typeset`graph = HoldComplete[
+       Graph[{
+        GSberveglieri`Phi4tools`Private`o1, 0, GSberveglieri`Phi4tools`Private`o2, 1, 2, 
+         3}, {Null, {{1, 2}, {3, 4}, {2, 4}, {2, 5}, {2, 6}, {4, 5}, {4, 6}, {
+         5, 6}, {5, 6}}}, {
+        EdgeStyle -> {
+          UndirectedEdge[GSberveglieri`Phi4tools`Private`o1, 0] -> 
+           Dashing[{0, Small}], 
+           UndirectedEdge[GSberveglieri`Phi4tools`Private`o2, 1] -> 
+           Dashing[{0, Small}]}, GraphLayout -> "SpringEmbedding", 
+         VertexSize -> {0.15}}]]}, 
+      TagBox[GraphicsGroupBox[GraphicsComplexBox[CompressedData["
+1:eJwBcQKO/SFib1JlAgAAACYAAAACAAAAAsdAvtFuBkAUtOr/Iz32PzHf9fti
+Gv4/KAmZ3ISx6z8AAAAAAAAAADHXOO6RO/Y/r2Vobh6Q7T8/N6bh9LzrPyZd
+LeY4AvE/ANK5octaWT/0rh0rk9j7PwAAAAAAAAAAu4xUrncn8j/wM2VNRg6b
+P377vgo6cvI/AB4ZbluGoD9OWIxcDb7yP+gKol+sEaM/ULinvsQK8z8wk3RZ
+lCelP4bt88QyWPM/sP3jPdfGpj8dUTCXKabzP0g8mi5/7qc/m5QdDHv08z94
+6Coe3Z2oP6uH0sT4QvQ/8HW4N4nUqD8wdf95tpj4P4BWGaxmg6g/XJFd/THn
++D8oHM+QQEGoP0AKldN8Nfk/uM4La2+Gpz+OF6ihaIP5P1ATMddhU6Y/tS7d
+RMfQ+T8A5SWizaikP//rD+5qHfo/4JOyXa+Hoj/jftA8Jmn6P/Ax7JWT4p8/
+XopBWsyz+j9wk5o2Ss6ZP7+BCbf/JvI/cPZ+fJ04mL86jXrUpXHyP+CU0Nvm
+TJ6/HiA7I2G98j9YxaQA2byhv2jdbcwECvM/gBYYRffdo7+O9KJvY1fzP8BE
+I3qLiKW/3QG2PU+l8z8oAP4Nmbumv8F67ROa8/M/mE3BM2p2p7/tlkuXFUL0
+P/CHC0+QuKe/coR4TNOX+D9gp6rasgmov4J3LQVR5vg/6BkdwQbTp78Auxp6
+ojT5P7htjNGoI6e/lh5XTJmC+T8gL9bgAPylv81To1IH0Pk/kMRm/L1cpL/P
+s760vhz6P1A8lALWRqK/nxCMBpJo+j/QnhYiCnefv2J/9mJUs/o/sJZJk5l4
+mb+gZjJk
+         "], {
+          {Hue[0.6, 0.7, 0.5], Opacity[0.7], 
+           {Dashing[{0, Small}], 
+            {Arrowheads[0.], ArrowBox[{1, 2}, 0.050800046182395635`]}}, 
+           {Arrowheads[0.], ArrowBox[{2, 4}, 0.050800046182395635`]}, 
+           {Arrowheads[0.], ArrowBox[{2, 5}, 0.050800046182395635`]}, 
+           {Arrowheads[0.], ArrowBox[{2, 6}, 0.050800046182395635`]}, 
+           {Dashing[{0, Small}], 
+            {Arrowheads[0.], ArrowBox[{3, 4}, 0.050800046182395635`]}}, 
+           {Arrowheads[0.], ArrowBox[{4, 5}, 0.050800046182395635`]}, 
+           {Arrowheads[0.], ArrowBox[{4, 6}, 0.050800046182395635`]}, 
+           {Arrowheads[0.], 
+            ArrowBox[BezierCurveBox[{
+             5, {1.4019631114850426`, 0.11215477308939936`}, 6}], 
+             0.050800046182395635`]}, 
+           {Arrowheads[0.], 
+            ArrowBox[BezierCurveBox[{
+             5, {1.401454158747524, -0.11060724686419231`}, 6}], 
+             0.050800046182395635`]}}, 
+          {Hue[0.6, 0.2, 0.8], EdgeForm[{GrayLevel[0], Opacity[0.7]}], 
+           DiskBox[1, 0.050800046182395635], DiskBox[2, 0.050800046182395635],
+            DiskBox[3, 0.050800046182395635], 
+           DiskBox[4, 0.050800046182395635], DiskBox[5, 0.050800046182395635],
+            DiskBox[6, 0.050800046182395635]}}]],
+       MouseAppearanceTag["NetworkGraphics"]],
+      AllowKernelInitialization->False]],
+    DefaultBaseStyle->{
+     "NetworkGraphics", FrontEnd`GraphicsHighlightColor -> Hue[0.8, 1., 0.6]},
+    
+    FormatType->TraditionalForm,
+    FrameTicks->None]}], "}"}]], "Output",
+ CellChangeTimes->{{3.868936693800397*^9, 3.868936698764173*^9}, 
+   3.868936835958013*^9},
+ CellLabel->"Out[5]=",
+ CellID->374738560,ExpressionUUID->"a783feb3-f53f-4b63-b9dd-d24d7671aa58"]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["More Examples", "ExtendedExamplesSection",
+ CellTags->"ExtendedExamples",
+ CellID->433346399,ExpressionUUID->"9f1b8047-bda5-4020-8b57-a3c83262680f"],
+
+Cell[BoxData[
+ InterpretationBox[Cell[
+  "Scope", "ExampleSection",ExpressionUUID->
+   "157389cd-c14b-4fae-ab28-124dfa0ed284"],
+  $Line = 0; Null]], "ExampleSection",
+ CellID->974068598,ExpressionUUID->"8fe0e2d9-28df-4666-a7d1-df3b1a95b693"],
+
+Cell[BoxData[
+ InterpretationBox[Cell[
+  "Generalizations & Extensions", "ExampleSection",ExpressionUUID->
+   "01e4d5b8-96b4-4d71-a061-be7a47ce3fdb"],
+  $Line = 0; Null]], "ExampleSection",
+ CellID->645788944,ExpressionUUID->"72a59fa4-9301-4e3b-a724-ab65c525cca6"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ InterpretationBox[Cell[
+  "Options", "ExampleSection",ExpressionUUID->
+   "608d0dc9-1339-4836-a001-febe102f615d"],
+  $Line = 0; Null]], "ExampleSection",
+ CellID->1694798048,ExpressionUUID->"867f81b5-2410-48b4-b729-b203bd436aa1"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ InterpretationBox[Cell[
+  "\"Substitutions\"", "ExampleSubsection",ExpressionUUID->
+   "aedec9ca-6ccc-45c6-874a-4d8d32e1db84"],
+  $Line = 0; Null]], "ExampleSubsection",
+ CellID->1216892327,ExpressionUUID->"23692ee2-7382-4561-9620-20cb16785f61"],
+
+Cell[TextData[{
+ "The ",
+ Cell[BoxData[
+  FormBox[
+   SuperscriptBox["14", "th"], TraditionalForm]],ExpressionUUID->
+  "bf1cc783-1313-45d9-9d50-889e7acc3c60"],
+ " Feynman diagram for ",
+ Cell[BoxData[
+  FormBox[
+   SuperscriptBox["\[CapitalGamma]", 
+    RowBox[{"(", "2", ")"}]], TraditionalForm]],ExpressionUUID->
+  "168251ce-a073-4f19-b462-f6336c40b118"],
+ " with ",
+ Cell[BoxData[
+  StyleBox["v4", "TI"]], "InlineFormula",ExpressionUUID->
+  "e9e7682f-bd08-4dc1-8632-1faf73727f18"],
+ "=5 quartic vertices, with different substitution options."
+}], "ExampleText",
+ CellChangeTimes->{{3.8689370719672947`*^9, 3.868937092798623*^9}, 
+   3.8858083745600443`*^9},
+ CellID->1093603958,ExpressionUUID->"17f7dfd5-3ec2-43cd-abc9-eef017162313"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"VisualizeDiagram", "[", 
+    RowBox[{"2", ",", "0", ",", "5", ",", "14"}], "]"}], ",", 
+   RowBox[{"VisualizeDiagram", "[", 
+    RowBox[{"2", ",", "0", ",", "5", ",", "14", ",", " ", 
+     RowBox[{"\"\<Substitutions\>\"", "->", "\"\<Sunsets\>\""}]}], "]"}], ",", 
+   RowBox[{"VisualizeDiagram", "[", 
+    RowBox[{"2", ",", "0", ",", "5", ",", "14", ",", " ", 
+     RowBox[{"\"\<Substitutions\>\"", "->", "\"\<Analytics\>\""}]}], "]"}]}], 
+  "}"}]], "Input",
+ CellChangeTimes->{{3.866705068703566*^9, 3.866705078099207*^9}, {
+   3.8677521277442627`*^9, 3.8677521355274343`*^9}, {3.867752264902132*^9, 
+   3.8677523056023197`*^9}, 3.8689369823051367`*^9, 3.86893710596898*^9},
+ CellLabel->"In[7]:=",
+ CellID->91064068,ExpressionUUID->"e3132e20-d728-4b72-a54f-b931074211d4"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   GraphicsBox[
+    NamespaceBox["NetworkGraphics",
+     DynamicModuleBox[{Typeset`graph = HoldComplete[
+       Graph[{
+        GSberveglieri`Phi4tools`Private`o1, 0, GSberveglieri`Phi4tools`Private`o2, 3, 1, 2, 
+         4}, {Null, {{1, 2}, {3, 4}, {2, 5}, {2, 5}, {2, 6}, {5, 4}, {5, 4}, {
+         6, 7}, {6, 7}, {6, 7}, {4, 7}}}, {
+        EdgeStyle -> {
+          UndirectedEdge[GSberveglieri`Phi4tools`Private`o2, 3] -> 
+           Dashing[{0, Small}], 
+           UndirectedEdge[GSberveglieri`Phi4tools`Private`o1, 0] -> 
+           Dashing[{0, Small}]}, GraphLayout -> "SpringEmbedding", 
+         VertexSize -> {0.15}}]]}, 
+      TagBox[GraphicsGroupBox[GraphicsComplexBox[CompressedData["
+1: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
+         "], {
+          {Hue[0.6, 0.7, 0.5], Opacity[0.7], 
+           {Dashing[{0, Small}], 
+            {Arrowheads[0.], ArrowBox[{1, 2}, 0.07102823695968799]}}, 
+           {Arrowheads[0.], 
+            ArrowBox[BezierCurveBox[{
+             2, {2.0766624650673204`, 1.1056345690992413`}, 5}], 
+             0.07102823695968799]}, 
+           {Arrowheads[0.], 
+            ArrowBox[BezierCurveBox[{
+             2, {2.2645464918567213`, 1.3848164140215553`}, 5}], 
+             0.07102823695968799]}, 
+           {Arrowheads[0.], ArrowBox[{2, 6}, 0.07102823695968799]}, 
+           {Dashing[{0, Small}], 
+            {Arrowheads[0.], ArrowBox[{3, 4}, 0.07102823695968799]}}, 
+           {Arrowheads[0.], 
+            ArrowBox[BezierCurveBox[{
+             4, {1.227783946021174, 1.3849292777554039`}, 5}], 
+             0.07102823695968799]}, 
+           {Arrowheads[0.], 
+            ArrowBox[BezierCurveBox[{
+             4, {1.4156001448821354`, 1.105727943568633}, 5}], 
+             0.07102823695968799]}, 
+           {Arrowheads[0.], ArrowBox[{4, 7}, 0.07102823695968799]}, 
+           {Arrowheads[0.], 
+            ArrowBox[BezierCurveBox[{
+             6, {1.7459999902895547`, -0.1677277339465576}, 7}], 
+             0.07102823695968799]}, 
+           {Arrowheads[0.], ArrowBox[{6, 7}, 0.07102823695968799]}, 
+           {Arrowheads[0.], 
+            ArrowBox[BezierCurveBox[{
+             6, {1.7460427749379643`, 0.16785782532944632`}, 7}], 
+             0.07102823695968799]}}, 
+          {Hue[0.6, 0.2, 0.8], EdgeForm[{GrayLevel[0], Opacity[0.7]}], 
+           DiskBox[1, 0.07102823695968799], DiskBox[2, 0.07102823695968799], 
+           DiskBox[3, 0.07102823695968799], DiskBox[4, 0.07102823695968799], 
+           DiskBox[5, 0.07102823695968799], DiskBox[6, 0.07102823695968799], 
+           DiskBox[7, 0.07102823695968799]}}]],
+       MouseAppearanceTag["NetworkGraphics"]],
+      AllowKernelInitialization->False]],
+    DefaultBaseStyle->{
+     "NetworkGraphics", FrontEnd`GraphicsHighlightColor -> Hue[0.8, 1., 0.6]},
+    
+    FormatType->TraditionalForm,
+    FrameTicks->None], ",", 
+   GraphicsBox[
+    NamespaceBox["NetworkGraphics",
+     DynamicModuleBox[{Typeset`graph = HoldComplete[
+       Graph[{
+        GSberveglieri`Phi4tools`Private`o1, 0, GSberveglieri`Phi4tools`Private`o2, 3, 1, 2, 
+         
+         Subscript[GSberveglieri`Phi4tools`Private`s, {2, 4}], 4}, {
+        Null, {{1, 2}, {3, 4}, {2, 5}, {2, 5}, {2, 6}, {5, 4}, {5, 4}, {6, 
+         7}, {7, 8}, {4, 8}}}, {
+        EdgeStyle -> {
+          UndirectedEdge[GSberveglieri`Phi4tools`Private`o2, 3] -> 
+           Dashing[{0, Small}], 
+           UndirectedEdge[GSberveglieri`Phi4tools`Private`o1, 0] -> 
+           Dashing[{0, Small}], UndirectedEdge[2, 
+             Subscript[GSberveglieri`Phi4tools`Private`s, {2, 4}]] -> 
+           Dashing[{Small, Small}], UndirectedEdge[
+             Subscript[GSberveglieri`Phi4tools`Private`s, {2, 4}], 4] -> 
+           Dashing[{Small, Small}]}, GraphLayout -> "SpringEmbedding", 
+         VertexShapeFunction -> {
+          Subscript[GSberveglieri`Phi4tools`Private`s, {2, 4}] -> "Star"}, 
+         VertexSize -> {0.15}, 
+         VertexStyle -> {
+          Subscript[GSberveglieri`Phi4tools`Private`s, {2, 4}] -> 
+           RGBColor[0, 1, 0]}}]]}, 
+      TagBox[GraphicsGroupBox[{
+         {Hue[0.6, 0.7, 0.5], Opacity[0.7], 
+          {Dashing[{0, Small}], 
+           {Arrowheads[0.], 
+            ArrowBox[{{0., 1.9730790225977144`}, {0.7982945237949363, 
+             1.4923085088500088`}}, 0.06988860051011564]}}, 
+          {Arrowheads[0.], 
+           ArrowBox[BezierCurveBox[{{0.7982945237949363, 
+            1.4923085088500088`}, {1.16675447986588, 1.8758581380649664`}, {
+            1.6909471653765233`, 1.965830832566618}}], 
+            0.06988860051011564]}, 
+          {Arrowheads[0.], 
+           ArrowBox[BezierCurveBox[{{0.7982945237949363, 
+            1.4923085088500088`}, {1.3224872093055775`, 
+            1.5822812033516638`}, {1.6909471653765233`, 1.965830832566618}}], 
+            0.06988860051011564]}, 
+          {Arrowheads[0.], 
+           ArrowBox[{{0.7982945237949363, 1.4923085088500088`}, {
+            0.7801025457158276, 0.45754044164975316`}}, 0.06988860051011564]}, 
+          {Dashing[{0, Small}], 
+           {Arrowheads[0.], 
+            ArrowBox[{{3.382106056033831, 1.973066060772634}, {
+             2.583654014365895, 1.4926339168268834`}}, 0.06988860051011564]}}, 
+          {Arrowheads[0.], 
+           ArrowBox[BezierCurveBox[{{2.583654014365895, 
+            1.4926339168268834`}, {2.05948773548223, 1.5824349934334472`}, {
+            1.6909471653765233`, 1.965830832566618}}], 
+            0.06988860051011564]}, 
+          {Arrowheads[0.], 
+           ArrowBox[BezierCurveBox[{{2.583654014365895, 
+            1.4926339168268834`}, {2.215113444260196, 1.8760297559600356`}, {
+            1.6909471653765233`, 1.965830832566618}}], 
+            0.06988860051011564]}, 
+          {Arrowheads[0.], 
+           ArrowBox[{{2.583654014365895, 1.4926339168268834`}, {
+            2.6022879863985224`, 0.45784892603512306`}}, 
+            0.06988860051011564]}, 
+          {Dashing[{Small, Small}], 
+           {Arrowheads[0.], 
+            ArrowBox[{{0.7801025457158276, 0.45754044164975316`}, {
+             1.6912248559638017`, 0.}}, 0.06988860051011564]}}, 
+          {Dashing[{Small, Small}], 
+           {Arrowheads[0.], 
+            ArrowBox[{{1.6912248559638017`, 0.}, {2.6022879863985224`, 
+             0.45784892603512306`}}, 0.06988860051011564]}}}, 
+         {Hue[0.6, 0.2, 0.8], EdgeForm[{GrayLevel[0], Opacity[0.7]}], 
+          DiskBox[{0., 1.9730790225977144}, 0.06988860051011564], 
+          DiskBox[{0.7982945237949363, 1.4923085088500088}, 
+           0.06988860051011564], 
+          DiskBox[{3.382106056033831, 1.973066060772634}, 
+           0.06988860051011564], 
+          DiskBox[{2.583654014365895, 1.4926339168268834}, 
+           0.06988860051011564], 
+          DiskBox[{1.6909471653765233, 1.965830832566618}, 
+           0.06988860051011564], 
+          DiskBox[{0.7801025457158276, 0.45754044164975316}, 
+           0.06988860051011564], 
+          {RGBColor[0, 1, 0], 
+           PolygonBox[{{1.6912248559638017`, 0.08222184184213574}, {
+            1.6708984553914397`, 0.02073622732575335}, {1.609003014121666, 
+            0.019409951353872888`}, {
+            1.6583361192269475`, -0.019916503930370203`}, {
+            1.640408924421497, -0.08222184184213574}, {
+            1.6912248559638017`, -0.045041316036555756`}, {
+            1.7420407875061064`, -0.08222184184213574}, {
+            1.724113592700656, -0.019916503930370203`}, {1.7734466978059373`, 
+            0.019409951353872888`}, {1.7115512565361637`, 
+            0.02073622732575335}, {1.6912248559638017`, 
+            0.08222184184213574}}]}, 
+          DiskBox[{2.6022879863985224, 0.45784892603512306}, 
+           0.06988860051011564]}}],
+       MouseAppearanceTag["NetworkGraphics"]],
+      AllowKernelInitialization->False]],
+    DefaultBaseStyle->{
+     "NetworkGraphics", FrontEnd`GraphicsHighlightColor -> Hue[0.8, 1., 0.6]},
+    
+    FormatType->TraditionalForm,
+    FrameTicks->None], ",", 
+   GraphicsBox[
+    NamespaceBox["NetworkGraphics",
+     DynamicModuleBox[{Typeset`graph = HoldComplete[
+       Graph[{
+        GSberveglieri`Phi4tools`Private`o1, 0, GSberveglieri`Phi4tools`Private`o2, 3, 2, 4, 
+         
+         Subscript[GSberveglieri`Phi4tools`Private`s, {2, 4}], 
+         Subscript[GSberveglieri`Phi4tools`Private`b, {3, 1}], 1, 
+         Subscript[GSberveglieri`Phi4tools`Private`b, {0, 1}]}, {
+        Null, {{1, 2}, {3, 4}, {2, 5}, {4, 6}, {5, 7}, {7, 6}, {4, 8}, {8, 
+         9}, {2, 10}, {10, 9}}}, {
+        EdgeStyle -> {
+          UndirectedEdge[GSberveglieri`Phi4tools`Private`o2, 3] -> 
+           Dashing[{0, Small}], 
+           UndirectedEdge[GSberveglieri`Phi4tools`Private`o1, 0] -> 
+           Dashing[{0, Small}], UndirectedEdge[2, 
+             Subscript[GSberveglieri`Phi4tools`Private`s, {2, 4}]] -> 
+           Dashing[{Small, Small}], UndirectedEdge[
+             Subscript[GSberveglieri`Phi4tools`Private`b, {3, 1}], 1] -> 
+           Dashing[{Small, Small}], UndirectedEdge[
+             Subscript[GSberveglieri`Phi4tools`Private`b, {0, 1}], 1] -> 
+           Dashing[{Small, Small}], UndirectedEdge[
+             Subscript[GSberveglieri`Phi4tools`Private`s, {2, 4}], 4] -> 
+           Dashing[{Small, Small}], UndirectedEdge[3, 
+             Subscript[GSberveglieri`Phi4tools`Private`b, {3, 1}]] -> 
+           Dashing[{Small, Small}], UndirectedEdge[0, 
+             Subscript[GSberveglieri`Phi4tools`Private`b, {0, 1}]] -> 
+           Dashing[{Small, Small}]}, 
+         VertexShapeFunction -> {
+          Subscript[GSberveglieri`Phi4tools`Private`b, {3, 1}] -> "Capsule", 
+           Subscript[GSberveglieri`Phi4tools`Private`s, {2, 4}] -> "Star", 
+           Subscript[GSberveglieri`Phi4tools`Private`b, {0, 1}] -> "Capsule"}, 
+         VertexSize -> {0.15}, 
+         VertexStyle -> {
+          Subscript[GSberveglieri`Phi4tools`Private`b, {3, 1}] -> RGBColor[0, 1, 0], 
+           Subscript[GSberveglieri`Phi4tools`Private`s, {2, 4}] -> RGBColor[0, 1, 0],
+            Subscript[GSberveglieri`Phi4tools`Private`b, {0, 1}] -> 
+           RGBColor[0, 1, 0]}}]]}, 
+      TagBox[GraphicsGroupBox[{
+         {Hue[0.6, 0.7, 0.5], Opacity[0.7], 
+          {Dashing[{0, Small}], 
+           {Arrowheads[0.], 
+            ArrowBox[{{0., 1.0729744209666514`}, {0.9132376350397942, 
+             1.073517208884644}}, 0.0684928347258228]}}, 
+          {Arrowheads[0.], 
+           ArrowBox[{{0.9132376350397942, 1.073517208884644}, {
+            1.571882589641127, 0.29685533267949393`}}, 0.0684928347258228]}, 
+          {Dashing[{Small, Small}], 
+           {Arrowheads[0.], 
+            ArrowBox[{{0.9132376350397942, 1.073517208884644}, {
+             1.5727898739160264`, 1.8500771051830154`}}, 
+             0.0684928347258228]}}, 
+          {Dashing[{0, Small}], 
+           {Arrowheads[0.], 
+            ArrowBox[{{5.10348835438724, 1.0721633088138096`}, {
+             4.187307992879537, 1.0722442955547693`}}, 
+             0.0684928347258228]}}, 
+          {Arrowheads[0.], 
+           ArrowBox[{{4.187307992879537, 1.0722442955547693`}, {
+            3.5260473746690986`, 0.2960285412189825}}, 0.0684928347258228]}, 
+          {Dashing[{Small, Small}], 
+           {Arrowheads[0.], 
+            ArrowBox[{{4.187307992879537, 1.0722442955547693`}, {
+             3.5285647272090364`, 1.8498144487668546`}}, 
+             0.0684928347258228]}}, 
+          {Dashing[{Small, Small}], 
+           {Arrowheads[0.], 
+            ArrowBox[{{1.571882589641127, 0.29685533267949393`}, {
+             2.5480236550385262`, 0.}}, 0.0684928347258228]}}, 
+          {Dashing[{Small, Small}], 
+           {Arrowheads[0.], 
+            ArrowBox[{{3.5260473746690986`, 0.2960285412189825}, {
+             2.5480236550385262`, 0.}}, 0.0684928347258228]}}, 
+          {Dashing[{Small, Small}], 
+           {Arrowheads[0.], 
+            ArrowBox[{{3.5285647272090364`, 1.8498144487668546`}, {
+             2.5504092616985496`, 2.146204850835351}}, 
+             0.0684928347258228]}}, 
+          {Dashing[{Small, Small}], 
+           {Arrowheads[0.], 
+            ArrowBox[{{2.5504092616985496`, 2.146204850835351}, {
+             1.5727898739160264`, 1.8500771051830154`}}, 
+             0.0684928347258228]}}}, 
+         {Hue[0.6, 0.2, 0.8], EdgeForm[{GrayLevel[0], Opacity[0.7]}], 
+          DiskBox[{0., 1.0729744209666514}, 0.0684928347258228], 
+          DiskBox[{0.9132376350397942, 1.073517208884644}, 
+           0.0684928347258228], 
+          DiskBox[{5.10348835438724, 1.0721633088138096}, 0.0684928347258228],
+           DiskBox[{4.187307992879537, 1.0722442955547693}, 
+           0.0684928347258228], 
+          DiskBox[{1.571882589641127, 0.29685533267949393}, 
+           0.0684928347258228], 
+          DiskBox[{3.5260473746690986, 0.2960285412189825}, 
+           0.0684928347258228], 
+          {RGBColor[0, 1, 0], 
+           PolygonBox[{{2.5480236550385262`, 0.08057976526988873}, {
+            2.528103198986868, 0.02032209803449053}, {2.4674438897686377`, 
+            0.019022309509898586`}, {
+            2.5157917489305706`, -0.01951874557599135}, {
+            2.498222583402215, -0.08057976526988873}, {
+            2.5480236550385262`, -0.04414178267425519}, {
+            2.5978247266748373`, -0.08057976526988873}, {
+            2.580255561146482, -0.01951874557599135}, {2.6286034203084148`, 
+            0.019022309509898586`}, {2.5679441110901844`, 
+            0.02032209803449053}, {2.5480236550385262`, 
+            0.08057976526988873}}]}, 
+          {RGBColor[0, 1, 0], 
+           FilledCurveBox[{{{0, 2, 1}, {1, 6, 3}, {0, 1, 1}, {1, 6, 3}}}, {{{
+            3.488274844574092, 1.8095245661319104`}, {3.5688546098439806`, 
+            1.8095245661319104`}, {3.591106151032698, 1.8095245661319104`}, {
+            3.609144492478925, 1.8275629760709724`}, {3.609144492478925, 
+            1.8498144487668546`}, {3.609144492478925, 1.8720659214627369`}, {
+            3.591106151032698, 1.890104331401799}, {3.5688546098439806`, 
+            1.890104331401799}, {3.488274844574092, 1.890104331401799}, {
+            3.466023303385375, 1.890104331401799}, {3.447984961939148, 
+            1.8720659214627369`}, {3.447984961939148, 1.8498144487668546`}, {
+            3.447984961939148, 1.8275629760709724`}, {3.466023303385375, 
+            1.8095245661319104`}, {3.488274844574092, 
+            1.8095245661319104`}}}]}, 
+          DiskBox[{2.5504092616985496, 2.146204850835351}, 
+           0.0684928347258228], 
+          {RGBColor[0, 1, 0], 
+           FilledCurveBox[{{{0, 2, 1}, {1, 6, 3}, {0, 1, 1}, {1, 6, 3}}}, {{{
+            1.5324999912810822`, 1.8097872225480711`}, {1.6130797565509707`, 
+            1.8097872225480711`}, {1.6353312977396877`, 
+            1.8097872225480711`}, {1.6533696391859152`, 
+            1.8278256324871331`}, {1.6533696391859152`, 
+            1.8500771051830154`}, {1.6533696391859152`, 
+            1.8723285778788976`}, {1.6353312977396877`, 
+            1.8903669878179596`}, {1.6130797565509707`, 
+            1.8903669878179596`}, {1.5324999912810822`, 
+            1.8903669878179596`}, {1.5102484500923652`, 
+            1.8903669878179596`}, {1.4922101086461377`, 
+            1.8723285778788976`}, {1.4922101086461377`, 
+            1.8500771051830154`}, {1.4922101086461377`, 
+            1.8278256324871331`}, {1.5102484500923652`, 
+            1.8097872225480711`}, {1.5324999912810822`, 
+            1.8097872225480711`}}}]}}}],
+       MouseAppearanceTag["NetworkGraphics"]],
+      AllowKernelInitialization->False]],
+    DefaultBaseStyle->{
+     "NetworkGraphics", FrontEnd`GraphicsHighlightColor -> Hue[0.8, 1., 0.6]},
+    
+    FormatType->TraditionalForm,
+    FrameTicks->None]}], "}"}]], "Output",
+ CellChangeTimes->{3.868936983562583*^9, 3.868937107943988*^9},
+ CellLabel->"Out[7]=",
+ CellID->324143731,ExpressionUUID->"c932a40a-070a-4ac4-a82d-8333ad1388f8"]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]],
+
+Cell[BoxData[
+ InterpretationBox[Cell[
+  "Applications", "ExampleSection",ExpressionUUID->
+   "fd06d189-c794-4a08-8f9b-03c981d9fda0"],
+  $Line = 0; Null]], "ExampleSection",
+ CellID->1191189639,ExpressionUUID->"bb9e67a1-8a1a-4149-abef-cbb7cc13b9ed"],
+
+Cell[BoxData[
+ InterpretationBox[Cell[
+  "Properties & Relations", "ExampleSection",ExpressionUUID->
+   "c075a90f-b4b5-4f7a-9f98-59b783fca6b6"],
+  $Line = 0; Null]], "ExampleSection",
+ CellID->541749821,ExpressionUUID->"5851ea3f-e837-4468-86b9-037c8449113e"],
+
+Cell[BoxData[
+ InterpretationBox[Cell[
+  "Possible Issues", "ExampleSection",ExpressionUUID->
+   "59ccdd07-eb59-4328-92bc-d311898348c6"],
+  $Line = 0; Null]], "ExampleSection",
+ CellID->1047082460,ExpressionUUID->"fd9f34af-6845-4b3e-b49d-1535ca0f8e10"],
+
+Cell[BoxData[
+ InterpretationBox[Cell[
+  "Interactive Examples", "ExampleSection",ExpressionUUID->
+   "ae9f5b48-bc65-447a-bbe2-5b896603135f"],
+  $Line = 0; Null]], "ExampleSection",
+ CellID->661036779,ExpressionUUID->"d09f9136-2b02-4ec2-bc68-aed1db96d519"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ InterpretationBox[Cell[
+  "Neat Examples", "ExampleSection",ExpressionUUID->
+   "705c9e82-199d-4161-99aa-3c81f73cb46b"],
+  $Line = 0; Null]], "ExampleSection",
+ CellID->2043146678,ExpressionUUID->"25cda14a-c35d-4849-a68d-97951b7b0e68"],
+
+Cell[TextData[{
+ "The graphs for all the Feynman diagrams for ",
+ Cell[BoxData[
+  FormBox[
+   SuperscriptBox["\[CapitalGamma]", 
+    RowBox[{"(", "4", ")"}]], TraditionalForm]],ExpressionUUID->
+  "4f6824b1-2ae9-4fef-af38-253eee732917"],
+ " with two cubic vertices and two quartic vertices after the substitutions \
+of the analytically known subdiagrams."
+}], "ExampleText",
+ CellChangeTimes->{{3.86893689452284*^9, 3.868936962109743*^9}, {
+  3.868936996574564*^9, 3.868937023559698*^9}},
+ CellID->272027549,ExpressionUUID->"e0bb9f85-36df-4ff0-ada9-89c8141f8562"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"VisualizeDiagram", "[", 
+  RowBox[{"4", ",", "2", ",", "2", ",", 
+   RowBox[{"\"\<Substitutions\>\"", "->", "\"\<Analytics\>\""}]}], 
+  "]"}]], "Input",
+ CellChangeTimes->{{3.866705068703566*^9, 3.866705078099207*^9}, {
+   3.8677521277442627`*^9, 3.8677521355274343`*^9}, {3.867752264902132*^9, 
+   3.8677523056023197`*^9}, 3.8689369823051367`*^9},
+ CellLabel->"In[6]:=",
+ CellID->174069280,ExpressionUUID->"cb263376-82a3-486a-a015-e10f7c836e34"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   GraphicsBox[
+    NamespaceBox["NetworkGraphics",
+     DynamicModuleBox[{Typeset`graph = HoldComplete[
+       Graph[{
+        GSberveglieri`Phi4tools`Private`o1, 0, GSberveglieri`Phi4tools`Private`o2, 
+         GSberveglieri`Phi4tools`Private`o3, 2, GSberveglieri`Phi4tools`Private`o4, 3, 
+         Subscript[GSberveglieri`Phi4tools`Private`b, {0, 1}], 1, 
+         Subscript[GSberveglieri`Phi4tools`Private`t, {2, 3, 1}]}, {
+        Null, {{1, 2}, {3, 2}, {4, 5}, {6, 7}, {2, 8}, {8, 9}, {10, 5}, {10, 
+         7}, {10, 9}}}, {
+        EdgeStyle -> {
+          UndirectedEdge[GSberveglieri`Phi4tools`Private`o3, 2] -> 
+           Dashing[{0, Small}], UndirectedEdge[
+             Subscript[GSberveglieri`Phi4tools`Private`t, {2, 3, 1}], 1] -> 
+           Dashing[{Small, Small}], 
+           UndirectedEdge[GSberveglieri`Phi4tools`Private`o1, 0] -> 
+           Dashing[{0, Small}], 
+           UndirectedEdge[GSberveglieri`Phi4tools`Private`o2, 0] -> 
+           Dashing[{0, Small}], UndirectedEdge[
+             Subscript[GSberveglieri`Phi4tools`Private`b, {0, 1}], 1] -> 
+           Dashing[{Small, Small}], UndirectedEdge[
+             Subscript[GSberveglieri`Phi4tools`Private`t, {2, 3, 1}], 2] -> 
+           Dashing[{Small, Small}], 
+           UndirectedEdge[GSberveglieri`Phi4tools`Private`o4, 3] -> 
+           Dashing[{0, Small}], UndirectedEdge[
+             Subscript[GSberveglieri`Phi4tools`Private`t, {2, 3, 1}], 3] -> 
+           Dashing[{Small, Small}], UndirectedEdge[0, 
+             Subscript[GSberveglieri`Phi4tools`Private`b, {0, 1}]] -> 
+           Dashing[{Small, Small}]}, GraphLayout -> "SpringEmbedding", 
+         VertexShapeFunction -> {
+          Subscript[GSberveglieri`Phi4tools`Private`t, {2, 3, 1}] -> "Triangle", 
+           Subscript[GSberveglieri`Phi4tools`Private`b, {0, 1}] -> "Capsule"}, 
+         VertexSize -> {0.15}, 
+         VertexStyle -> {
+          Subscript[GSberveglieri`Phi4tools`Private`t, {2, 3, 1}] -> 
+           RGBColor[0, 1, 0], Subscript[GSberveglieri`Phi4tools`Private`b, {0, 1}] -> 
+           RGBColor[0, 1, 0]}}]]}, 
+      TagBox[GraphicsGroupBox[{
+         {Hue[0.6, 0.7, 0.5], Opacity[0.7], 
+          {Dashing[{0, Small}], 
+           {Arrowheads[0.], 
+            ArrowBox[{{4.637350193933414, 2.498295796192319}, {
+             4.009274330021366, 1.6852604861666538`}}, 0.07159289671803323]}}, 
+          {Dashing[{0, Small}], 
+           {Arrowheads[0.], 
+            ArrowBox[{{4.009274330021366, 1.6852604861666538`}, {
+             4.645872959321092, 0.8811885135513337}}, 
+             0.07159289671803323]}}, 
+          {Dashing[{Small, Small}], 
+           {Arrowheads[0.], 
+            ArrowBox[{{4.009274330021366, 1.6852604861666538`}, {
+             3.0373215564215936`, 1.6758259556052837`}}, 
+             0.07159289671803323]}}, 
+          {Dashing[{0, Small}], 
+           {Arrowheads[0.], 
+            ArrowBox[{{0.02487343823807109, 3.3898302148006643`}, {
+             0.4819893344240491, 2.5514016525993273`}}, 
+             0.07159289671803323]}}, 
+          {Dashing[{Small, Small}], 
+           {Arrowheads[0.], 
+            ArrowBox[{{0.4819893344240491, 2.5514016525993273`}, {
+             1.0784713466853406`, 1.6871084322049086`}}, 
+             0.07159289671803323]}}, 
+          {Dashing[{0, Small}], 
+           {Arrowheads[0.], 
+            ArrowBox[{{0., 0.}, {0.47524852253941274`, 0.8278565464286742}}, 
+             0.07159289671803323]}}, 
+          {Dashing[{Small, Small}], 
+           {Arrowheads[0.], 
+            ArrowBox[{{0.47524852253941274`, 0.8278565464286742}, {
+             1.0784713466853406`, 1.6871084322049086`}}, 
+             0.07159289671803323]}}, 
+          {Dashing[{Small, Small}], 
+           {Arrowheads[0.], 
+            ArrowBox[{{3.0373215564215936`, 1.6758259556052837`}, {
+             2.0823384421449163`, 1.679487334916885}}, 0.07159289671803323]}}, 
+          {Dashing[{Small, Small}], 
+           {Arrowheads[0.], 
+            ArrowBox[{{2.0823384421449163`, 1.679487334916885}, {
+             1.0784713466853406`, 1.6871084322049086`}}, 
+             0.07159289671803323]}}}, 
+         {Hue[0.6, 0.2, 0.8], EdgeForm[{GrayLevel[0], Opacity[0.7]}], 
+          DiskBox[{4.637350193933414, 2.498295796192319}, 
+           0.07159289671803323], 
+          DiskBox[{4.009274330021366, 1.6852604861666538}, 
+           0.07159289671803323], 
+          DiskBox[{4.645872959321092, 0.8811885135513337}, 
+           0.07159289671803323], 
+          DiskBox[{0.02487343823807109, 3.3898302148006643}, 
+           0.07159289671803323], 
+          DiskBox[{0.4819893344240491, 2.5514016525993273}, 
+           0.07159289671803323], DiskBox[{0., 0.}, 0.07159289671803323], 
+          DiskBox[{0.47524852253941274, 0.8278565464286742}, 
+           0.07159289671803323], 
+          {RGBColor[0, 1, 0], 
+           FilledCurveBox[{{{0, 2, 1}, {1, 6, 3}, {0, 1, 1}, {1, 6, 3}}}, {{{
+            2.9952081088206612`, 1.6337125080043515`}, {3.079435004022526, 
+            1.6337125080043515`}, {3.1026936747509004`, 
+            1.6337125080043515`}, {3.1215484516234584`, 1.652567356469806}, {
+            3.1215484516234584`, 1.6758259556052837`}, {3.1215484516234584`, 
+            1.6990845547407614`}, {3.1026936747509004`, 
+            1.7179394032062159`}, {3.079435004022526, 1.7179394032062159`}, {
+            2.9952081088206612`, 1.7179394032062159`}, {2.971949438092287, 
+            1.7179394032062159`}, {2.953094661219729, 1.6990845547407614`}, {
+            2.953094661219729, 1.6758259556052837`}, {2.953094661219729, 
+            1.652567356469806}, {2.971949438092287, 1.6337125080043515`}, {
+            2.9952081088206612`, 1.6337125080043515`}}}]}, 
+          DiskBox[{2.0823384421449163, 1.679487334916885}, 
+           0.07159289671803323], 
+          {RGBColor[0, 1, 0], 
+           PolygonBox[{{1.0784713466853406`, 1.7675000959295881`}, {
+            0.9984555456684308, 1.6289090630119882`}, {1.1584871477022505`, 
+            1.6289090630119882`}, {1.0784713466853406`, 
+            1.7675000959295881`}}]}}}],
+       MouseAppearanceTag["NetworkGraphics"]],
+      AllowKernelInitialization->False]],
+    DefaultBaseStyle->{
+     "NetworkGraphics", FrontEnd`GraphicsHighlightColor -> Hue[0.8, 1., 0.6]},
+    
+    FormatType->TraditionalForm,
+    FrameTicks->None], ",", 
+   GraphicsBox[
+    NamespaceBox["NetworkGraphics",
+     DynamicModuleBox[{Typeset`graph = HoldComplete[
+       Graph[{
+        GSberveglieri`Phi4tools`Private`o1, 0, GSberveglieri`Phi4tools`Private`o2, 
+         GSberveglieri`Phi4tools`Private`o3, 1, GSberveglieri`Phi4tools`Private`o4, 2, 3, 
+         Subscript[GSberveglieri`Phi4tools`Private`b, {2, 3}]}, {
+        Null, {{1, 2}, {3, 2}, {4, 5}, {6, 5}, {2, 5}, {2, 7}, {5, 8}, {7, 
+         9}, {9, 8}}}, {EdgeStyle -> {UndirectedEdge[2, 
+             Subscript[GSberveglieri`Phi4tools`Private`b, {2, 3}]] -> 
+           Dashing[{Small, Small}], 
+           UndirectedEdge[GSberveglieri`Phi4tools`Private`o1, 0] -> 
+           Dashing[{0, Small}], 
+           UndirectedEdge[GSberveglieri`Phi4tools`Private`o3, 1] -> 
+           Dashing[{0, Small}], 
+           UndirectedEdge[GSberveglieri`Phi4tools`Private`o2, 0] -> 
+           Dashing[{0, Small}], 
+           UndirectedEdge[GSberveglieri`Phi4tools`Private`o4, 1] -> 
+           Dashing[{0, Small}], UndirectedEdge[
+             Subscript[GSberveglieri`Phi4tools`Private`b, {2, 3}], 3] -> 
+           Dashing[{Small, Small}]}, GraphLayout -> "SpringEmbedding", 
+         VertexShapeFunction -> {
+          Subscript[GSberveglieri`Phi4tools`Private`b, {2, 3}] -> "Capsule"}, 
+         VertexSize -> {0.15}, 
+         VertexStyle -> {
+          Subscript[GSberveglieri`Phi4tools`Private`b, {2, 3}] -> 
+           RGBColor[0, 1, 0]}}]]}, 
+      TagBox[GraphicsGroupBox[{
+         {Hue[0.6, 0.7, 0.5], Opacity[0.7], 
+          {Dashing[{0, Small}], 
+           {Arrowheads[0.], 
+            ArrowBox[{{0., 1.642296710810719}, {0.994586405447634, 
+             1.625084593952944}}, 0.07104511359585523]}}, 
+          {Dashing[{0, Small}], 
+           {Arrowheads[0.], 
+            ArrowBox[{{0.994586405447634, 1.625084593952944}, {
+             0.5790401598546123, 2.5432093397546045`}}, 
+             0.07104511359585523]}}, 
+          {Arrowheads[0.], 
+           ArrowBox[{{0.994586405447634, 1.625084593952944}, {
+            2.005053652366411, 1.6250845944215608`}}, 0.07104511359585523]}, 
+          {Arrowheads[0.], 
+           ArrowBox[{{0.994586405447634, 1.625084593952944}, {
+            0.7721535419216299, 0.6064804120001667}}, 0.07104511359585523]}, 
+          {Dashing[{0, Small}], 
+           {Arrowheads[0.], 
+            ArrowBox[{{2.4205998974951584`, 2.543209340219856}, {
+             2.005053652366411, 1.6250845944215608`}}, 0.07104511359585523]}}, 
+          {Dashing[{0, Small}], 
+           {Arrowheads[0.], 
+            ArrowBox[{{2.005053652366411, 1.6250845944215608`}, {
+             2.999640057837997, 1.6422967114269837`}}, 0.07104511359585523]}}, 
+          {Arrowheads[0.], 
+           ArrowBox[{{2.005053652366411, 1.6250845944215608`}, {
+            2.227486516641606, 0.6064804124968654}}, 0.07104511359585523]}, 
+          {Dashing[{Small, Small}], 
+           {Arrowheads[0.], 
+            ArrowBox[{{0.7721535419216299, 0.6064804120001667}, {
+             1.4998200294844215`, 0.}}, 0.07104511359585523]}}, 
+          {Dashing[{Small, Small}], 
+           {Arrowheads[0.], 
+            ArrowBox[{{2.227486516641606, 0.6064804124968654}, {
+             1.4998200294844215`, 0.}}, 0.07104511359585523]}}}, 
+         {Hue[0.6, 0.2, 0.8], EdgeForm[{GrayLevel[0], Opacity[0.7]}], 
+          DiskBox[{0., 1.642296710810719}, 0.07104511359585523], 
+          DiskBox[{0.994586405447634, 1.625084593952944}, 
+           0.07104511359585523], 
+          DiskBox[{0.5790401598546123, 2.5432093397546045}, 
+           0.07104511359585523], 
+          DiskBox[{2.4205998974951584, 2.543209340219856}, 
+           0.07104511359585523], 
+          DiskBox[{2.005053652366411, 1.6250845944215608}, 
+           0.07104511359585523], 
+          DiskBox[{2.999640057837997, 1.6422967114269837}, 
+           0.07104511359585523], 
+          DiskBox[{0.7721535419216299, 0.6064804120001667}, 
+           0.07104511359585523], 
+          DiskBox[{2.227486516641606, 0.6064804124968654}, 
+           0.07104511359585523], 
+          {RGBColor[0, 1, 0], 
+           FilledCurveBox[{{{0, 2, 1}, {1, 6, 3}, {0, 1, 1}, {1, 6, 3}}}, {{{
+            1.4580288070883636`, -0.0417912223960579}, {
+            1.5416112518804794`, -0.0417912223960579}, {
+            1.5646919621148192`, -0.0417912223960579}, {
+            1.5834024742765374`, -0.02308063918922628}, {1.5834024742765374`, 
+            0.}, {1.5834024742765374`, 0.02308063918922628}, {
+            1.5646919621148192`, 0.0417912223960579}, {1.5416112518804794`, 
+            0.0417912223960579}, {1.4580288070883636`, 0.0417912223960579}, {
+            1.4349480968540238`, 0.0417912223960579}, {1.4162375846923057`, 
+            0.02308063918922628}, {1.4162375846923057`, 0.}, {
+            1.4162375846923057`, -0.02308063918922628}, {
+            1.4349480968540238`, -0.0417912223960579}, {
+            1.4580288070883636`, -0.0417912223960579}}}]}}}],
+       MouseAppearanceTag["NetworkGraphics"]],
+      AllowKernelInitialization->False]],
+    DefaultBaseStyle->{
+     "NetworkGraphics", FrontEnd`GraphicsHighlightColor -> Hue[0.8, 1., 0.6]},
+    
+    FormatType->TraditionalForm,
+    FrameTicks->None], ",", 
+   GraphicsBox[
+    NamespaceBox["NetworkGraphics",
+     DynamicModuleBox[{Typeset`graph = HoldComplete[
+       Graph[{
+        GSberveglieri`Phi4tools`Private`o1, 0, GSberveglieri`Phi4tools`Private`o2, 
+         GSberveglieri`Phi4tools`Private`o3, 1, GSberveglieri`Phi4tools`Private`o4, 3, 
+         Subscript[GSberveglieri`Phi4tools`Private`b, {3, 2}], 2, 
+         Subscript[GSberveglieri`Phi4tools`Private`t, {0, 1, 2}]}, {
+        Null, {{1, 2}, {3, 2}, {4, 5}, {6, 7}, {7, 8}, {8, 9}, {10, 2}, {10, 
+         5}, {10, 9}}}, {
+        EdgeStyle -> {
+          UndirectedEdge[GSberveglieri`Phi4tools`Private`o1, 0] -> 
+           Dashing[{0, Small}], 
+           UndirectedEdge[GSberveglieri`Phi4tools`Private`o3, 1] -> 
+           Dashing[{0, Small}], UndirectedEdge[
+             Subscript[GSberveglieri`Phi4tools`Private`t, {0, 1, 2}], 1] -> 
+           Dashing[{Small, Small}], UndirectedEdge[
+             Subscript[GSberveglieri`Phi4tools`Private`t, {0, 1, 2}], 0] -> 
+           Dashing[{Small, Small}], UndirectedEdge[3, 
+             Subscript[GSberveglieri`Phi4tools`Private`b, {3, 2}]] -> 
+           Dashing[{Small, Small}], 
+           UndirectedEdge[GSberveglieri`Phi4tools`Private`o2, 0] -> 
+           Dashing[{0, Small}], UndirectedEdge[
+             Subscript[GSberveglieri`Phi4tools`Private`t, {0, 1, 2}], 2] -> 
+           Dashing[{Small, Small}], UndirectedEdge[
+             Subscript[GSberveglieri`Phi4tools`Private`b, {3, 2}], 2] -> 
+           Dashing[{Small, Small}], 
+           UndirectedEdge[GSberveglieri`Phi4tools`Private`o4, 3] -> 
+           Dashing[{0, Small}]}, GraphLayout -> "SpringEmbedding", 
+         VertexShapeFunction -> {
+          Subscript[GSberveglieri`Phi4tools`Private`t, {0, 1, 2}] -> "Triangle", 
+           Subscript[GSberveglieri`Phi4tools`Private`b, {3, 2}] -> "Capsule"}, 
+         VertexSize -> {0.15}, 
+         VertexStyle -> {
+          Subscript[GSberveglieri`Phi4tools`Private`b, {3, 2}] -> RGBColor[0, 1, 0], 
+           Subscript[GSberveglieri`Phi4tools`Private`t, {0, 1, 2}] -> 
+           RGBColor[0, 1, 0]}}]]}, 
+      TagBox[GraphicsGroupBox[{
+         {Hue[0.6, 0.7, 0.5], Opacity[0.7], 
+          {Dashing[{0, Small}], 
+           {Arrowheads[0.], 
+            ArrowBox[{{4.456448607126504, 3.763863299929364}, {
+             4.41007689717462, 2.7248005570420357`}}, 
+             0.06754747322679985]}}, 
+          {Dashing[{0, Small}], 
+           {Arrowheads[0.], 
+            ArrowBox[{{4.41007689717462, 2.7248005570420357`}, {
+             5.425439412081634, 2.864706695205234}}, 0.06754747322679985]}}, 
+          {Dashing[{Small, Small}], 
+           {Arrowheads[0.], 
+            ArrowBox[{{4.41007689717462, 2.7248005570420357`}, {
+             3.7311704906458156`, 1.9058087015798417`}}, 
+             0.06754747322679985]}}, 
+          {Dashing[{0, Small}], 
+           {Arrowheads[0.], 
+            ArrowBox[{{4.479808963460058, 0.}, {4.132619727336151, 
+             0.9151638412048568}}, 0.06754747322679985]}}, 
+          {Dashing[{Small, Small}], 
+           {Arrowheads[0.], 
+            ArrowBox[{{4.132619727336151, 0.9151638412048568}, {
+             3.7311704906458156`, 1.9058087015798417`}}, 
+             0.06754747322679985]}}, 
+          {Dashing[{0, Small}], 
+           {Arrowheads[0.], 
+            ArrowBox[{{0., 2.4037318055558177`}, {0.8260195764485561, 
+             2.0448008687086108`}}, 0.06754747322679985]}}, 
+          {Dashing[{Small, Small}], 
+           {Arrowheads[0.], 
+            ArrowBox[{{0.8260195764485561, 2.0448008687086108`}, {
+             1.758118653736801, 2.010797088779642}}, 0.06754747322679985]}}, 
+          {Dashing[{Small, Small}], 
+           {Arrowheads[0.], 
+            ArrowBox[{{1.758118653736801, 2.010797088779642}, {
+             2.713527413802698, 1.9720630037627793`}}, 0.06754747322679985]}}, 
+          {Dashing[{Small, Small}], 
+           {Arrowheads[0.], 
+            ArrowBox[{{2.713527413802698, 1.9720630037627793`}, {
+             3.7311704906458156`, 1.9058087015798417`}}, 
+             0.06754747322679985]}}}, 
+         {Hue[0.6, 0.2, 0.8], EdgeForm[{GrayLevel[0], Opacity[0.7]}], 
+          DiskBox[{4.456448607126504, 3.763863299929364}, 
+           0.06754747322679985], 
+          DiskBox[{4.41007689717462, 2.7248005570420357}, 
+           0.06754747322679985], 
+          DiskBox[{5.425439412081634, 2.864706695205234}, 
+           0.06754747322679985], 
+          DiskBox[{4.479808963460058, 0.}, 0.06754747322679985], 
+          DiskBox[{4.132619727336151, 0.9151638412048568}, 
+           0.06754747322679985], 
+          DiskBox[{0., 2.4037318055558177}, 0.06754747322679985], 
+          DiskBox[{0.8260195764485561, 2.0448008687086108}, 
+           0.06754747322679985], 
+          {RGBColor[0, 1, 0], 
+           FilledCurveBox[{{{0, 2, 1}, {1, 6, 3}, {0, 1, 1}, {1, 6, 3}}}, {{{
+            1.7183848658232344`, 1.9710633008660754`}, {1.7978524416503676`, 
+            1.9710633008660754`}, {1.819796859467451, 1.9710633008660754`}, {
+            1.8375862295639342`, 1.9888527385100319`}, {1.8375862295639342`, 
+            2.010797088779642}, {1.8375862295639342`, 2.032741439049252}, {
+            1.819796859467451, 2.0505308766932084`}, {1.7978524416503676`, 
+            2.0505308766932084`}, {1.7183848658232344`, 
+            2.0505308766932084`}, {1.696440448006151, 2.0505308766932084`}, {
+            1.6786510779096677`, 2.032741439049252}, {1.6786510779096677`, 
+            2.010797088779642}, {1.6786510779096677`, 1.9888527385100319`}, {
+            1.696440448006151, 1.9710633008660754`}, {1.7183848658232344`, 
+            1.9710633008660754`}}}]}, 
+          DiskBox[{2.713527413802698, 1.9720630037627793}, 
+           0.06754747322679985], 
+          {RGBColor[0, 1, 0], 
+           PolygonBox[{{3.7311704906458156`, 1.9816577592662152`}, {
+            3.6556760571938827`, 1.8508979420968383`}, {3.8066649240977486`, 
+            1.8508979420968383`}, {3.7311704906458156`, 
+            1.9816577592662152`}}]}}}],
+       MouseAppearanceTag["NetworkGraphics"]],
+      AllowKernelInitialization->False]],
+    DefaultBaseStyle->{
+     "NetworkGraphics", FrontEnd`GraphicsHighlightColor -> Hue[0.8, 1., 0.6]},
+    
+    FormatType->TraditionalForm,
+    FrameTicks->None], ",", 
+   GraphicsBox[
+    NamespaceBox["NetworkGraphics",
+     DynamicModuleBox[{Typeset`graph = HoldComplete[
+       Graph[{
+        GSberveglieri`Phi4tools`Private`o1, 0, GSberveglieri`Phi4tools`Private`o2, 
+         GSberveglieri`Phi4tools`Private`o3, 1, GSberveglieri`Phi4tools`Private`o4, 3, 2, 
+         Subscript[GSberveglieri`Phi4tools`Private`t, {1, 3, 2}]}, {
+        Null, {{1, 2}, {3, 2}, {4, 5}, {6, 7}, {2, 5}, {2, 8}, {9, 5}, {9, 
+         7}, {9, 8}}}, {EdgeStyle -> {UndirectedEdge[
+             Subscript[GSberveglieri`Phi4tools`Private`t, {1, 3, 2}], 2] -> 
+           Dashing[{Small, Small}], 
+           UndirectedEdge[GSberveglieri`Phi4tools`Private`o1, 0] -> 
+           Dashing[{0, Small}], 
+           UndirectedEdge[GSberveglieri`Phi4tools`Private`o3, 1] -> 
+           Dashing[{0, Small}], UndirectedEdge[
+             Subscript[GSberveglieri`Phi4tools`Private`t, {1, 3, 2}], 1] -> 
+           Dashing[{Small, Small}], 
+           UndirectedEdge[GSberveglieri`Phi4tools`Private`o2, 0] -> 
+           Dashing[{0, Small}], 
+           UndirectedEdge[GSberveglieri`Phi4tools`Private`o4, 3] -> 
+           Dashing[{0, Small}], UndirectedEdge[
+             Subscript[GSberveglieri`Phi4tools`Private`t, {1, 3, 2}], 3] -> 
+           Dashing[{Small, Small}]}, GraphLayout -> "SpringEmbedding", 
+         VertexShapeFunction -> {
+          Subscript[GSberveglieri`Phi4tools`Private`t, {1, 3, 2}] -> "Triangle"}, 
+         VertexSize -> {0.15}, 
+         VertexStyle -> {
+          Subscript[GSberveglieri`Phi4tools`Private`t, {1, 3, 2}] -> 
+           RGBColor[0, 1, 0]}}]]}, 
+      TagBox[GraphicsGroupBox[{
+         {Hue[0.6, 0.7, 0.5], Opacity[0.7], 
+          {Dashing[{0, Small}], 
+           {Arrowheads[0.], 
+            ArrowBox[{{4.027334977213741, 2.521227140105779}, {
+             3.4198576652545194`, 1.7084373795531576`}}, 
+             0.06724099137533884]}}, 
+          {Dashing[{0, Small}], 
+           {Arrowheads[0.], 
+            ArrowBox[{{3.4198576652545194`, 1.7084373795531576`}, {
+             4.326353294283546, 1.2982954199892562`}}, 0.06724099137533884]}}, 
+          {Arrowheads[0.], 
+           ArrowBox[{{3.4198576652545194`, 1.7084373795531576`}, {
+            2.6510132302269622`, 1.000582203207455}}, 0.06724099137533884]}, 
+          {Arrowheads[0.], 
+           ArrowBox[{{3.4198576652545194`, 1.7084373795531576`}, {
+            2.5486805465405857`, 2.2984943095414883`}}, 0.06724099137533884]}, 
+          {Dashing[{0, Small}], 
+           {Arrowheads[0.], 
+            ArrowBox[{{2.692406810049825, 0.}, {2.6510132302269622`, 
+             1.000582203207455}}, 0.06724099137533884]}}, 
+          {Dashing[{Small, Small}], 
+           {Arrowheads[0.], 
+            ArrowBox[{{2.6510132302269622`, 1.000582203207455}, {
+             1.8106617292979847`, 1.5645240246912995`}}, 
+             0.06724099137533884]}}, 
+          {Dashing[{0, Small}], 
+           {Arrowheads[0.], 
+            ArrowBox[{{0., 1.805467959175851}, {0.8843374652383535, 
+             1.6580129935446586`}}, 0.06724099137533884]}}, 
+          {Dashing[{Small, Small}], 
+           {Arrowheads[0.], 
+            ArrowBox[{{0.8843374652383535, 1.6580129935446586`}, {
+             1.8106617292979847`, 1.5645240246912995`}}, 
+             0.06724099137533884]}}, 
+          {Dashing[{Small, Small}], 
+           {Arrowheads[0.], 
+            ArrowBox[{{2.5486805465405857`, 2.2984943095414883`}, {
+             1.8106617292979847`, 1.5645240246912995`}}, 
+             0.06724099137533884]}}}, 
+         {Hue[0.6, 0.2, 0.8], EdgeForm[{GrayLevel[0], Opacity[0.7]}], 
+          DiskBox[{4.027334977213741, 2.521227140105779}, 
+           0.06724099137533884], 
+          DiskBox[{3.4198576652545194, 1.7084373795531576}, 
+           0.06724099137533884], 
+          DiskBox[{4.326353294283546, 1.2982954199892562}, 
+           0.06724099137533884], 
+          DiskBox[{2.692406810049825, 0.}, 0.06724099137533884], 
+          DiskBox[{2.6510132302269622, 1.000582203207455}, 
+           0.06724099137533884], 
+          DiskBox[{0., 1.805467959175851}, 0.06724099137533884], 
+          DiskBox[{0.8843374652383535, 1.6580129935446586}, 
+           0.06724099137533884], 
+          DiskBox[{2.5486805465405857, 2.2984943095414883}, 
+           0.06724099137533884], 
+          {RGBColor[0, 1, 0], 
+           PolygonBox[{{1.8106617292979847`, 1.6400289339066674`}, {
+            1.7355098352873373`, 1.5098624107414675`}, {1.8858136233086322`, 
+            1.5098624107414675`}, {1.8106617292979847`, 
+            1.6400289339066674`}}]}}}],
+       MouseAppearanceTag["NetworkGraphics"]],
+      AllowKernelInitialization->False]],
+    DefaultBaseStyle->{
+     "NetworkGraphics", FrontEnd`GraphicsHighlightColor -> Hue[0.8, 1., 0.6]},
+    
+    FormatType->TraditionalForm,
+    FrameTicks->None], ",", 
+   GraphicsBox[
+    NamespaceBox["NetworkGraphics",
+     DynamicModuleBox[{Typeset`graph = HoldComplete[
+       Graph[{
+        GSberveglieri`Phi4tools`Private`o1, 0, GSberveglieri`Phi4tools`Private`o2, 
+         GSberveglieri`Phi4tools`Private`o3, 1, GSberveglieri`Phi4tools`Private`o4, 2, 3, 
+         Subscript[GSberveglieri`Phi4tools`Private`b, {2, 3}]}, {
+        Null, {{1, 2}, {3, 2}, {4, 5}, {6, 7}, {2, 5}, {2, 7}, {5, 8}, {7, 
+         9}, {9, 8}}}, {EdgeStyle -> {UndirectedEdge[2, 
+             Subscript[GSberveglieri`Phi4tools`Private`b, {2, 3}]] -> 
+           Dashing[{Small, Small}], 
+           UndirectedEdge[GSberveglieri`Phi4tools`Private`o1, 0] -> 
+           Dashing[{0, Small}], 
+           UndirectedEdge[GSberveglieri`Phi4tools`Private`o3, 1] -> 
+           Dashing[{0, Small}], 
+           UndirectedEdge[GSberveglieri`Phi4tools`Private`o4, 2] -> 
+           Dashing[{0, Small}], 
+           UndirectedEdge[GSberveglieri`Phi4tools`Private`o2, 0] -> 
+           Dashing[{0, Small}], UndirectedEdge[
+             Subscript[GSberveglieri`Phi4tools`Private`b, {2, 3}], 3] -> 
+           Dashing[{Small, Small}]}, GraphLayout -> "SpringEmbedding", 
+         VertexShapeFunction -> {
+          Subscript[GSberveglieri`Phi4tools`Private`b, {2, 3}] -> "Capsule"}, 
+         VertexSize -> {0.15}, 
+         VertexStyle -> {
+          Subscript[GSberveglieri`Phi4tools`Private`b, {2, 3}] -> 
+           RGBColor[0, 1, 0]}}]]}, 
+      TagBox[GraphicsGroupBox[{
+         {Hue[0.6, 0.7, 0.5], Opacity[0.7], 
+          {Dashing[{0, Small}], 
+           {Arrowheads[0.], 
+            ArrowBox[{{1.2530765579327485`, 2.48516772168404}, {
+             1.7642738220738008`, 1.6219023248887914`}}, 
+             0.07135679708565158]}}, 
+          {Dashing[{0, Small}], 
+           {Arrowheads[0.], 
+            ArrowBox[{{1.7642738220738008`, 1.6219023248887914`}, {
+             2.279496149866012, 2.4825314615520644`}}, 0.07135679708565158]}}, 
+          {Arrowheads[0.], 
+           ArrowBox[{{1.7642738220738008`, 1.6219023248887914`}, {
+            2.557114177290444, 0.9667659332391513}}, 0.07135679708565158]}, 
+          {Arrowheads[0.], 
+           ArrowBox[{{1.7642738220738008`, 1.6219023248887914`}, {
+            0.9693222650519961, 0.9697105613584721}}, 0.07135679708565158]}, 
+          {Dashing[{0, Small}], 
+           {Arrowheads[0.], 
+            ArrowBox[{{3.526320703099781, 0.8828737816296754}, {
+             2.557114177290444, 0.9667659332391513}}, 
+             0.07135679708565158]}}, 
+          {Arrowheads[0.], 
+           ArrowBox[{{2.557114177290444, 0.9667659332391513}, {
+            2.23739185629084, 0.}}, 0.07135679708565158]}, 
+          {Dashing[{0, Small}], 
+           {Arrowheads[0.], 
+            ArrowBox[{{0., 0.8872894783718643}, {0.9693222650519961, 
+             0.9697105613584721}}, 0.07135679708565158]}}, 
+          {Dashing[{Small, Small}], 
+           {Arrowheads[0.], 
+            ArrowBox[{{0.9693222650519961, 0.9697105613584721}, {
+             1.2859693609856913`, 0.00167010852891325}}, 
+             0.07135679708565158]}}, 
+          {Dashing[{Small, Small}], 
+           {Arrowheads[0.], 
+            ArrowBox[{{2.23739185629084, 0.}, {1.2859693609856913`, 
+             0.00167010852891325}}, 0.07135679708565158]}}}, 
+         {Hue[0.6, 0.2, 0.8], EdgeForm[{GrayLevel[0], Opacity[0.7]}], 
+          DiskBox[{1.2530765579327485, 2.48516772168404}, 
+           0.07135679708565158], 
+          DiskBox[{1.7642738220738008, 1.6219023248887914}, 
+           0.07135679708565158], 
+          DiskBox[{2.279496149866012, 2.4825314615520644}, 
+           0.07135679708565158], 
+          DiskBox[{3.526320703099781, 0.8828737816296754}, 
+           0.07135679708565158], 
+          DiskBox[{2.557114177290444, 0.9667659332391513}, 
+           0.07135679708565158], 
+          DiskBox[{0., 0.8872894783718643}, 0.07135679708565158], 
+          DiskBox[{0.9693222650519961, 0.9697105613584721}, 
+           0.07135679708565158], 
+          DiskBox[{2.23739185629084, 0.}, 0.07135679708565158], 
+          {RGBColor[0, 1, 0], 
+           FilledCurveBox[{{{0, 2, 1}, {1, 6, 3}, {0, 1, 1}, {1, 6, 3}}}, {{{
+            1.243994795452013, -0.040304457004765}, {
+            1.3279439265193695`, -0.040304457004765}, {
+            1.3511258946157736`, -0.040304457004765}, {
+            1.3699184920530478`, -0.021511788210693637`}, {
+            1.3699184920530478`, 0.00167010852891325}, {1.3699184920530478`, 
+            0.024852005268520137`}, {1.3511258946157736`, 
+            0.0436446740625915}, {1.3279439265193695`, 0.0436446740625915}, {
+            1.243994795452013, 0.0436446740625915}, {1.220812827355609, 
+            0.0436446740625915}, {1.2020202299183347`, 
+            0.024852005268520137`}, {1.2020202299183347`, 
+            0.00167010852891325}, {
+            1.2020202299183347`, -0.021511788210693637`}, {
+            1.220812827355609, -0.040304457004765}, {
+            1.243994795452013, -0.040304457004765}}}]}}}],
+       MouseAppearanceTag["NetworkGraphics"]],
+      AllowKernelInitialization->False]],
+    DefaultBaseStyle->{
+     "NetworkGraphics", FrontEnd`GraphicsHighlightColor -> Hue[0.8, 1., 0.6]},
+    
+    FormatType->TraditionalForm,
+    FrameTicks->None], ",", 
+   GraphicsBox[
+    NamespaceBox["NetworkGraphics",
+     DynamicModuleBox[{Typeset`graph = HoldComplete[
+       Graph[{
+        GSberveglieri`Phi4tools`Private`o1, 0, GSberveglieri`Phi4tools`Private`o2, 
+         GSberveglieri`Phi4tools`Private`o3, 1, GSberveglieri`Phi4tools`Private`o4, 3, 2, 
+         Subscript[GSberveglieri`Phi4tools`Private`b, {3, 2}]}, {
+        Null, {{1, 2}, {3, 2}, {4, 5}, {6, 7}, {2, 5}, {2, 8}, {5, 7}, {7, 
+         9}, {9, 8}}}, {
+        EdgeStyle -> {
+          UndirectedEdge[GSberveglieri`Phi4tools`Private`o1, 0] -> 
+           Dashing[{0, Small}], 
+           UndirectedEdge[GSberveglieri`Phi4tools`Private`o3, 1] -> 
+           Dashing[{0, Small}], UndirectedEdge[3, 
+             Subscript[GSberveglieri`Phi4tools`Private`b, {3, 2}]] -> 
+           Dashing[{Small, Small}], 
+           UndirectedEdge[GSberveglieri`Phi4tools`Private`o2, 0] -> 
+           Dashing[{0, Small}], UndirectedEdge[
+             Subscript[GSberveglieri`Phi4tools`Private`b, {3, 2}], 2] -> 
+           Dashing[{Small, Small}], 
+           UndirectedEdge[GSberveglieri`Phi4tools`Private`o4, 3] -> 
+           Dashing[{0, Small}]}, GraphLayout -> "SpringEmbedding", 
+         VertexShapeFunction -> {
+          Subscript[GSberveglieri`Phi4tools`Private`b, {3, 2}] -> "Capsule"}, 
+         VertexSize -> {0.15}, 
+         VertexStyle -> {
+          Subscript[GSberveglieri`Phi4tools`Private`b, {3, 2}] -> 
+           RGBColor[0, 1, 0]}}]]}, 
+      TagBox[GraphicsGroupBox[{
+         {Hue[0.6, 0.7, 0.5], Opacity[0.7], 
+          {Dashing[{0, Small}], 
+           {Arrowheads[0.], 
+            ArrowBox[{{0., 0.45053678300547007`}, {0.8545680864907874, 
+             0.9837418848141546}}, 0.07117151399206172]}}, 
+          {Dashing[{0, Small}], 
+           {Arrowheads[0.], 
+            ArrowBox[{{0.8545680864907874, 0.9837418848141546}, {
+             0.07740935982474917, 1.6135952643574714`}}, 
+             0.07117151399206172]}}, 
+          {Arrowheads[0.], 
+           ArrowBox[{{0.8545680864907874, 0.9837418848141546}, {
+            1.7247622233969633`, 1.5277012968688077`}}, 0.07117151399206172]}, 
+          {Arrowheads[0.], 
+           ArrowBox[{{0.8545680864907874, 0.9837418848141546}, {
+            1.2740822628694035`, 0.04502052398430734}}, 0.07117151399206172]}, 
+          {Dashing[{0, Small}], 
+           {Arrowheads[0.], 
+            ArrowBox[{{1.8726845655091924`, 2.5138547084457916`}, {
+             1.7247622233969633`, 1.5277012968688077`}}, 
+             0.07117151399206172]}}, 
+          {Arrowheads[0.], 
+           ArrowBox[{{1.7247622233969633`, 1.5277012968688077`}, {
+            2.5640568172257217`, 0.945076579920011}}, 0.07117151399206172]}, 
+          {Dashing[{0, Small}], 
+           {Arrowheads[0.], 
+            ArrowBox[{{3.5126297029715134`, 0.9719515375462083}, {
+             2.5640568172257217`, 0.945076579920011}}, 0.07117151399206172]}}, 
+          {Dashing[{Small, Small}], 
+           {Arrowheads[0.], 
+            ArrowBox[{{2.5640568172257217`, 0.945076579920011}, {
+             2.2418868483854104`, 0.}}, 0.07117151399206172]}}, 
+          {Dashing[{Small, Small}], 
+           {Arrowheads[0.], 
+            ArrowBox[{{1.2740822628694035`, 0.04502052398430734}, {
+             2.2418868483854104`, 0.}}, 0.07117151399206172]}}}, 
+         {Hue[0.6, 0.2, 0.8], EdgeForm[{GrayLevel[0], Opacity[0.7]}], 
+          DiskBox[{0., 0.45053678300547007}, 0.07117151399206172], 
+          DiskBox[{0.8545680864907874, 0.9837418848141546}, 
+           0.07117151399206172], 
+          DiskBox[{0.07740935982474917, 1.6135952643574714}, 
+           0.07117151399206172], 
+          DiskBox[{1.8726845655091924, 2.5138547084457916}, 
+           0.07117151399206172], 
+          DiskBox[{1.7247622233969633, 1.5277012968688077}, 
+           0.07117151399206172], 
+          DiskBox[{3.5126297029715134, 0.9719515375462083}, 
+           0.07117151399206172], 
+          DiskBox[{2.5640568172257217, 0.945076579920011}, 
+           0.07117151399206172], 
+          DiskBox[{1.2740822628694035, 0.04502052398430734}, 
+           0.07117151399206172], 
+          {RGBColor[0, 1, 0], 
+           FilledCurveBox[{{{0, 2, 1}, {1, 6, 3}, {0, 1, 1}, {1, 6, 3}}}, {{{
+            2.20002127285229, -0.04186557553312042}, {
+            2.2837524239185307`, -0.04186557553312042}, {
+            2.306874198355188, -0.04186557553312042}, {
+            2.325617999451651, -0.023121703265143068`}, {2.325617999451651, 
+            0.}, {2.325617999451651, 0.023121703265143068`}, {
+            2.306874198355188, 0.04186557553312042}, {2.2837524239185307`, 
+            0.04186557553312042}, {2.20002127285229, 0.04186557553312042}, {
+            2.176899498415633, 0.04186557553312042}, {2.15815569731917, 
+            0.023121703265143068`}, {2.15815569731917, 0.}, {
+            2.15815569731917, -0.023121703265143068`}, {
+            2.176899498415633, -0.04186557553312042}, {
+            2.20002127285229, -0.04186557553312042}}}]}}}],
+       MouseAppearanceTag["NetworkGraphics"]],
+      AllowKernelInitialization->False]],
+    DefaultBaseStyle->{
+     "NetworkGraphics", FrontEnd`GraphicsHighlightColor -> Hue[0.8, 1., 0.6]},
+    
+    FormatType->TraditionalForm,
+    FrameTicks->None], ",", 
+   GraphicsBox[
+    NamespaceBox["NetworkGraphics",
+     DynamicModuleBox[{Typeset`graph = HoldComplete[
+       Graph[{
+        GSberveglieri`Phi4tools`Private`o1, 0, GSberveglieri`Phi4tools`Private`o2, 
+         GSberveglieri`Phi4tools`Private`o3, 3, GSberveglieri`Phi4tools`Private`o4, 1, 2, 
+         Subscript[GSberveglieri`Phi4tools`Private`t, {3, 1, 2}]}, {
+        Null, {{1, 2}, {3, 2}, {4, 5}, {6, 5}, {2, 7}, {2, 8}, {9, 5}, {9, 
+         7}, {9, 8}}}, {EdgeStyle -> {UndirectedEdge[
+             Subscript[GSberveglieri`Phi4tools`Private`t, {3, 1, 2}], 1] -> 
+           Dashing[{Small, Small}], 
+           UndirectedEdge[GSberveglieri`Phi4tools`Private`o1, 0] -> 
+           Dashing[{0, Small}], UndirectedEdge[
+             Subscript[GSberveglieri`Phi4tools`Private`t, {3, 1, 2}], 2] -> 
+           Dashing[{Small, Small}], UndirectedEdge[
+             Subscript[GSberveglieri`Phi4tools`Private`t, {3, 1, 2}], 3] -> 
+           Dashing[{Small, Small}], 
+           UndirectedEdge[GSberveglieri`Phi4tools`Private`o2, 0] -> 
+           Dashing[{0, Small}], 
+           UndirectedEdge[GSberveglieri`Phi4tools`Private`o3, 3] -> 
+           Dashing[{0, Small}], 
+           UndirectedEdge[GSberveglieri`Phi4tools`Private`o4, 3] -> 
+           Dashing[{0, Small}]}, GraphLayout -> "SpringEmbedding", 
+         VertexShapeFunction -> {
+          Subscript[GSberveglieri`Phi4tools`Private`t, {3, 1, 2}] -> "Triangle"}, 
+         VertexSize -> {0.15}, 
+         VertexStyle -> {
+          Subscript[GSberveglieri`Phi4tools`Private`t, {3, 1, 2}] -> 
+           RGBColor[0, 1, 0]}}]]}, 
+      TagBox[GraphicsGroupBox[{
+         {Hue[0.6, 0.7, 0.5], Opacity[0.7], 
+          {Dashing[{0, Small}], 
+           {Arrowheads[0.], 
+            ArrowBox[{{4.003728769941074, 1.454546501387868}, {
+             3.292132187795932, 0.7449910910025426}}, 
+             0.07100803451789241]}}, 
+          {Dashing[{0, Small}], 
+           {Arrowheads[0.], 
+            ArrowBox[{{3.292132187795932, 0.7449910910025426}, {
+             4.008008495248292, 0.04170268366904939}}, 0.07100803451789241]}}, 
+          {Arrowheads[0.], 
+           ArrowBox[{{3.292132187795932, 0.7449910910025426}, {
+            2.4365944222483296`, 1.3055085458378244`}}, 0.07100803451789241]}, 
+          {Arrowheads[0.], 
+           ArrowBox[{{3.292132187795932, 0.7449910910025426}, {
+            2.4379696699931257`, 0.1802323611325226}}, 
+            0.07100803451789241]}, 
+          {Dashing[{0, Small}], 
+           {Arrowheads[0.], 
+            ArrowBox[{{0.0038447615119898693`, 1.4952764139730128`}, {
+             0.6671140443148584, 0.7453120202832172}}, 0.07100803451789241]}}, 
+          {Dashing[{0, Small}], 
+           {Arrowheads[0.], 
+            ArrowBox[{{0.6671140443148584, 0.7453120202832172}, {0., 0.}}, 
+             0.07100803451789241]}}, 
+          {Dashing[{Small, Small}], 
+           {Arrowheads[0.], 
+            ArrowBox[{{0.6671140443148584, 0.7453120202832172}, {
+             1.6138794282818765`, 0.7413215420776494}}, 
+             0.07100803451789241]}}, 
+          {Dashing[{Small, Small}], 
+           {Arrowheads[0.], 
+            ArrowBox[{{2.4365944222483296`, 1.3055085458378244`}, {
+             1.6138794282818765`, 0.7413215420776494}}, 
+             0.07100803451789241]}}, 
+          {Dashing[{Small, Small}], 
+           {Arrowheads[0.], 
+            ArrowBox[{{2.4379696699931257`, 0.1802323611325226}, {
+             1.6138794282818765`, 0.7413215420776494}}, 
+             0.07100803451789241]}}}, 
+         {Hue[0.6, 0.2, 0.8], EdgeForm[{GrayLevel[0], Opacity[0.7]}], 
+          DiskBox[{4.003728769941074, 1.454546501387868}, 
+           0.07100803451789241], 
+          DiskBox[{3.292132187795932, 0.7449910910025426}, 
+           0.07100803451789241], 
+          DiskBox[{4.008008495248292, 0.04170268366904939}, 
+           0.07100803451789241], 
+          DiskBox[{0.0038447615119898693, 1.4952764139730128}, 
+           0.07100803451789241], 
+          DiskBox[{0.6671140443148584, 0.7453120202832172}, 
+           0.07100803451789241], DiskBox[{0., 0.}, 0.07100803451789241], 
+          DiskBox[{2.4365944222483296, 1.3055085458378244}, 
+           0.07100803451789241], 
+          DiskBox[{2.4379696699931257, 0.1802323611325226}, 
+           0.07100803451789241], 
+          {RGBColor[0, 1, 0], 
+           PolygonBox[{{1.6138794282818765`, 0.8210564640377909}, {
+            1.534517298502954, 0.6835976196493299}, {1.693241558060799, 
+            0.6835976196493299}, {1.6138794282818765`, 
+            0.8210564640377909}}]}}}],
+       MouseAppearanceTag["NetworkGraphics"]],
+      AllowKernelInitialization->False]],
+    DefaultBaseStyle->{
+     "NetworkGraphics", FrontEnd`GraphicsHighlightColor -> Hue[0.8, 1., 0.6]},
+    
+    FormatType->TraditionalForm,
+    FrameTicks->None], ",", 
+   GraphicsBox[
+    NamespaceBox["NetworkGraphics",
+     DynamicModuleBox[{Typeset`graph = HoldComplete[
+       Graph[{
+        GSberveglieri`Phi4tools`Private`o1, 0, GSberveglieri`Phi4tools`Private`o2, 1, 
+         GSberveglieri`Phi4tools`Private`o3, 2, GSberveglieri`Phi4tools`Private`o4, 3, 
+         Subscript[GSberveglieri`Phi4tools`Private`b, {0, 1}]}, {
+        Null, {{1, 2}, {3, 4}, {5, 6}, {7, 8}, {2, 6}, {4, 8}, {6, 8}, {2, 
+         9}, {9, 4}}}, {
+        EdgeStyle -> {
+          UndirectedEdge[GSberveglieri`Phi4tools`Private`o3, 2] -> 
+           Dashing[{0, Small}], 
+           UndirectedEdge[GSberveglieri`Phi4tools`Private`o1, 0] -> 
+           Dashing[{0, Small}], 
+           UndirectedEdge[GSberveglieri`Phi4tools`Private`o2, 1] -> 
+           Dashing[{0, Small}], UndirectedEdge[
+             Subscript[GSberveglieri`Phi4tools`Private`b, {0, 1}], 1] -> 
+           Dashing[{Small, Small}], 
+           UndirectedEdge[GSberveglieri`Phi4tools`Private`o4, 3] -> 
+           Dashing[{0, Small}], UndirectedEdge[0, 
+             Subscript[GSberveglieri`Phi4tools`Private`b, {0, 1}]] -> 
+           Dashing[{Small, Small}]}, GraphLayout -> "SpringEmbedding", 
+         VertexShapeFunction -> {
+          Subscript[GSberveglieri`Phi4tools`Private`b, {0, 1}] -> "Capsule"}, 
+         VertexSize -> {0.15}, 
+         VertexStyle -> {
+          Subscript[GSberveglieri`Phi4tools`Private`b, {0, 1}] -> 
+           RGBColor[0, 1, 0]}}]]}, 
+      TagBox[GraphicsGroupBox[{
+         {Hue[0.6, 0.7, 0.5], Opacity[0.7], 
+          {Dashing[{0, Small}], 
+           {Arrowheads[0.], 
+            ArrowBox[{{0., 0.06829011949432628}, {0.8236292202200127, 
+             0.568313038006473}}, 0.07226467023613042]}}, 
+          {Arrowheads[0.], 
+           ArrowBox[{{0.8236292202200127, 0.568313038006473}, {
+            1.1457267836640623`, 1.5340554045569221`}}, 0.07226467023613042]}, 
+          {Dashing[{Small, Small}], 
+           {Arrowheads[0.], 
+            ArrowBox[{{0.8236292202200127, 0.568313038006473}, {
+             1.6658066946871364`, 0.}}, 0.07226467023613042]}}, 
+          {Dashing[{0, Small}], 
+           {Arrowheads[0.], 
+            ArrowBox[{{3.3315652903499346`, 0.0683188682666458}, {
+             2.507959868308665, 0.5683837399930044}}, 
+             0.07226467023613042]}}, 
+          {Arrowheads[0.], 
+           ArrowBox[{{2.507959868308665, 0.5683837399930044}, {
+            2.185794011424041, 1.534091218846573}}, 0.07226467023613042]}, 
+          {Dashing[{Small, Small}], 
+           {Arrowheads[0.], 
+            ArrowBox[{{2.507959868308665, 0.5683837399930044}, {
+             1.6658066946871364`, 0.}}, 0.07226467023613042]}}, 
+          {Dashing[{0, Small}], 
+           {Arrowheads[0.], 
+            ArrowBox[{{0.54626692875997, 2.3104130275085772`}, {
+             1.1457267836640623`, 1.5340554045569221`}}, 
+             0.07226467023613042]}}, 
+          {Arrowheads[0.], 
+           ArrowBox[{{1.1457267836640623`, 1.5340554045569221`}, {
+            2.185794011424041, 1.534091218846573}}, 0.07226467023613042]}, 
+          {Dashing[{0, Small}], 
+           {Arrowheads[0.], 
+            ArrowBox[{{2.78513859665975, 2.3105399224198138`}, {
+             2.185794011424041, 1.534091218846573}}, 
+             0.07226467023613042]}}}, 
+         {Hue[0.6, 0.2, 0.8], EdgeForm[{GrayLevel[0], Opacity[0.7]}], 
+          DiskBox[{0., 0.06829011949432628}, 0.07226467023613042], 
+          DiskBox[{0.8236292202200127, 0.568313038006473}, 
+           0.07226467023613042], 
+          DiskBox[{3.3315652903499346, 0.0683188682666458}, 
+           0.07226467023613042], 
+          DiskBox[{2.507959868308665, 0.5683837399930044}, 
+           0.07226467023613042], 
+          DiskBox[{0.54626692875997, 2.3104130275085772}, 
+           0.07226467023613042], 
+          DiskBox[{1.1457267836640623, 1.5340554045569221}, 
+           0.07226467023613042], 
+          DiskBox[{2.78513859665975, 2.3105399224198138}, 
+           0.07226467023613042], 
+          DiskBox[{2.185794011424041, 1.534091218846573}, 
+           0.07226467023613042], 
+          {RGBColor[0, 1, 0], 
+           FilledCurveBox[{{{0, 2, 1}, {1, 6, 3}, {0, 1, 1}, {1, 6, 3}}}, {{{
+            1.6232980863907862`, -0.04250860829635018}, {
+            1.7083153029834865`, -0.04250860829635018}, {
+            1.731792215461779, -0.04250860829635018}, {
+            1.7508239112798367`, -0.0234768402136224}, {1.7508239112798367`, 
+            0.}, {1.7508239112798367`, 0.0234768402136224}, {
+            1.731792215461779, 0.04250860829635018}, {1.7083153029834865`, 
+            0.04250860829635018}, {1.6232980863907862`, 
+            0.04250860829635018}, {1.5998211739124937`, 
+            0.04250860829635018}, {1.580789478094436, 0.0234768402136224}, {
+            1.580789478094436, 0.}, {
+            1.580789478094436, -0.0234768402136224}, {
+            1.5998211739124937`, -0.04250860829635018}, {
+            1.6232980863907862`, -0.04250860829635018}}}]}}}],
+       MouseAppearanceTag["NetworkGraphics"]],
+      AllowKernelInitialization->False]],
+    DefaultBaseStyle->{
+     "NetworkGraphics", FrontEnd`GraphicsHighlightColor -> Hue[0.8, 1., 0.6]},
+    
+    FormatType->TraditionalForm,
+    FrameTicks->None], ",", 
+   GraphicsBox[
+    NamespaceBox["NetworkGraphics",
+     DynamicModuleBox[{Typeset`graph = HoldComplete[
+       Graph[{
+        GSberveglieri`Phi4tools`Private`o1, 0, GSberveglieri`Phi4tools`Private`o2, 1, 
+         GSberveglieri`Phi4tools`Private`o3, 2, GSberveglieri`Phi4tools`Private`o4, 3, 
+         Subscript[GSberveglieri`Phi4tools`Private`t, {1, 2, 3}]}, {
+        Null, {{1, 2}, {3, 4}, {5, 6}, {7, 8}, {2, 4}, {2, 6}, {9, 4}, {9, 
+         6}, {9, 8}}}, {
+        EdgeStyle -> {
+          UndirectedEdge[GSberveglieri`Phi4tools`Private`o3, 2] -> 
+           Dashing[{0, Small}], 
+           UndirectedEdge[GSberveglieri`Phi4tools`Private`o1, 0] -> 
+           Dashing[{0, Small}], UndirectedEdge[
+             Subscript[GSberveglieri`Phi4tools`Private`t, {1, 2, 3}], 2] -> 
+           Dashing[{Small, Small}], 
+           UndirectedEdge[GSberveglieri`Phi4tools`Private`o2, 1] -> 
+           Dashing[{0, Small}], UndirectedEdge[
+             Subscript[GSberveglieri`Phi4tools`Private`t, {1, 2, 3}], 3] -> 
+           Dashing[{Small, Small}], 
+           UndirectedEdge[GSberveglieri`Phi4tools`Private`o4, 3] -> 
+           Dashing[{0, Small}], UndirectedEdge[
+             Subscript[GSberveglieri`Phi4tools`Private`t, {1, 2, 3}], 1] -> 
+           Dashing[{Small, Small}]}, GraphLayout -> "SpringEmbedding", 
+         VertexShapeFunction -> {
+          Subscript[GSberveglieri`Phi4tools`Private`t, {1, 2, 3}] -> "Triangle"}, 
+         VertexSize -> {0.15}, 
+         VertexStyle -> {
+          Subscript[GSberveglieri`Phi4tools`Private`t, {1, 2, 3}] -> 
+           RGBColor[0, 1, 0]}}]]}, 
+      TagBox[GraphicsGroupBox[{
+         {Hue[0.6, 0.7, 0.5], Opacity[0.7], 
+          {Dashing[{0, Small}], 
+           {Arrowheads[0.], 
+            ArrowBox[{{4.331567114199715, 1.7074418962806637`}, {
+             3.370859656722936, 1.7068805410115777`}}, 
+             0.0684145626596384]}}, 
+          {Arrowheads[0.], 
+           ArrowBox[{{3.370859656722936, 1.7068805410115777`}, {
+            2.6105571767952647`, 0.972006635733197}}, 0.0684145626596384]}, 
+          {Arrowheads[0.], 
+           ArrowBox[{{3.370859656722936, 1.7068805410115777`}, {
+            2.609968993735528, 2.4411566761486148`}}, 0.0684145626596384]}, 
+          {Dashing[{0, Small}], 
+           {Arrowheads[0.], 
+            ArrowBox[{{2.7193640607392195`, 0.}, {2.6105571767952647`, 
+             0.972006635733197}}, 0.0684145626596384]}}, 
+          {Dashing[{Small, Small}], 
+           {Arrowheads[0.], 
+            ArrowBox[{{2.6105571767952647`, 0.972006635733197}, {
+             1.8672629501623952`, 1.7062764208966867`}}, 
+             0.0684145626596384]}}, 
+          {Dashing[{0, Small}], 
+           {Arrowheads[0.], 
+            ArrowBox[{{2.7179756766534036`, 3.413250939650575}, {
+             2.609968993735528, 2.4411566761486148`}}, 
+             0.0684145626596384]}}, 
+          {Dashing[{Small, Small}], 
+           {Arrowheads[0.], 
+            ArrowBox[{{2.609968993735528, 2.4411566761486148`}, {
+             1.8672629501623952`, 1.7062764208966867`}}, 
+             0.0684145626596384]}}, 
+          {Dashing[{0, Small}], 
+           {Arrowheads[0.], 
+            ArrowBox[{{0., 1.7069444186118987`}, {0.912193123154287, 
+             1.7055632401459442`}}, 0.0684145626596384]}}, 
+          {Dashing[{Small, Small}], 
+           {Arrowheads[0.], 
+            ArrowBox[{{0.912193123154287, 1.7055632401459442`}, {
+             1.8672629501623952`, 1.7062764208966867`}}, 
+             0.0684145626596384]}}}, 
+         {Hue[0.6, 0.2, 0.8], EdgeForm[{GrayLevel[0], Opacity[0.7]}], 
+          DiskBox[{4.331567114199715, 1.7074418962806637}, 
+           0.0684145626596384], 
+          DiskBox[{3.370859656722936, 1.7068805410115777}, 
+           0.0684145626596384], 
+          DiskBox[{2.7193640607392195, 0.}, 0.0684145626596384], 
+          DiskBox[{2.6105571767952647, 0.972006635733197}, 
+           0.0684145626596384], 
+          DiskBox[{2.7179756766534036, 3.413250939650575}, 
+           0.0684145626596384], 
+          DiskBox[{2.609968993735528, 2.4411566761486148}, 
+           0.0684145626596384], 
+          DiskBox[{0., 1.7069444186118987}, 0.0684145626596384], 
+          DiskBox[{0.912193123154287, 1.7055632401459442}, 
+           0.0684145626596384], 
+          {RGBColor[0, 1, 0], 
+           PolygonBox[{{1.8672629501623952`, 1.7830991333071946`}, {
+            1.7907994142058503`, 1.6506607862048508`}, {1.94372648611894, 
+            1.6506607862048508`}, {1.8672629501623952`, 
+            1.7830991333071946`}}]}}}],
+       MouseAppearanceTag["NetworkGraphics"]],
+      AllowKernelInitialization->False]],
+    DefaultBaseStyle->{
+     "NetworkGraphics", FrontEnd`GraphicsHighlightColor -> Hue[0.8, 1., 0.6]},
+    
+    FormatType->TraditionalForm,
+    FrameTicks->None]}], "}"}]], "Output",
+ CellChangeTimes->{3.868936983562583*^9},
+ CellLabel->"Out[6]=",
+ CellID->1251525946,ExpressionUUID->"153dbc20-b232-4d3b-b4fc-8cc341df2f79"]
+}, Open  ]],
+
+Cell["\<\
+Note: The edges have to be read by the package when the function is run the \
+first time, so at high order it might take some time, from a few seconds to a \
+few minutes.\
+\>", "ExampleText",
+ CellChangeTimes->{{3.86893689452284*^9, 3.868936969177353*^9}, 
+   3.885808434158866*^9},
+ CellID->58320284,ExpressionUUID->"9d0c3d56-0559-4b9b-a522-61500703d93b"]
+}, Open  ]]
+}, Open  ]]
+},
+WindowSize->{766, 799},
+WindowMargins->{{Automatic, 275}, {Automatic, 48}},
+TaggingRules-><|"Paclet" -> "None"|>,
+CellContext->"Global`",
+FrontEndVersion->"13.1 for Mac OS X x86 (64-bit) (June 16, 2022)",
+StyleDefinitions->FrontEnd`FileName[{"Wolfram"}, "FunctionPageStylesExt.nb", 
+  CharacterEncoding -> "UTF-8"],
+ExpressionUUID->"a4fa2a03-2395-4117-b82d-8a4fb22ac0a2"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{
+ "ExtendedExamples"->{
+  Cell[41454, 930, 154, 2, 58, "ExtendedExamplesSection",ExpressionUUID->"9f1b8047-bda5-4020-8b57-a3c83262680f",
+   CellTags->"ExtendedExamples",
+   CellID->433346399]}
+ }
+*)
+(*CellTagsIndex
+CellTagsIndex->{
+ {"ExtendedExamples", 112640, 2397}
+ }
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 599, 14, 26, "History",ExpressionUUID->"710f3431-8513-4b9d-9e99-112334fca67c",
+ CellID->1912807343],
+Cell[CellGroupData[{
+Cell[1182, 38, 123, 1, 21, "CategorizationSection",ExpressionUUID->"913d8a68-0245-4501-a64e-ddfd68150c92",
+ CellID->1544066031],
+Cell[1308, 41, 134, 2, 33, "Categorization",ExpressionUUID->"f2782160-a57e-4da2-a31b-531b052a9a1c",
+ CellID->629198909],
+Cell[1445, 45, 144, 2, 33, "Categorization",ExpressionUUID->"35ae502f-74e4-4f98-a1b9-b0b653f17816",
+ CellID->568644872],
+Cell[1592, 49, 141, 2, 33, "Categorization",ExpressionUUID->"f8f6c953-9d2f-45bb-b1b9-9f3e6cfd2824",
+ CellID->315505872],
+Cell[1736, 53, 158, 2, 33, "Categorization",ExpressionUUID->"406f1567-fd88-49a1-9dff-3eaeedba178e",
+ CellID->1091602372]
+}, Closed]],
+Cell[CellGroupData[{
+Cell[1931, 60, 111, 1, 21, "KeywordsSection",ExpressionUUID->"e1096a7d-013a-4d42-8c34-7c46f504caa7",
+ CellID->1617330788],
+Cell[2045, 63, 100, 1, 21, "Keywords",ExpressionUUID->"fc3177fa-2694-422e-b84a-ef54ab241cd0",
+ CellID->1501396857]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[2182, 69, 120, 1, 31, "TemplatesSection",ExpressionUUID->"6ee78e05-6f29-4c1d-a705-1733832a8776",
+ CellID->1669046060],
+Cell[2305, 72, 149, 2, 30, "Template",ExpressionUUID->"b1d48ece-002d-4b7a-bb09-71e8299c3841",
+ CellID->1801952741],
+Cell[2457, 76, 138, 2, 30, "Template",ExpressionUUID->"f9b46b3a-504d-40fa-b7ea-89b54e3082ab",
+ CellID->1195939341],
+Cell[2598, 80, 136, 2, 30, "Template",ExpressionUUID->"6a0e5e04-79d7-4998-9171-eb257cd80d9c",
+ CellID->1126153175],
+Cell[2737, 84, 137, 2, 30, "Template",ExpressionUUID->"54659ac7-0932-41c0-a6ef-a52f624eab15",
+ CellID->901386455]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[2911, 91, 114, 1, 74, "ObjectName",ExpressionUUID->"b7290767-0148-40e8-811b-69d1882be412",
+ CellID->1012041002],
+Cell[3028, 94, 2488, 68, 143, "Usage",ExpressionUUID->"7f4741a0-beec-468c-b89d-b980d322990a",
+ CellID->1811307925],
+Cell[5519, 164, 170, 2, 27, "Notes",ExpressionUUID->"d6407122-11b2-4fd2-ab34-b7c395feaa03",
+ CellID->2097911480],
+Cell[5692, 168, 390, 7, 23, "3ColumnTableMod",ExpressionUUID->"f3bd4fc4-91c4-437a-84ef-f5f32c7f5353",
+ CellID->110536163],
+Cell[6085, 177, 348, 8, 27, "Notes",ExpressionUUID->"f331e67c-df12-47b7-9edd-0514b0109e3d",
+ CellID->1467706269],
+Cell[6436, 187, 906, 16, 61, "2ColumnTableMod",ExpressionUUID->"fbe03957-b6d0-46bb-8c3e-6cfc59edfd56",
+ CellID->1891466392]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[7379, 208, 113, 1, 47, "TechNotesSection",ExpressionUUID->"ac6e1d7b-5f93-41f3-a08c-438876dfdbdb",
+ CellID->575528919],
+Cell[7495, 211, 305, 5, 19, "Tutorials",ExpressionUUID->"cc899cd2-cb3f-4521-99a1-aa40908a8229",
+ CellID->470718188]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[7837, 221, 137, 1, 34, "RelatedDemonstrationsSection",ExpressionUUID->"067943e7-ef3d-45df-a11d-da70e6965d1c",
+ CellID->582988230],
+Cell[7977, 224, 112, 1, 19, "RelatedDemonstrations",ExpressionUUID->"ebf0964e-0fdc-4f01-9da1-5ea841de2e40",
+ CellID->268943151]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[8126, 230, 120, 1, 34, "RelatedLinksSection",ExpressionUUID->"8133728c-96d4-48d0-b902-52f12599b8a2",
+ CellID->1857922848],
+Cell[8249, 233, 104, 1, 19, "RelatedLinks",ExpressionUUID->"56ff0c0e-958d-4a30-b0a7-607e19ade2cd",
+ CellID->1952614250]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[8390, 239, 109, 1, 34, "SeeAlsoSection",ExpressionUUID->"41726d35-c314-4658-b8ac-eaea7c0dc946",
+ CellID->906497442],
+Cell[8502, 242, 381, 8, 22, "SeeAlso",ExpressionUUID->"3a851ab0-eee5-4ad8-848a-5decc1664034",
+ CellID->2103643374],
+Cell[8886, 252, 379, 8, 22, "SeeAlso",ExpressionUUID->"34f7439f-1997-43a9-8dbb-b357c43a9b63",
+ CellID->683674005]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[9302, 265, 184, 2, 34, "MoreAboutSection",ExpressionUUID->"e837e583-5aa4-43bf-b921-5b4e261a944d",
+ CellID->1428622572],
+Cell[9489, 269, 101, 1, 19, "MoreAbout",ExpressionUUID->"d280b158-836f-49f2-a13d-6eaf48cd1149",
+ CellID->1399413050]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[9627, 275, 411, 11, 73, "PrimaryExamplesSection",ExpressionUUID->"1bd1f3e0-41f0-4a4c-b683-e82546d5a7f6",
+ CellID->243180917],
+Cell[10041, 288, 158, 2, 27, "Input",ExpressionUUID->"483eac4f-0ef8-4894-b4c6-c98788b464c8",
+ CellID->1961920283],
+Cell[10202, 292, 829, 24, 25, "ExampleText",ExpressionUUID->"ab29a4d1-9870-4532-8f43-50eecfff1d41",
+ CellID->844798558],
+Cell[CellGroupData[{
+Cell[11056, 320, 378, 7, 27, "Input",ExpressionUUID->"5ef3f2f7-a1e5-47e9-8afa-809060b4f686",
+ CellID->1571353638],
+Cell[11437, 329, 5287, 100, 322, "Output",ExpressionUUID->"b9291bf7-4a97-4549-aab7-9f210c113833",
+ CellID->424310728]
+}, Open  ]],
+Cell[16739, 432, 545, 14, 24, "ExampleText",ExpressionUUID->"0332f90f-14ca-4202-b522-1745ff8f7edb",
+ CellID->1568208626],
+Cell[CellGroupData[{
+Cell[17309, 450, 414, 7, 27, "Input",ExpressionUUID->"bf6d0201-0600-48a1-975f-c436fbab84ad",
+ CellID->874238471],
+Cell[17726, 459, 23679, 465, 449, "Output",ExpressionUUID->"a783feb3-f53f-4b63-b9dd-d24d7671aa58",
+ CellID->374738560]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[41454, 930, 154, 2, 58, "ExtendedExamplesSection",ExpressionUUID->"9f1b8047-bda5-4020-8b57-a3c83262680f",
+ CellTags->"ExtendedExamples",
+ CellID->433346399],
+Cell[41611, 934, 241, 5, 35, "ExampleSection",ExpressionUUID->"8fe0e2d9-28df-4666-a7d1-df3b1a95b693",
+ CellID->974068598],
+Cell[41855, 941, 264, 5, 23, "ExampleSection",ExpressionUUID->"72a59fa4-9301-4e3b-a724-ab65c525cca6",
+ CellID->645788944],
+Cell[CellGroupData[{
+Cell[42144, 950, 244, 5, 23, "ExampleSection",ExpressionUUID->"867f81b5-2410-48b4-b729-b203bd436aa1",
+ CellID->1694798048],
+Cell[CellGroupData[{
+Cell[42413, 959, 260, 5, 26, "ExampleSubsection",ExpressionUUID->"23692ee2-7382-4561-9620-20cb16785f61",
+ CellID->1216892327],
+Cell[42676, 966, 736, 20, 25, "ExampleText",ExpressionUUID->"17f7dfd5-3ec2-43cd-abc9-eef017162313",
+ CellID->1093603958],
+Cell[CellGroupData[{
+Cell[43437, 990, 823, 16, 66, "Input",ExpressionUUID->"e3132e20-d728-4b72-a54f-b931074211d4",
+ CellID->91064068],
+Cell[44263, 1008, 17798, 347, 242, "Output",ExpressionUUID->"c932a40a-070a-4ac4-a82d-8333ad1388f8",
+ CellID->324143731]
+}, Open  ]]
+}, Open  ]]
+}, Open  ]],
+Cell[62100, 1360, 249, 5, 35, "ExampleSection",ExpressionUUID->"bb9e67a1-8a1a-4149-abef-cbb7cc13b9ed",
+ CellID->1191189639],
+Cell[62352, 1367, 258, 5, 23, "ExampleSection",ExpressionUUID->"5851ea3f-e837-4468-86b9-037c8449113e",
+ CellID->541749821],
+Cell[62613, 1374, 252, 5, 23, "ExampleSection",ExpressionUUID->"fd9f34af-6845-4b3e-b49d-1535ca0f8e10",
+ CellID->1047082460],
+Cell[62868, 1381, 256, 5, 23, "ExampleSection",ExpressionUUID->"d09f9136-2b02-4ec2-bc68-aed1db96d519",
+ CellID->661036779],
+Cell[CellGroupData[{
+Cell[63149, 1390, 250, 5, 23, "ExampleSection",ExpressionUUID->"25cda14a-c35d-4849-a68d-97951b7b0e68",
+ CellID->2043146678],
+Cell[63402, 1397, 562, 12, 41, "ExampleText",ExpressionUUID->"e0bb9f85-36df-4ff0-ada9-89c8141f8562",
+ CellID->272027549],
+Cell[CellGroupData[{
+Cell[63989, 1413, 470, 9, 27, "Input",ExpressionUUID->"cb263376-82a3-486a-a015-e10f7c836e34",
+ CellID->174069280],
+Cell[64462, 1424, 47276, 945, 830, "Output",ExpressionUUID->"153dbc20-b232-4d3b-b4fc-8cc341df2f79",
+ CellID->1251525946]
+}, Open  ]],
+Cell[111753, 2372, 366, 7, 41, "ExampleText",ExpressionUUID->"9d0c3d56-0559-4b9b-a522-61500703d93b",
+ CellID->58320284]
+}, Open  ]]
+}, Open  ]]
+}
+]
+*)
+

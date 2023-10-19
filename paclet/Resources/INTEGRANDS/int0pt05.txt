@@ -1,0 +1,6 @@
+1	1112|2|34|444||	0	tadSunset^2/288
+2	1112|3|344|44||	2	(bubble[q1 - q2]*bubble[-q1 + q2]*prop[q1]^2*prop[q2]*sunset[q1])/48
+3	1122|33|44|44||	1	bubble[q1]^5/320
+4	1122|34|34|44||	2	(bubble[q1]^2*bubble[q2]*square[-q1, q2, q1, -q2])/32
+5	1123|24|34|44||	2	(bubble[q1]*bubble[q2]*triangle[-q1, q1 - q2, q2]*triangle[q1, -q1 + q2, -q2])/16
+6	1234|234|34|4||	3	(square[q1 + q2, q3, -q2, -q1 - q3]*triangle[-q1, -q3, q1 + q3]*triangle[-q1 - q2, q2, q1])/120

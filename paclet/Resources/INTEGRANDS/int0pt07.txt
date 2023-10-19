@@ -1,0 +1,50 @@
+1	1112|2|33|44|56|666||	0	(tadSunset^2*bubble[0]^2)/1152
+2	1112|2|33|45|566|66||	0	(tadSunset*tadTrianBub*bubble[0])/192
+3	1112|2|34|445|6|666||	2	(tadSunset*bubble[-q1 + q2]*prop[q1]^2*prop[q2]^2*sunset[q1])/288
+4	1112|2|34|455|66|66||	1	(tadSunset*bubble[q1]^3*triangle[0, -q1, q1])/192
+5	1112|2|34|456|56|66||	2	(tadSunset*bubble[q1]*square[0, -q1 - q2, q1, q2]*triangle[q1 + q2, -q1, -q2])/96
+6	1112|2|34|555|666|6||	1	(tadSunset*prop[q1]^3*sunset[q1]^2)/864
+7	1112|2|34|556|566|6||	2	(tadSunset*bubble[q1]*square[0, -q2, q1 + q2, -q1]*triangle[q2, -q1 - q2, q1])/96
+8	1112|3|334|5|566|66||	3	(bubble[q2]^2*prop[q1]^2*prop[q3]*square[q1 - q3, -q1 + q3, -q2, q2]*sunset[q1])/96
+9	1112|3|344|45|6|666||	3	(prop[q1]^2*prop[q2]^2*prop[q3]*sunset[q1]*sunset[q2]*triangle[q1 + q3, -q1 + q2, -q2 - q3])/144
+10	1112|3|344|55|66|66||	2	(bubble[q2]^4*prop[q1]^2*prop[q1 + q2]*sunset[q1])/192
+11	1112|3|344|56|56|66||	3	(bubble[q2]*bubble[q3]*prop[q1]^2*prop[q1 + q2]*square[q2, q3, -q2, -q3]*sunset[q1])/48
+12	1112|3|345|45|66|66||	3	(bubble[q2]^2*prop[q1]^2*prop[q3]*square[q1 - q3, -q2, -q1 + q3, q2]*sunset[q1])/96
+13	1112|3|345|46|56|66||	3	(bubble[-q1 + q3]*prop[q1]^2*prop[q2]*sunset[q1]*triangle[q1 - q2, q2 - q3, -q1 + q3]*triangle[-q1 + q2, -q2 + q3, q1 - q3])/24
+14	1112|3|444|556|6|66||	2	(bubble[-q1 + q2]^2*prop[q1]^3*prop[q2]*sunset[q1]^2)/288
+15	1112|3|445|446||666||	2	(bubble[q1 + q2]^2*prop[q1]^2*prop[q2]^2*sunset[q1]*sunset[q2])/576
+16	1112|3|445|456|6|66||	3	(bubble[-q1 + q2]*bubble[-q2 + q3]*prop[q1]^2*prop[q2]*prop[q3]*sunset[q1]*triangle[-q1 + q3, q2 - q3, q1 - q2])/24
+17	1112|3|445|466|5|66||	3	(bubble[q1 + q2]^2*prop[q1]^2*prop[q2]*prop[q3]*sunset[q1]*triangle[q1 - q3, q2 + q3, -q1 - q2])/48
+18	1112|3|445|566|56|6||	3	(bubble[-q1 + q2]*bubble[q1 + q3]*prop[q1]^2*prop[q2]*prop[q3]*sunset[q1]*triangle[q1 - q2, q2 + q3, -q1 - q3])/48
+19	1112|3|456|456|56|6||	4	(prop[q1]^2*prop[q2]*prop[q3]*square[-q1 + q2, -q4, q1 + q3, -q2 - q3 + q4]*sunset[q1]*triangle[q4, -q2 - q3, q2 + q3 - q4])/72
+20	1122|23|3|45|566|66||	0	tadTrianBub^2/128
+21	1122|23|4|455|66|66||	2	(bubble[q1]^3*bubble[q2]^2*square[-q2, q1, -q1, q2])/64
+22	1122|23|4|456|56|66||	3	(bubble[q3]^2*square[-q3, q3, q2, -q2]*triangle[-q2, -q1, q1 + q2]*triangle[q2, q1, -q1 - q2])/32
+23	1122|23|4|556|566|6||	4	(bubble[q1 + q2]^2*bubble[q1 - q3]*prop[q1]^2*prop[q2]*prop[q3]*prop[q4]*triangle[-q1 + q3, q1 + q4, -q3 - q4])/32
+24	1122|33|44|55|66|66||	1	bubble[q1]^7/1792
+25	1122|33|44|56|56|66||	2	(bubble[q1]^4*bubble[q2]*square[-q1, q2, q1, -q2])/128
+26	1122|33|45|45|66|66||	2	(bubble[q1]^3*bubble[q2]^2*square[q1, -q2, -q1, q2])/128
+27	1122|33|45|46|56|66||	2	(bubble[q1]^3*bubble[q2]*triangle[q1, q2, -q1 - q2]*triangle[q1 + q2, -q1, -q2])/32
+28	1122|34|34|56|56|66||	3	(bubble[q1]^2*bubble[q2]*square[-q1, q3, q1, -q3]*square[-q3, q2, q3, -q2])/64
+29	1122|34|35|45|66|66||	2	(bubble[q1]^2*bubble[q2]^2*triangle[-q2, -q1, q1 + q2]*triangle[q2, -q1 - q2, q1])/64
+30	1122|34|35|46|56|66||	3	(bubble[q2]^2*square[-q2, -q1 + q2, -q3, q1 + q3]*triangle[q1, -q1 - q3, q3]*triangle[q2, q1 - q2, -q1])/8
+31	1122|34|35|66|556|6||	3	(bubble[q1]^2*bubble[q2]*square[-q2 - q3, q2, -q1, q1 + q3]*square[q2 + q3, -q2, q1, -q1 - q3])/32
+32	1122|34|56|445|6|66||	3	(bubble[q1]^2*square[q3, -q2, q1 + q2, -q1 - q3]*triangle[-q1, q1 + q3, -q3]*triangle[q1, -q1 - q2, q2])/64
+33	1122|34|56|455|66|6||	2	(bubble[q1]^2*bubble[q2]*bubble[q1 + q2]*triangle[-q1, -q2, q1 + q2]*triangle[q1, -q1 - q2, q2])/64
+34	1122|34|56|456|56|6||	3	(bubble[q2]^2*square[-q1 + q2, -q3, -q2, q1 + q3]*triangle[q1, -q1 - q3, q3]*triangle[q2, q1 - q2, -q1])/32
+35	1122|34|56|556|566|||	3	(bubble[q1]^2*bubble[q3]*square[q1, q3, -q1 - q2, q2 - q3]*square[q1 + q2, -q1, -q3, -q2 + q3])/64
+36	1123|23|44|56|56|66||	3	(bubble[q1]*bubble[q2]*bubble[q3]*square[q2, -q3, -q2, q3]*square[-q3, q1, q3, -q1])/64
+37	1123|23|45|46|56|66||	3	(bubble[q1]*bubble[q3]*square[q3, -q2, -q3, q2]*triangle[-q2, -q1 + q2, q1]*triangle[q2, q1 - q2, -q1])/16
+38	1123|24|35|46|56|66||	3	(bubble[q2]*bubble[q3]*square[-q3, -q1 + q3, -q2, q1 + q2]*triangle[q1, -q1 - q2, q2]*triangle[q3, q1 - q3, -q1])/8
+39	1123|24|35|56|566|6||	3	(bubble[q2]*bubble[q3]*square[-q2, -q3, -q1 + q3, q1 + q2]*triangle[q1, -q1 - q2, q2]*triangle[q3, q1 - q3, -q1])/8
+40	1123|24|35|66|556|6||	3	(bubble[q1]*bubble[q2]*square[-q2, q1 + q2, -q1 - q3, q3]*triangle[q2, -q1 - q2, q1]*triangle[-q3, q1 + q3, -q1])/8
+41	1123|24|56|445|6|66||	3	(bubble[q1]*bubble[q1 + q2]*bubble[q3]*square[-q3, q2 + q3, -q1 - q2, q1]*square[q3, -q2 - q3, q1 + q2, -q1])/32
+42	1123|24|56|455|66|6||	3	(bubble[q2]*bubble[q1 + q2]*square[-q2, q3, -q1 - q3, q1 + q2]*triangle[q1, q2, -q1 - q2]*triangle[-q3, q1 + q3, -q1])/16
+43	1123|24|56|456|56|6||	4	(bubble[q4]*square[q1, q2, q3, -q1 - q2 - q3]*square[-q3, -q1, q4, q1 + q3 - q4]*square[-q4, -q1 - q3 + q4, -q2, q1 + q2 + q3])/8
+44	1123|24|56|556|566|||	3	(bubble[q1]*bubble[q1 + q2]*bubble[q3]*square[q1 + q2, -q2 + q3, -q3, -q1]*square[q3, -q1 - q2, q2 - q3, q1])/16
+45	1123|45|345|46|6|66||	3	(bubble[q2]*bubble[q3]*square[-q1 + q3, q2, -q3, q1 - q2]*triangle[-q1 + q2, q1, -q2]*triangle[q3, q1 - q3, -q1])/8
+46	1123|45|345|66|56|6||	3	(bubble[q1]*bubble[q2]*square[-q1 + q2, -q3, -q2, q1 + q3]*triangle[q2, q1 - q2, -q1]*triangle[-q1 - q3, q3, q1])/16
+47	1123|45|346|56|56|6||	3	(bubble[q1]*triangle[-q1, -q3, q1 + q3]*triangle[q1, q2, -q1 - q2]*triangle[-q2, q3, q2 - q3]*triangle[-q1 - q3, q1 + q2, -q2 + q3])/8
+48	1123|45|456|456|6|6||	4	(bubble[q4]*square[q1, q2, q3, -q1 - q2 - q3]*square[-q2, -q4, q1 + q2 + q3, -q1 - q3 + q4]*square[-q3, -q1, q4, q1 + q3 - q4])/16
+49	1234|234|56|56|56|6||	4	(square[-q2, q3 + q4, q1 + q2, -q1 - q3 - q4]*square[-q4, -q1, -q3, q1 + q3 + q4]*triangle[q1, q2, -q1 - q2]*triangle[q3, q4, -q3 - q4])/48
+50	1234|235|46|56|56|6||	4	(square[q1, q2, q3, -q1 - q2 - q3]*square[-q3 + q4, -q1 - q4, -q2, q1 + q2 + q3]*triangle[-q4, q1 + q4, -q1]*triangle[q4, -q3, q3 - q4])/14

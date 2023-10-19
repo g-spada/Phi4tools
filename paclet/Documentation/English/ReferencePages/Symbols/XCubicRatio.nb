@@ -1,0 +1,2268 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 13.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[    109269,       2260]
+NotebookOptionsPosition[    101085,       2087]
+NotebookOutlinePosition[    101955,       2116]
+CellTagsIndexPosition[    101874,       2111]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+Cell[TextData[{
+ "New in: ",
+ Cell["??", "HistoryData",
+  CellTags->"New",ExpressionUUID->"03fcf1ed-ad20-41c7-9698-4b1d9a64747a"],
+ " | Modified in: ",
+ Cell[" ", "HistoryData",
+  CellTags->"Modified",ExpressionUUID->"c799fb95-2205-4657-9c1b-600137cb8b63"],
+ " | Obsolete in: ",
+ Cell[" ", "HistoryData",
+  CellTags->"Obsolete",ExpressionUUID->"8892d832-9197-40b5-bc2d-5b8ac506ca8c"],
+ " | Excised in: ",
+ Cell[" ", "HistoryData",
+  CellTags->"Excised",ExpressionUUID->"2350b5c0-caa5-4dbe-b48f-ce59a42979eb"]
+}], "History",
+ CellID->473735228,ExpressionUUID->"b40f4740-9bc1-4e93-b8ff-eb1cf7e68cbf"],
+
+Cell["Created by: gabriele on 01-05-2023 12:57:22", "AuthorDate",
+ CellID->236263411,ExpressionUUID->"123c398c-b14a-45c8-930f-7134e2952801"],
+
+Cell[CellGroupData[{
+
+Cell["Categorization", "CategorizationSection",
+ CellID->1218005229,ExpressionUUID->"ea7e12ed-4424-43fb-bb22-7ef8ceb22b7b"],
+
+Cell["Symbol", "Categorization",
+ CellLabel->"Entity Type",
+ CellID->1642503988,ExpressionUUID->"9ca899b0-1175-4469-acec-0e5c73b64e41"],
+
+Cell["GSberveglieri/Phi4tools", "Categorization",
+ CellLabel->"Paclet Name",
+ CellID->693909353,ExpressionUUID->"434ddc72-28e6-4002-a44a-eadd77ec3619"],
+
+Cell["GSberveglieri`Phi4tools`", "Categorization",
+ CellLabel->"Context",
+ CellID->444087933,ExpressionUUID->"ae41759b-4a4b-40f7-a852-8ec98a869683"],
+
+Cell["GSberveglieri/Phi4tools/ref/XCubicRatio", "Categorization",
+ CellLabel->"URI",
+ CellID->600030713,ExpressionUUID->"3cc66592-ba80-4bf5-945a-4f7b5fd0c5cc"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Keywords", "KeywordsSection",
+ CellID->331791263,ExpressionUUID->"b7f137ae-4411-47c0-9e4d-cd2baedf8a14"],
+
+Cell["XXXX", "Keywords",
+ CellID->2111810673,ExpressionUUID->"64551716-ca2f-40e4-9ab5-7d73148da1d5"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Syntax Templates", "TemplatesSection",
+ CellID->537357677,ExpressionUUID->"6df7992b-31a6-4d5c-bcf3-3214f765d1af"],
+
+Cell[BoxData[""], "Template",
+ CellLabel->"Additional Function Template",
+ CellID->1238701851,ExpressionUUID->"e8923f3a-509c-4dea-9f60-179983d1c743"],
+
+Cell[BoxData[""], "Template",
+ CellLabel->"Arguments Pattern",
+ CellID->1665047575,ExpressionUUID->"dbbe4fd8-649b-46e9-bcdc-0072360b3a7a"],
+
+Cell[BoxData[""], "Template",
+ CellLabel->"Local Variables",
+ CellID->1620345841,ExpressionUUID->"ff18126d-9973-4185-a352-46e46a66eb24"],
+
+Cell[BoxData[""], "Template",
+ CellLabel->"Color Equal Signs",
+ CellID->340640611,ExpressionUUID->"a77535fb-e824-443b-bd51-d6ff4ab5a6d0"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["XCubicRatio", "ObjectName",
+ CellID->426280327,ExpressionUUID->"27da3949-faf0-4710-83c1-6c293e622fe1"],
+
+Cell[TextData[{
+ Cell["   ", "ModInfo",ExpressionUUID->"707b66fc-4b4c-463b-90f1-4f8a158c3bf3"],
+ Cell[BoxData[
+  RowBox[{
+   ButtonBox["XCubicRatio",
+    BaseStyle->"Link",
+    ButtonData->"paclet:GSberveglieri/Phi4tools/ref/XCubicRatio"], "[", "]"}]], 
+  "InlineFormula",ExpressionUUID->"64eb7763-bda3-4d8f-b879-141b9d9ba4af"],
+ " \[LineSeparator]represents the ratio between the cubic and ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"O", "(", "N", ")"}], TraditionalForm]], "InlineMath",
+  ExpressionUUID->"f5540ee6-2a23-47db-b9f9-d9b1eff61c30"],
+ "-symmetric coupling constants."
+}], "Usage",
+ CellChangeTimes->{{3.881908695953657*^9, 3.881908726077827*^9}},
+ CellID->1156025589,ExpressionUUID->"541c465e-82a6-4ebb-95e1-c8e419d84215"],
+
+Cell[TextData[{
+ Cell[BoxData[
+  RowBox[{
+   ButtonBox["XCubicRatio",
+    BaseStyle->"Link",
+    ButtonData->"paclet:GSberveglieri/Phi4tools/ref/XCubicRatio"], "[", "]"}]], 
+  "InlineFormula",ExpressionUUID->"7491688e-0e41-4833-a5f4-43856d8dba43"],
+ " can be entered as ",
+ StyleBox["\[CapitalChi]",
+  Deletable->True],
+ ". "
+}], "Notes",
+ CellChangeTimes->{{3.880808906301182*^9, 3.880808950737133*^9}, {
+  3.8813042214816008`*^9, 3.881304267380481*^9}, {3.881658538038788*^9, 
+  3.881658565843835*^9}, {3.881658932511219*^9, 3.8816589582650642`*^9}, {
+  3.881908839039978*^9, 3.8819088623722*^9}, {3.881908945931631*^9, 
+  3.881908953315201*^9}, {3.88190907775519*^9, 3.881909082077739*^9}},
+ CellID->1517129543,ExpressionUUID->"4ca96912-bc2b-445b-8b65-91f34e7dc6a1"],
+
+Cell[TextData[{
+ Cell[BoxData[
+ "\[CapitalChi]"], "InlineFormula",ExpressionUUID->
+  "e327aff0-5d20-4e9f-907e-a1178b5f16a9"],
+ " can be entered as ",
+ StyleBox["Esc", "KeyEvent"],
+ StyleBox["\[ThinSpace]C", "InlineCode"],
+ StyleBox["Esc", "KeyEvent"],
+ StyleBox[".", "InlineCode"]
+}], "Notes",
+ CellChangeTimes->{{3.8808090093072033`*^9, 3.8808090785659227`*^9}, 
+   3.880809540848156*^9, {3.881304241877442*^9, 3.881304247157345*^9}, {
+   3.881658492077877*^9, 3.881658497325663*^9}, {3.881908962229837*^9, 
+   3.881908970786824*^9}, 3.881909001114217*^9, {3.881909086639078*^9, 
+   3.881909094039405*^9}, {3.885808078618589*^9, 3.885808082150463*^9}},
+ CellID->1583640269,ExpressionUUID->"d8bc644d-0e14-4bc4-b516-04dd25eacdf8"],
+
+Cell[TextData[{
+ "In ",
+ Cell[BoxData[
+  ButtonBox["StandardForm",
+   BaseStyle->"Link"]], "InlineFormula",ExpressionUUID->
+  "0b35d951-b1bb-4fe3-8654-595365314a0f"],
+ ", ",
+ Cell[BoxData[
+  RowBox[{
+   ButtonBox["XCubicRatio",
+    BaseStyle->"Link",
+    ButtonData->"paclet:GSberveglieri/Phi4tools/ref/XCubicRatio"], "[", "]"}]], 
+  "InlineFormula",ExpressionUUID->"8c673d05-04b8-4d92-806d-08c65cb08686"],
+ " is output as ",
+ Cell[BoxData[
+ "\[CapitalChi]"], "InlineFormula",ExpressionUUID->
+  "8f7f5496-659c-4b57-9f77-65fb514041bb"],
+ "."
+}], "Notes",
+ CellChangeTimes->{{3.880809493433421*^9, 3.880809538830233*^9}, {
+   3.8813042549357357`*^9, 3.881304273520562*^9}, {3.8816585703498573`*^9, 
+   3.881658611414011*^9}, {3.881658939930283*^9, 3.881658939930304*^9}, {
+   3.881908978441328*^9, 3.8819089938017597`*^9}, {3.881909100115116*^9, 
+   3.881909104954607*^9}, 3.885808074583191*^9},
+ CellID->452607685,ExpressionUUID->"f8d22c8e-bdf3-46f4-97da-519c1bbc8d38"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Tech Notes", "TechNotesSection",
+ CellID->170598304,ExpressionUUID->"3db68d62-404c-48ba-8917-0291f5e97461"],
+
+Cell[TextData[ButtonBox["Perturbative Series Generation ",
+ BaseStyle->"Link",
+ ButtonData->
+  "paclet:GSberveglieri/Phi4tools/tutorial/PerturbativeSeriesGeneration"]], \
+"Tutorials",
+ CellChangeTimes->{{3.88354885525525*^9, 3.883548888083745*^9}, {
+  3.885025733316227*^9, 3.885025759131979*^9}},
+ CellID->761534299,ExpressionUUID->"ba152364-7601-474e-bfc3-e05a7a79c72c"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Related Demonstrations", "RelatedDemonstrationsSection",
+ CellID->1652949719,ExpressionUUID->"536a6b72-e146-46ad-917b-e499561678b9"],
+
+Cell["XXXX", "RelatedDemonstrations",
+ CellID->168309502,ExpressionUUID->"98d715da-f121-4a4e-b681-1b3aaa9c7ef3"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Related Links", "RelatedLinksSection",
+ CellID->1666611191,ExpressionUUID->"fa33c1f9-e454-4d80-aa8c-eb7e2636aeae"],
+
+Cell["XXXX", "RelatedLinks",
+ CellID->510782083,ExpressionUUID->"7200f058-d3ee-4606-90a4-52922859f3a9"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["See Also", "SeeAlsoSection",
+ CellID->1074573111,ExpressionUUID->"dde46e93-b7c8-4a61-a621-318420a00540"],
+
+Cell[TextData[Cell[BoxData[
+ ButtonBox["NComponents",
+  BaseStyle->"Link",
+  ButtonData->
+   "paclet:GSberveglieri/Phi4tools/ref/NComponents"]], \
+"InlineFormula",ExpressionUUID->"c5f3f8aa-1950-4000-9ac7-eb9709fb205e"]], \
+"SeeAlso",
+ CellChangeTimes->{{3.8819094675695343`*^9, 3.881909496446455*^9}},
+ CellID->1743208817,ExpressionUUID->"5c32956d-7c15-46d9-9c0e-c34477c10355"],
+
+Cell[TextData[Cell[BoxData[
+ ButtonBox["SymmetryFactorDiagram",
+  BaseStyle->"Link",
+  ButtonData->
+   "paclet:GSberveglieri/Phi4tools/ref/SymmetryFactorDiagram"]], \
+"InlineFormula",ExpressionUUID->"f4eff6d1-9746-4e05-bce3-bd42bc4fed23"]], \
+"SeeAlso",
+ CellChangeTimes->{{3.881908743283895*^9, 3.8819087617959757`*^9}},
+ CellID->252217375,ExpressionUUID->"59674118-f01f-459b-9a21-22d4740d929a"],
+
+Cell[TextData[Cell[BoxData[
+ ButtonBox["ValueDiagram",
+  BaseStyle->"Link",
+  ButtonData->
+   "paclet:GSberveglieri/Phi4tools/ref/ValueDiagram"]], \
+"InlineFormula",ExpressionUUID->"74e5b8cc-d48f-4a1e-8a48-01387c9425f0"]], \
+"SeeAlso",
+ CellChangeTimes->{{3.8850242709228783`*^9, 3.8850243039065313`*^9}},
+ CellID->287811297,ExpressionUUID->"fa78c47e-d98f-4dc9-ab83-dcd62da864fe"],
+
+Cell[TextData[Cell[BoxData[
+ ButtonBox["InformationDiagram",
+  BaseStyle->"Link",
+  ButtonData->
+   "paclet:GSberveglieri/Phi4tools/ref/InformationDiagram"]], \
+"InlineFormula",ExpressionUUID->"d54f48b3-c7f7-46dd-8c81-c011d552903f"]], \
+"SeeAlso",
+ CellChangeTimes->{{3.884929437657275*^9, 3.8849294542146807`*^9}},
+ CellID->1478579431,ExpressionUUID->"b937fea8-d740-4517-ac89-50f261d65663"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["Related Guides", "MoreAboutSection",
+ CellChangeTimes->{{3.843042374232973*^9, 3.843042375545676*^9}},
+ CellID->457333037,ExpressionUUID->"8b663365-d8d7-47e6-ad00-ca503ac05ec1"],
+
+Cell["XXXX", "MoreAbout",
+ CellID->922663556,ExpressionUUID->"a3ded9b7-2eac-43ba-aa83-3ee1f9603539"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ InterpretationBox[GridBox[{
+    {
+     StyleBox["Examples", "PrimaryExamplesSection"], 
+     ButtonBox[
+      RowBox[{
+       RowBox[{"More", " ", "Examples"}], " ", "\[RightTriangle]"}],
+      BaseStyle->"ExtendedExamplesLink",
+      ButtonData:>"ExtendedExamples"]}
+   }],
+  $Line = 0; Null]], "PrimaryExamplesSection",
+ CellID->1541237679,ExpressionUUID->"92f09b22-7ca5-497e-a968-0decf3811024"],
+
+Cell[BoxData[
+ RowBox[{"Needs", "[", "\"\<GSberveglieri`Phi4tools`\>\"", "]"}]], "Input",
+ CellLabel->"In[11]:=",
+ CellID->966237502,ExpressionUUID->"273f570d-715b-40db-9307-1cef982f8e32"],
+
+Cell[TextData[{
+ "Let's look at the ",
+ Cell[BoxData[
+  SuperscriptBox["2", "nd"]], "InlineFormula",ExpressionUUID->
+  "37fba012-193e-4893-9730-a239684c3ce6"],
+ " diagram for ",
+ Cell[BoxData[
+  FormBox[
+   SuperscriptBox["\[CapitalGamma]", 
+    RowBox[{"(", "2", ")"}]], TraditionalForm]],ExpressionUUID->
+  "44bd54c1-90af-4711-8727-d3e8c77e4ebf"],
+ " for the ",
+ Cell[BoxData[
+  FormBox[
+   SuperscriptBox["\[Phi]", "4"], TraditionalForm]],ExpressionUUID->
+  "500f2d68-bdee-4c2f-a068-45c44fd4594e"],
+ " theory with ",
+ Cell[BoxData[
+  StyleBox["v4", "TI"]], "InlineFormula",ExpressionUUID->
+  "83cf887c-d4f8-4aca-9754-dcd01174c036"],
+ "=3 quartic vertices, let's visualize it and print its symmetry factor for \
+the theory with O(N) model broken to cubic symmetry:"
+}], "ExampleText",
+ CellChangeTimes->{{3.868943413568012*^9, 3.868943469961192*^9}, {
+   3.8848532267045794`*^9, 3.8848533414062843`*^9}, 3.88485676122222*^9, {
+   3.8848570851214237`*^9, 3.884857129152472*^9}, {3.884857263475752*^9, 
+   3.88485726456673*^9}, {3.8850240209343843`*^9, 3.885024046848819*^9}, {
+   3.885024079822653*^9, 3.885024087772521*^9}, {3.8850241427736692`*^9, 
+   3.88502418661038*^9}, {3.885026357037595*^9, 3.885026375820252*^9}, {
+   3.885808086011479*^9, 3.885808095585617*^9}},
+ CellID->1417942789,ExpressionUUID->"2445b196-1295-4bd5-8f29-3bffb1bf0dc4"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   RowBox[{"VisualizeDiagram", "[", 
+    RowBox[{"2", ",", "0", ",", "3", ",", "1"}], "]"}], ",", 
+   RowBox[{"SymmetryFactorDiagram", "[", 
+    RowBox[{"2", ",", "0", ",", "3", ",", "1", ",", 
+     RowBox[{"\"\<Tensor\>\"", "->", "\"\<Cubic\>\""}]}], "]"}]}], 
+  "}"}]], "Input",
+ CellChangeTimes->{{3.885023876908132*^9, 3.885023891471542*^9}, {
+  3.885024061586694*^9, 3.885024063778846*^9}, {3.885026386340041*^9, 
+  3.8850263872479477`*^9}},
+ CellLabel->"In[83]:=",
+ CellID->629955954,ExpressionUUID->"80cecbe6-a13f-4544-8994-8b07eac8a777"],
+
+Cell[BoxData[
+ RowBox[{"{", 
+  RowBox[{
+   GraphicsBox[
+    NamespaceBox["NetworkGraphics",
+     DynamicModuleBox[{Typeset`graph = HoldComplete[
+       Graph[{"o1", 0, "o2", 1, 2}, {
+        Null, {{1, 2}, {3, 2}, {2, 4}, {2, 5}, {4, 5}, {4, 5}, {4, 5}}}, {
+        EdgeStyle -> {UndirectedEdge["o2", 0] -> Directive[
+             Dashing[{0, Small}], 
+             Thickness[Large]], UndirectedEdge["o1", 0] -> Directive[
+             Dashing[{0, Small}], 
+             Thickness[Large]]}, GraphLayout -> "SpringEmbedding", 
+         VertexSize -> {0.15}}]]}, 
+      TagBox[GraphicsGroupBox[GraphicsComplexBox[CompressedData["
+1:eJxdz21IU2EUB/CrDoMQynQtKpsuNkUpwsRlLI/ExFJqltUwl1Bm2gWZrCkb
+5QrM0lVgG5qSaLNtFmHNxBYtqCRMyqRlaG4t24vdGMheyLz3UqPT1x44PBw4
+nPP/ZZxSHq6NJwhCiPXvJzjtk8HuYmj+o7K7P7Kw15Iv7ukJwEbdfIfxQxCI
+/x4U5a0uEDEgWuus16b+hLk+Wdt27EvI45LRJRe8emzrvGpmQHUtrqXrQRRU
+oW1j0nEGrMsMZZBFwTJ779Z1NwOhSo5+TzQCDiUUlYcZSKiIWqaMEcgvNNe0
+Eiz0E2qRJi8ClfZacnMSC+03f1/QfAqDLbWvOTWFhaoE+aVEdRicIraujsuC
+0hsrrUoJg3rRmVuDPRmbptZpF6FXt/7+Gpw/sOnc5ef2AHyN93B4uC/zbbrp
+8y8/9A5OnWnBe8f446r5fD80PhMN78c8SY1z1h0aH/S/G1O2Yd44T1a6zOGF
+YTWflaDH6w+Nmgkv2N70SS+iV6a/Qw3s+wZ1XKr0xxANnbU8aTf6yfrTXdl6
+GiaehjxG9GuSp/m+RhrEkpmhQvRbBSd8aQoaRqLnA+/Rr9ttzwqW0ZB0+4pO
+i/5dLqu+vIgGc7Gc0qK/pbrhu7yAhuS0h8ur0H93ZUTBEdPQmkO8VqC/5ElH
+JoG9weCc56L/7CS1oQLnHQczlC/Q/1K4RViG+07mzja50e/rX8gJ4L28I5Tg
+C/qrG6QyHuYhHwW37kS/OtG94sK8RtNE1SH0W5eOugToEZLuASv65dkzsQX0
+3iicajKh/y9wDSk1
+         "], {
+          {Hue[0.6, 0.7, 0.5], Opacity[0.7], 
+           {Thickness[Large], Dashing[{0, Small}], 
+            {Arrowheads[0.], ArrowBox[{1, 2}, 0.06256803993449017]}}, 
+           {Thickness[Large], Dashing[{0, Small}], 
+            {Arrowheads[0.], ArrowBox[{2, 3}, 0.06256803993449017]}}, 
+           {Arrowheads[0.], ArrowBox[{2, 4}, 0.06256803993449017]}, 
+           {Arrowheads[0.], ArrowBox[{2, 5}, 0.06256803993449017]}, 
+           {Arrowheads[0.], 
+            ArrowBox[BezierCurveBox[{
+             4, {1.7090098617732088`, 0.8378766817268682}, 5}], 
+             0.06256803993449017]}, 
+           {Arrowheads[0.], ArrowBox[{4, 5}, 0.06256803993449017]}, 
+           {Arrowheads[0.], 
+            ArrowBox[BezierCurveBox[{
+             4, {1.4346435888167648`, 0.83787998100306}, 5}], 
+             0.06256803993449017]}}, 
+          {Hue[0.6, 0.2, 0.8], EdgeForm[{GrayLevel[0], Opacity[0.7]}], 
+           DiskBox[1, 0.06256803993449017], DiskBox[2, 0.06256803993449017], 
+           DiskBox[3, 0.06256803993449017], DiskBox[4, 0.06256803993449017], 
+           DiskBox[5, 0.06256803993449017]}}]],
+       MouseAppearanceTag["NetworkGraphics"]],
+      AllowKernelInitialization->False]],
+    DefaultBaseStyle->{
+     "NetworkGraphics", FrontEnd`GraphicsHighlightColor -> Hue[0.8, 1., 0.6]},
+    
+    FormatType->TraditionalForm,
+    FrameTicks->None], ",", 
+   RowBox[{
+    FractionBox["4", "9"], "+", 
+    FractionBox[
+     RowBox[{"4", " ", "\[CapitalNu]"}], "9"], "+", 
+    FractionBox[
+     SuperscriptBox["\[CapitalNu]", "2"], "9"], "+", 
+    RowBox[{"2", " ", "\[CapitalChi]"}], "+", 
+    RowBox[{"\[CapitalNu]", " ", "\[CapitalChi]"}], "+", 
+    FractionBox[
+     RowBox[{"8", " ", 
+      SuperscriptBox["\[CapitalChi]", "2"]}], "3"], "+", 
+    FractionBox[
+     RowBox[{"\[CapitalNu]", " ", 
+      SuperscriptBox["\[CapitalChi]", "2"]}], "3"], "+", 
+    SuperscriptBox["\[CapitalChi]", "3"]}]}], "}"}]], "Output",
+ CellChangeTimes->{{3.8850238867744102`*^9, 3.885023892111022*^9}, 
+   3.885024064379036*^9, 3.8850263878752823`*^9},
+ CellLabel->"Out[83]=",
+ CellID->1163577027,ExpressionUUID->"086446ce-bbb6-432d-90cb-2d406aed7aa0"]
+}, Open  ]],
+
+Cell[TextData[{
+ "Using the function ",
+ Cell[BoxData[
+  ButtonBox["InformationDiagram",
+   BaseStyle->"Link",
+   ButtonData->"paclet:GSberveglieri/Phi4tools/ref/InformationDiagram"]], 
+  "InlineFormula",ExpressionUUID->"3bee2570-f6f2-476a-935c-453d21f72ac1"],
+ " with the option \"Tensor\"->\"Cubic\" is possible to get both these \
+information at the same time, for example"
+}], "ExampleText",
+ CellChangeTimes->{{3.868943413568012*^9, 3.868943469961192*^9}, {
+   3.8848532267045794`*^9, 3.8848533414062843`*^9}, 3.88485676122222*^9, {
+   3.8848570851214237`*^9, 3.884857129152472*^9}, {3.884857263475752*^9, 
+   3.88485726456673*^9}, {3.8850240209343843`*^9, 3.885024046848819*^9}, {
+   3.885024079822653*^9, 3.885024087772521*^9}, {3.8850241427736692`*^9, 
+   3.88502418661038*^9}, {3.885024329997087*^9, 3.8850243505547523`*^9}, {
+   3.8850244084116497`*^9, 3.885024424744679*^9}, {3.8850244614475183`*^9, 
+   3.8850244775656977`*^9}, {3.8850263948126698`*^9, 3.8850263957247753`*^9}},
+ 
+ CellID->1541095987,ExpressionUUID->"baabe812-de91-40eb-b1dc-5803104f4488"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"info4031", "=", 
+  RowBox[{"InformationDiagram", "[", 
+   RowBox[{"4", ",", "0", ",", "3", ",", "1", ",", 
+    RowBox[{"\"\<Tensor\>\"", "->", "\"\<Cubic\>\""}]}], "]"}]}]], "Input",
+ CellChangeTimes->{{3.885024485536385*^9, 3.885024509406856*^9}, {
+   3.885024609858653*^9, 3.885024621135957*^9}, 3.885026397489396*^9, {
+   3.885026624587007*^9, 3.885026628004417*^9}},
+ CellLabel->"In[100]:=",
+ CellID->139081936,ExpressionUUID->"07fbe36f-ceb1-46a6-97ae-8a903b92f6b0"],
+
+Cell[BoxData[
+ TagBox[
+  TagBox[
+   DynamicModuleBox[{TypeSystem`NestedGrid`PackagePrivate`$state$$ = <|
+    "InitialData" -> <|
+      "External Legs" -> 4, "Cubic Vertices" -> 0, "Quartic Vertices" -> 3, 
+       "List Number" -> 1, "Nickel Index" -> "ee11|22|ee|", 
+       "Symmetry Factor" -> {
+        Rational[4, 9] + Rational[2, 9] GSberveglieri`Phi4tools`NComponents[] + 
+         Rational[1, 27] GSberveglieri`Phi4tools`NComponents[]^2 + 
+         Rational[4, 3] 
+          GSberveglieri`Phi4tools`XCubicRatio[] + (Rational[1, 3] 
+           GSberveglieri`Phi4tools`NComponents[]) GSberveglieri`Phi4tools`XCubicRatio[] + 
+         GSberveglieri`Phi4tools`XCubicRatio[]^2, 
+         Rational[4, 27], 
+         Rational[4, 27], Rational[4, 3] GSberveglieri`Phi4tools`XCubicRatio[] + 
+         2 GSberveglieri`Phi4tools`XCubicRatio[]^2 + 
+         GSberveglieri`Phi4tools`XCubicRatio[]^3}, "Diagram" -> 
+       Graph[{"o1", 0, "o2", "o3", 2, "o4", 1}, {
+         Null, {{1, 2}, {3, 2}, {4, 5}, {6, 5}, {2, 7}, {2, 7}, {7, 5}, {7, 
+          5}}}, {EdgeStyle -> {UndirectedEdge["o2", 0] -> Directive[
+              Dashing[{0, Small}], 
+              Thickness[Large]], UndirectedEdge["o1", 0] -> Directive[
+              Dashing[{0, Small}], 
+              Thickness[Large]], UndirectedEdge["o3", 2] -> Directive[
+              Dashing[{0, Small}], 
+              Thickness[Large]], UndirectedEdge["o4", 2] -> Directive[
+              Dashing[{0, Small}], 
+              Thickness[Large]]}, GraphLayout -> "SpringEmbedding", 
+          VertexSize -> {0.15}}], "Value" -> 1|>, "AllowEmbedding" -> True, 
+     "InitialShape" -> 
+     TypeSystem`PackageScope`DocumentShape[<|{"External Legs"} -> 
+        TypeSystem`PackageScope`AtomShape[34], {"Cubic Vertices"} -> 
+        TypeSystem`PackageScope`AtomShape[34], {"Quartic Vertices"} -> 
+        TypeSystem`PackageScope`AtomShape[34], {"List Number"} -> 
+        TypeSystem`PackageScope`AtomShape[34], {"Nickel Index"} -> 
+        TypeSystem`PackageScope`AtomShape[123.20000000000002`], {
+         "Symmetry Factor"} -> 
+        TypeSystem`PackageScope`ElidedShape[1], {"Diagram"} -> 
+        TypeSystem`PackageScope`AtomShape[60], {"Value"} -> 
+        TypeSystem`PackageScope`AtomShape[34]|>, 1], "InitialType" -> 
+     TypeSystem`Struct[{
+       "External Legs", "Cubic Vertices", "Quartic Vertices", "List Number", 
+        "Nickel Index", "Symmetry Factor", "Diagram", "Value"}, {
+        TypeSystem`Atom[Integer], 
+        TypeSystem`Atom[Integer], 
+        TypeSystem`Atom[Integer], 
+        TypeSystem`Atom[Integer], 
+        TypeSystem`Atom[String], 
+        TypeSystem`Tuple[{TypeSystem`AnyType, 
+          TypeSystem`Atom[Rational], 
+          TypeSystem`Atom[Rational], TypeSystem`AnyType}], 
+        TypeSystem`Atom[Graph], 
+        TypeSystem`Atom[Integer]}], "Meta" -> <||>, "RowTarget" -> 20, 
+     "ColumnTarget" -> 10, "Shape" -> 
+     TypeSystem`PackageScope`DocumentShape[<|{"External Legs"} -> 
+        TypeSystem`PackageScope`AtomShape[34], {"Cubic Vertices"} -> 
+        TypeSystem`PackageScope`AtomShape[34], {"Quartic Vertices"} -> 
+        TypeSystem`PackageScope`AtomShape[34], {"List Number"} -> 
+        TypeSystem`PackageScope`AtomShape[34], {"Nickel Index"} -> 
+        TypeSystem`PackageScope`AtomShape[123.20000000000002`], {
+         "Symmetry Factor"} -> 
+        TypeSystem`PackageScope`ElidedShape[1], {"Diagram"} -> 
+        TypeSystem`PackageScope`AtomShape[60], {"Value"} -> 
+        TypeSystem`PackageScope`AtomShape[34]|>, 1], "Type" -> 
+     TypeSystem`Struct[{
+       "External Legs", "Cubic Vertices", "Quartic Vertices", "List Number", 
+        "Nickel Index", "Symmetry Factor", "Diagram", "Value"}, {
+        TypeSystem`Atom[Integer], 
+        TypeSystem`Atom[Integer], 
+        TypeSystem`Atom[Integer], 
+        TypeSystem`Atom[Integer], 
+        TypeSystem`Atom[String], 
+        TypeSystem`Tuple[{TypeSystem`AnyType, 
+          TypeSystem`Atom[Rational], 
+          TypeSystem`Atom[Rational], TypeSystem`AnyType}], 
+        TypeSystem`Atom[Graph], 
+        TypeSystem`Atom[Integer]}], "Path" -> {}, "DisplayedRowCount" -> 20, 
+     "DisplayedColumnCount" -> 10, "DataRowCount" -> 8, "DataColumnCount" -> 
+     1, "SortPaths" -> {}, "SortDirections" -> {}, "HiddenItemsMap" -> Null, 
+     "UpdateType" -> 1|>, TypeSystem`NestedGrid`PackagePrivate`$outputID$$, 
+    TypeSystem`NestedGrid`PackagePrivate`$path$$ = {}, 
+    TypeSystem`NestedGrid`PackagePrivate`$vPos$$ = 1, 
+    TypeSystem`NestedGrid`PackagePrivate`$hPos$$ = 1, 
+    TypeSystem`NestedGrid`PackagePrivate`$grid$$ = 
+    DynamicModule[{
+     TypeSystem`NestedGrid`PackagePrivate`renderedGrid = Deploy[
+        Style[
+         Grid[{{
+            Item[
+             Pane[
+              Annotation[
+               EventHandler[
+                MouseAppearance[
+                 Mouseover["External Legs", 
+                  Style[
+                  "External Legs", FontColor -> 
+                   RGBColor[
+                    0.27450980392156865`, 0.5372549019607843, 
+                    0.792156862745098]]], "LinkHand"], {"MouseClicked", 1} :> 
+                If[
+                  TypeSystem`NestedGrid`PackagePrivate`checkInteractivity[
+                  TypeSystem`NestedGrid`PackagePrivate`$state$$], 
+                  TypeSystem`NestedGrid`PackagePrivate`updateState[
+                  TypeSystem`NestedGrid`PackagePrivate`$state$$, 
+                   TypeSystem`NestedGrid`PackagePrivate`$path$$, 
+                   TypeSystem`NestedGrid`PackagePrivate`$vPos$$, 
+                   TypeSystem`NestedGrid`PackagePrivate`$hPos$$, 
+                   TypeSystem`NestedGrid`PackagePrivate`$grid$$, 
+                   TypeSystem`NestedGrid`PackagePrivate`localHold[
+                    TypeSystem`NestedGrid`PackagePrivate`localHold[
+                    TypeSystem`NestedGrid`PackagePrivate`$outputID$$]]][{
+                    Key["External Legs"]}, 1]]], 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                TypeSystem`NestedGrid`PackagePrivate`localHold[
+                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{
+                 Key["External Legs"]}, "RowHeader", False], "Mouse"], 
+              ImageSize -> {{1, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], Background -> 
+             GrayLevel[0.95], Alignment -> {Left, Baseline}], 
+            Item[
+             Pane[
+              Annotation[
+               RawBoxes["4"], 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                TypeSystem`NestedGrid`PackagePrivate`localHold[
+                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{
+                 Key["External Legs"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{34, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}]}, {
+            Item[
+             Pane[
+              Annotation[
+               EventHandler[
+                MouseAppearance[
+                 Mouseover["Cubic Vertices", 
+                  Style[
+                  "Cubic Vertices", FontColor -> 
+                   RGBColor[
+                    0.27450980392156865`, 0.5372549019607843, 
+                    0.792156862745098]]], "LinkHand"], {"MouseClicked", 1} :> 
+                If[
+                  TypeSystem`NestedGrid`PackagePrivate`checkInteractivity[
+                  TypeSystem`NestedGrid`PackagePrivate`$state$$], 
+                  TypeSystem`NestedGrid`PackagePrivate`updateState[
+                  TypeSystem`NestedGrid`PackagePrivate`$state$$, 
+                   TypeSystem`NestedGrid`PackagePrivate`$path$$, 
+                   TypeSystem`NestedGrid`PackagePrivate`$vPos$$, 
+                   TypeSystem`NestedGrid`PackagePrivate`$hPos$$, 
+                   TypeSystem`NestedGrid`PackagePrivate`$grid$$, 
+                   TypeSystem`NestedGrid`PackagePrivate`localHold[
+                    TypeSystem`NestedGrid`PackagePrivate`localHold[
+                    TypeSystem`NestedGrid`PackagePrivate`$outputID$$]]][{
+                    Key["Cubic Vertices"]}, 1]]], 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                TypeSystem`NestedGrid`PackagePrivate`localHold[
+                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{
+                 Key["Cubic Vertices"]}, "RowHeader", False], "Mouse"], 
+              ImageSize -> {{1, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], Background -> 
+             GrayLevel[0.95], Alignment -> {Left, Baseline}], 
+            Item[
+             Pane[
+              Annotation[
+               RawBoxes["0"], 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                TypeSystem`NestedGrid`PackagePrivate`localHold[
+                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{
+                 Key["Cubic Vertices"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{34, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}]}, {
+            Item[
+             Pane[
+              Annotation[
+               EventHandler[
+                MouseAppearance[
+                 Mouseover["Quartic Vertices", 
+                  Style[
+                  "Quartic Vertices", FontColor -> 
+                   RGBColor[
+                    0.27450980392156865`, 0.5372549019607843, 
+                    0.792156862745098]]], "LinkHand"], {"MouseClicked", 1} :> 
+                If[
+                  TypeSystem`NestedGrid`PackagePrivate`checkInteractivity[
+                  TypeSystem`NestedGrid`PackagePrivate`$state$$], 
+                  TypeSystem`NestedGrid`PackagePrivate`updateState[
+                  TypeSystem`NestedGrid`PackagePrivate`$state$$, 
+                   TypeSystem`NestedGrid`PackagePrivate`$path$$, 
+                   TypeSystem`NestedGrid`PackagePrivate`$vPos$$, 
+                   TypeSystem`NestedGrid`PackagePrivate`$hPos$$, 
+                   TypeSystem`NestedGrid`PackagePrivate`$grid$$, 
+                   TypeSystem`NestedGrid`PackagePrivate`localHold[
+                    TypeSystem`NestedGrid`PackagePrivate`localHold[
+                    TypeSystem`NestedGrid`PackagePrivate`$outputID$$]]][{
+                    Key["Quartic Vertices"]}, 1]]], 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                TypeSystem`NestedGrid`PackagePrivate`localHold[
+                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{
+                 Key["Quartic Vertices"]}, "RowHeader", False], "Mouse"], 
+              ImageSize -> {{1, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], Background -> 
+             GrayLevel[0.95], Alignment -> {Left, Baseline}], 
+            Item[
+             Pane[
+              Annotation[
+               RawBoxes["3"], 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                TypeSystem`NestedGrid`PackagePrivate`localHold[
+                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{
+                 Key["Quartic Vertices"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{34, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}]}, {
+            Item[
+             Pane[
+              Annotation[
+               EventHandler[
+                MouseAppearance[
+                 Mouseover["List Number", 
+                  Style[
+                  "List Number", FontColor -> 
+                   RGBColor[
+                    0.27450980392156865`, 0.5372549019607843, 
+                    0.792156862745098]]], "LinkHand"], {"MouseClicked", 1} :> 
+                If[
+                  TypeSystem`NestedGrid`PackagePrivate`checkInteractivity[
+                  TypeSystem`NestedGrid`PackagePrivate`$state$$], 
+                  TypeSystem`NestedGrid`PackagePrivate`updateState[
+                  TypeSystem`NestedGrid`PackagePrivate`$state$$, 
+                   TypeSystem`NestedGrid`PackagePrivate`$path$$, 
+                   TypeSystem`NestedGrid`PackagePrivate`$vPos$$, 
+                   TypeSystem`NestedGrid`PackagePrivate`$hPos$$, 
+                   TypeSystem`NestedGrid`PackagePrivate`$grid$$, 
+                   TypeSystem`NestedGrid`PackagePrivate`localHold[
+                    TypeSystem`NestedGrid`PackagePrivate`localHold[
+                    TypeSystem`NestedGrid`PackagePrivate`$outputID$$]]][{
+                    Key["List Number"]}, 1]]], 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                TypeSystem`NestedGrid`PackagePrivate`localHold[
+                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{
+                 Key["List Number"]}, "RowHeader", False], "Mouse"], 
+              ImageSize -> {{1, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], Background -> 
+             GrayLevel[0.95], Alignment -> {Left, Baseline}], 
+            Item[
+             Pane[
+              Annotation[
+               RawBoxes["1"], 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                TypeSystem`NestedGrid`PackagePrivate`localHold[
+                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{
+                 Key["List Number"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{34, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}]}, {
+            Item[
+             Pane[
+              Annotation[
+               EventHandler[
+                MouseAppearance[
+                 Mouseover["Nickel Index", 
+                  Style[
+                  "Nickel Index", FontColor -> 
+                   RGBColor[
+                    0.27450980392156865`, 0.5372549019607843, 
+                    0.792156862745098]]], "LinkHand"], {"MouseClicked", 1} :> 
+                If[
+                  TypeSystem`NestedGrid`PackagePrivate`checkInteractivity[
+                  TypeSystem`NestedGrid`PackagePrivate`$state$$], 
+                  TypeSystem`NestedGrid`PackagePrivate`updateState[
+                  TypeSystem`NestedGrid`PackagePrivate`$state$$, 
+                   TypeSystem`NestedGrid`PackagePrivate`$path$$, 
+                   TypeSystem`NestedGrid`PackagePrivate`$vPos$$, 
+                   TypeSystem`NestedGrid`PackagePrivate`$hPos$$, 
+                   TypeSystem`NestedGrid`PackagePrivate`$grid$$, 
+                   TypeSystem`NestedGrid`PackagePrivate`localHold[
+                    TypeSystem`NestedGrid`PackagePrivate`localHold[
+                    TypeSystem`NestedGrid`PackagePrivate`$outputID$$]]][{
+                    Key["Nickel Index"]}, 1]]], 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                TypeSystem`NestedGrid`PackagePrivate`localHold[
+                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{
+                 Key["Nickel Index"]}, "RowHeader", False], "Mouse"], 
+              ImageSize -> {{1, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], Background -> 
+             GrayLevel[0.95], Alignment -> {Left, Baseline}], 
+            Item[
+             Pane[
+              Annotation["ee11|22|ee|", 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                TypeSystem`NestedGrid`PackagePrivate`localHold[
+                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{
+                 Key["Nickel Index"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{123.20000000000002`, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}]}, {
+            Item[
+             Pane[
+              Annotation[
+               EventHandler[
+                MouseAppearance[
+                 Mouseover["Symmetry Factor", 
+                  Style[
+                  "Symmetry Factor", FontColor -> 
+                   RGBColor[
+                    0.27450980392156865`, 0.5372549019607843, 
+                    0.792156862745098]]], "LinkHand"], {"MouseClicked", 1} :> 
+                If[
+                  TypeSystem`NestedGrid`PackagePrivate`checkInteractivity[
+                  TypeSystem`NestedGrid`PackagePrivate`$state$$], 
+                  TypeSystem`NestedGrid`PackagePrivate`updateState[
+                  TypeSystem`NestedGrid`PackagePrivate`$state$$, 
+                   TypeSystem`NestedGrid`PackagePrivate`$path$$, 
+                   TypeSystem`NestedGrid`PackagePrivate`$vPos$$, 
+                   TypeSystem`NestedGrid`PackagePrivate`$hPos$$, 
+                   TypeSystem`NestedGrid`PackagePrivate`$grid$$, 
+                   TypeSystem`NestedGrid`PackagePrivate`localHold[
+                    TypeSystem`NestedGrid`PackagePrivate`localHold[
+                    TypeSystem`NestedGrid`PackagePrivate`$outputID$$]]][{
+                    Key["Symmetry Factor"]}, 1]]], 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                TypeSystem`NestedGrid`PackagePrivate`localHold[
+                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{
+                 Key["Symmetry Factor"]}, "RowHeader", False], "Mouse"], 
+              ImageSize -> {{1, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], Background -> 
+             GrayLevel[0.95], Alignment -> {Left, Baseline}], 
+            Item[
+             Pane[
+              Annotation[
+               EventHandler[
+                MouseAppearance[
+                 Mouseover[
+                  Style[
+                   Row[{"\[ThinSpace]{ ", 
+                    Subscript["\[Ellipsis]", 4], " }\[ThinSpace]"}], 
+                   GrayLevel[0.5]], 
+                  Style[
+                   Style[
+                    Row[{"\[ThinSpace]{ ", 
+                    Subscript["\[Ellipsis]", 4], " }\[ThinSpace]"}], 
+                    GrayLevel[0.5]], FontColor -> 
+                   RGBColor[
+                    0.27450980392156865`, 0.5372549019607843, 
+                    0.792156862745098]]], "LinkHand"], {"MouseClicked", 1} :> 
+                If[
+                  TypeSystem`NestedGrid`PackagePrivate`checkInteractivity[
+                  TypeSystem`NestedGrid`PackagePrivate`$state$$], 
+                  TypeSystem`NestedGrid`PackagePrivate`updateState[
+                  TypeSystem`NestedGrid`PackagePrivate`$state$$, 
+                   TypeSystem`NestedGrid`PackagePrivate`$path$$, 
+                   TypeSystem`NestedGrid`PackagePrivate`$vPos$$, 
+                   TypeSystem`NestedGrid`PackagePrivate`$hPos$$, 
+                   TypeSystem`NestedGrid`PackagePrivate`$grid$$, 
+                   TypeSystem`NestedGrid`PackagePrivate`localHold[
+                    TypeSystem`NestedGrid`PackagePrivate`localHold[
+                    TypeSystem`NestedGrid`PackagePrivate`$outputID$$]]][{
+                    Key["Symmetry Factor"]}, 4]]], 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                TypeSystem`NestedGrid`PackagePrivate`localHold[
+                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{
+                 Key["Symmetry Factor"]}, "Item", False], "Mouse"], 
+              ImageMargins -> {{5, 3}, {4, 5}}], BaseStyle -> {
+               GrayLevel[0.5]}]}, {
+            Item[
+             Pane[
+              Annotation[
+               EventHandler[
+                MouseAppearance[
+                 Mouseover["Diagram", 
+                  Style[
+                  "Diagram", FontColor -> 
+                   RGBColor[
+                    0.27450980392156865`, 0.5372549019607843, 
+                    0.792156862745098]]], "LinkHand"], {"MouseClicked", 1} :> 
+                If[
+                  TypeSystem`NestedGrid`PackagePrivate`checkInteractivity[
+                  TypeSystem`NestedGrid`PackagePrivate`$state$$], 
+                  TypeSystem`NestedGrid`PackagePrivate`updateState[
+                  TypeSystem`NestedGrid`PackagePrivate`$state$$, 
+                   TypeSystem`NestedGrid`PackagePrivate`$path$$, 
+                   TypeSystem`NestedGrid`PackagePrivate`$vPos$$, 
+                   TypeSystem`NestedGrid`PackagePrivate`$hPos$$, 
+                   TypeSystem`NestedGrid`PackagePrivate`$grid$$, 
+                   TypeSystem`NestedGrid`PackagePrivate`localHold[
+                    TypeSystem`NestedGrid`PackagePrivate`localHold[
+                    TypeSystem`NestedGrid`PackagePrivate`$outputID$$]]][{
+                    Key["Diagram"]}, 1]]], 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                TypeSystem`NestedGrid`PackagePrivate`localHold[
+                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{
+                 Key["Diagram"]}, "RowHeader", False], "Mouse"], 
+              ImageSize -> {{1, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], Background -> 
+             GrayLevel[0.95], Alignment -> {Left, Baseline}], 
+            Item[
+             Pane[
+              Annotation[
+               RawBoxes[
+                StyleBox[
+                 GraphicsBox[
+                  NamespaceBox["NetworkGraphics", 
+                   DynamicModuleBox[{Typeset`graph = HoldComplete[
+                    
+                    Graph[{"o1", 0, "o2", "o3", 2, "o4", 1}, {
+                    Null, {{1, 2}, {3, 2}, {4, 5}, {6, 5}, {2, 7}, {2, 7}, {7,
+                     5}, {7, 5}}}, {
+                    EdgeStyle -> {UndirectedEdge["o2", 0] -> Directive[
+                    Dashing[{0, Small}], 
+                    Thickness[Large]], UndirectedEdge["o1", 0] -> Directive[
+                    Dashing[{0, Small}], 
+                    Thickness[Large]], UndirectedEdge["o3", 2] -> Directive[
+                    Dashing[{0, Small}], 
+                    Thickness[Large]], UndirectedEdge["o4", 2] -> Directive[
+                    Dashing[{0, Small}], 
+                    Thickness[Large]]}, GraphLayout -> "SpringEmbedding", 
+                    VertexSize -> {0.15}}]]}, 
+                    TagBox[
+                    GraphicsGroupBox[
+                    GraphicsComplexBox[CompressedData["
+1:eJw90n0w1HkcwPG1qCW1ns65M+fsakpGK+dE4+HzG8t4ZlvriDPEuAp5iMux
+ujslD2kJl8cJJ8x5Sh7WlcdLUVHJKFxaNnf8dvdnGya7Yne57/1x9535zveP
+72e+M6/vvGlRiewYMolE8kD73/NXztvpgg4tLHtDkyrw2gLJSWZnyC8a2EIb
+nZTmIobCw9H8VL4WRvpvYW/W/ig/AxeeDrROofm3xZWXE7P/hjIJw64Ezf8/
+R4q8R31Z4rJn8VxlKn8LcjtimU00MdieeJQ//FAdOx7eP0/+VAQr3PHYokJ1
+bH3fUXr0FA60qaTJihB1zC89vFC/DIfRdKNWBU0di3J84fJ1DA4Wqz2BcxIy
+pt1bQ192wUFZ3pcQ0E3GDmbGihzNcair6RVkcclYbeD8mqc+DuPrwpYbTDLG
+m5S7GenggCkCNLVO7UDcLYPSIhIOh2bqq2hiFejpeC+YaeIQFFQYn5aughxn
+7/gUQxwcjeIqfLVVYBFfbfkjAwdTvuXaUrUSPDjKdptAHByYEdNchhKe+WY7
+/nAZh9bUHErIiAIObv382m4AB6vkjrLfgxXgLqf4epJEMJtX95U98pt/l735
+KkICxnv5Wys8dcwtWicBvy2BqVpPw9fB6lgVVYvSKJCAYGXpKg35v6QU3yR0
+CGD1jnSuismY89q6ca0NASNGnR7BXWRMaMqcbfYhIHSm6djlDDLGYTFjlKEE
+PGOyuIWuZEwxlH6XF0GAZy2jSSN4B/68Xrazh0NAlfsVjI6r4Amli/3Kj4Bl
+Ntc0N00FrkJ62DsnAgpacjjfU1QQ3vTezIFGALvoYSOjSglk2rCGeFsCFcID
+4RtWSjD+y5qvPS4BakHYob0PFJDKiqT1FUrgou5ZUdM3CmDsTp353EsCeSFj
+WfInOEQrdP2lyF/0/F29fY0IUq1YWrvIv1sqjf/pohheXPBY7kd+t/C2Kb+T
+6B3ppS61/QTM2mq50RgE6Jt2p/Qgv654QiNNZxVK2MkJQ8j/ySg5aYJYBaU+
+Ya8bRgDz9gfvqgkplMhMhuqQP+0NwV02kMG6wNaSivznbBsXH1+RgeQU3J9H
+/hy13e2oDzIQxmqrcOSXBfHup0bJgaVP3XVG/rl2h5D+l3J4RIoze4/8lM6j
+12XOm+BKWOlSkX+0/2rzUvMmmPmsDA4if09A8VNXw4/wnJvv+QXyZ9/1pk+P
+4cA21T1mgvo/PXc6qrRaBDv+3X0ZqH+BVO/W+RQxLNyJP3sE9e+yodBY8pNA
+WCUjxBv1r9bAdk20JGAy91r6Nupf6Js4XEJZBbAu4rJQ/yZiOvreVbDDQoe/
+Rf3vVt0c5D2WgvVAjP8R1H/QjJPdop4MeA2X+spR/3Hu/PqxLBmY597BLFD/
+Cd2suaR1dO9hoZ2B+t93oOtedaQc9meuaGSj/jnpwmTNSTm0tJmMHUf9ywXQ
+EO+0CazD7NJM1L/1A/f8G79tQvt5r8QTqP8u7vRnNgYfYbAmz9IH9f8PqS0l
+7w==
+                    "], {{
+                    Directive[
+                    Opacity[0.7], 
+                    Hue[0.6, 0.7, 0.5]], 
+                    StyleBox[{
+                    Arrowheads[0.], 
+                    ArrowBox[{1, 2}, 0.07242304110703977]}, {
+                    Directive[
+                    Dashing[{0, Small}], 
+                    Thickness[Large]]}, StripOnInput -> False], 
+                    StyleBox[{
+                    Arrowheads[0.], 
+                    ArrowBox[{2, 3}, 0.07242304110703977]}, {
+                    Directive[
+                    Dashing[{0, Small}], 
+                    Thickness[Large]]}, StripOnInput -> False], {
+                    Arrowheads[0.], 
+                    ArrowBox[
+                    
+                    BezierCurveBox[{
+                    2, {2.090196142345773, 0.6283267523119701}, 7}], 
+                    0.07242304110703977]}, {
+                    Arrowheads[0.], 
+                    ArrowBox[
+                    
+                    BezierCurveBox[{
+                    2, {2.089039300901687, 0.9459059517913738}, 7}], 
+                    0.07242304110703977]}, 
+                    StyleBox[{
+                    Arrowheads[0.], 
+                    ArrowBox[{4, 5}, 0.07242304110703977]}, {
+                    Directive[
+                    Dashing[{0, Small}], 
+                    Thickness[Large]]}, StripOnInput -> False], 
+                    StyleBox[{
+                    Arrowheads[0.], 
+                    ArrowBox[{5, 6}, 0.07242304110703977]}, {
+                    Directive[
+                    Dashing[{0, Small}], 
+                    Thickness[Large]]}, StripOnInput -> False], {
+                    Arrowheads[0.], 
+                    ArrowBox[
+                    
+                    BezierCurveBox[{
+                    5, {1.1245641062254499`, 0.9459124476872448}, 7}], 
+                    0.07242304110703977]}, {
+                    Arrowheads[0.], 
+                    ArrowBox[
+                    
+                    BezierCurveBox[{
+                    5, {1.1234029980660878`, 0.6283332298286333}, 7}], 
+                    0.07242304110703977]}}, {
+                    Directive[
+                    Hue[0.6, 0.2, 0.8], 
+                    EdgeForm[
+                    Directive[
+                    GrayLevel[0], 
+                    Opacity[0.7]]]], 
+                    DiskBox[1, 0.07242304110703977], 
+                    DiskBox[2, 0.07242304110703977], 
+                    DiskBox[3, 0.07242304110703977], 
+                    DiskBox[4, 0.07242304110703977], 
+                    DiskBox[5, 0.07242304110703977], 
+                    DiskBox[6, 0.07242304110703977], 
+                    DiskBox[7, 0.07242304110703977]}}]], 
+                    MouseAppearanceTag["NetworkGraphics"]], 
+                    AllowKernelInitialization -> False]], {
+                  FormatType -> TraditionalForm, FrameTicks -> None, 
+                   DefaultBaseStyle -> {
+                    "NetworkGraphics", FrontEnd`GraphicsHighlightColor -> 
+                    Hue[0.8, 1., 0.6]}}], FontFamily -> Dynamic[
+                   CurrentValue[{"StyleHints", "CodeFont"}]], 
+                 ShowStringCharacters -> True]], 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                TypeSystem`NestedGrid`PackagePrivate`localHold[
+                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{
+                 Key["Diagram"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{60, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}]}, {
+            Item[
+             Pane[
+              Annotation[
+               EventHandler[
+                MouseAppearance[
+                 Mouseover["Value", 
+                  Style[
+                  "Value", FontColor -> 
+                   RGBColor[
+                    0.27450980392156865`, 0.5372549019607843, 
+                    0.792156862745098]]], "LinkHand"], {"MouseClicked", 1} :> 
+                If[
+                  TypeSystem`NestedGrid`PackagePrivate`checkInteractivity[
+                  TypeSystem`NestedGrid`PackagePrivate`$state$$], 
+                  TypeSystem`NestedGrid`PackagePrivate`updateState[
+                  TypeSystem`NestedGrid`PackagePrivate`$state$$, 
+                   TypeSystem`NestedGrid`PackagePrivate`$path$$, 
+                   TypeSystem`NestedGrid`PackagePrivate`$vPos$$, 
+                   TypeSystem`NestedGrid`PackagePrivate`$hPos$$, 
+                   TypeSystem`NestedGrid`PackagePrivate`$grid$$, 
+                   TypeSystem`NestedGrid`PackagePrivate`localHold[
+                    TypeSystem`NestedGrid`PackagePrivate`localHold[
+                    TypeSystem`NestedGrid`PackagePrivate`$outputID$$]]][{
+                    Key["Value"]}, 1]]], 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                TypeSystem`NestedGrid`PackagePrivate`localHold[
+                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{
+                 Key["Value"]}, "RowHeader", False], "Mouse"], 
+              ImageSize -> {{1, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], Background -> 
+             GrayLevel[0.95], Alignment -> {Left, Baseline}], 
+            Item[
+             Pane[
+              Annotation[
+               RawBoxes["1"], 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                TypeSystem`NestedGrid`PackagePrivate`localHold[
+                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{
+                 Key["Value"]}, "Item", False], "Mouse"], 
+              ImageSize -> {{34, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}]}}, 
+          BaseStyle -> {
+           ContextMenu -> 
+            Dynamic[TypeSystem`NestedGrid`PackagePrivate`$contextMenuTrigger; 
+              Which[TypeSystem`NestedGrid`PackagePrivate`$lastOutputID =!= 
+                TypeSystem`NestedGrid`PackagePrivate`localHold[
+                 TypeSystem`NestedGrid`PackagePrivate`$outputID$$], {}, 
+                TypeSystem`NestedGrid`PackagePrivate`$contextMenuTrigger === 
+                TypeSystem`NestedGrid`PackagePrivate`$lastContextMenuTrigger, 
+                TypeSystem`NestedGrid`PackagePrivate`$lastContextMenu, True, 
+                TypeSystem`NestedGrid`PackagePrivate`$lastContextMenuTrigger = 
+                 TypeSystem`NestedGrid`PackagePrivate`$contextMenuTrigger; 
+                TypeSystem`NestedGrid`PackagePrivate`$lastContextMenu = 
+                 Block[{TypeSystem`NestedGrid`PackagePrivate`$globalScrollPos = \
+{TypeSystem`NestedGrid`PackagePrivate`$vPos$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$hPos$$}}, 
+                   
+                   With[{TypeSystem`NestedGrid`PackagePrivate`lastPath$ = 
+                    TypeSystem`NestedGrid`PackagePrivate`$lastPath, 
+                    TypeSystem`NestedGrid`PackagePrivate`lastPathType$ = 
+                    TypeSystem`NestedGrid`PackagePrivate`$lastPathType, 
+                    TypeSystem`NestedGrid`PackagePrivate`isLeafHeader$ = 
+                    TypeSystem`NestedGrid`PackagePrivate`$\
+lastPathIsLeafHeader, TypeSystem`NestedGrid`PackagePrivate`headerHidden$ = And[
+                    MatchQ[TypeSystem`NestedGrid`PackagePrivate`$lastPathType, 
+                    Alternatives["RowHeader", "ColumnHeader"]], 
+                    TypeSystem`NestedGrid`PackagePrivate`headerHiddenQ[
+                    TypeSystem`NestedGrid`PackagePrivate`$lastPath, 
+                    TypeSystem`NestedGrid`PackagePrivate`$state$$]], 
+                    TypeSystem`NestedGrid`PackagePrivate`allHidden$ = 
+                    TypeSystem`NestedGrid`PackagePrivate`allHiddenQ[
+                    TypeSystem`NestedGrid`PackagePrivate`$lastPath, 
+                    TypeSystem`NestedGrid`PackagePrivate`$state$$], 
+                    TypeSystem`NestedGrid`PackagePrivate`anyHidden$ = 
+                    TypeSystem`NestedGrid`PackagePrivate`anyHiddenQ[
+                    TypeSystem`NestedGrid`PackagePrivate`$lastPath, 
+                    TypeSystem`NestedGrid`PackagePrivate`$state$$], 
+                    TypeSystem`NestedGrid`PackagePrivate`sortDirection$ = 
+                    TypeSystem`NestedGrid`PackagePrivate`columnSortDirection[
+                    TypeSystem`NestedGrid`PackagePrivate`$lastPath, 
+                    TypeSystem`NestedGrid`PackagePrivate`$state$$[
+                    "SortPaths"], 
+                    TypeSystem`NestedGrid`PackagePrivate`$state$$[
+                    "SortDirections"]], 
+                    TypeSystem`NestedGrid`PackagePrivate`haveData$ = Not[
+                    FailureQ[
+                    TypeSystem`NestedGrid`PackagePrivate`datasetInitialData[
+                    TypeSystem`NestedGrid`PackagePrivate`$state$$]]], 
+                    TypeSystem`NestedGrid`PackagePrivate`isKeyDummy$ = Not[
+                    FreeQ[
+                    TypeSystem`NestedGrid`PackagePrivate`$lastPath, Keys]]}, 
+                    Join[{
+                    If[
+                    Or[
+                    Not[TypeSystem`NestedGrid`PackagePrivate`haveData$], 
+                    Not[TypeSystem`NestedGrid`PackagePrivate`anyHidden$], 
+                    TypeSystem`NestedGrid`PackagePrivate`isKeyDummy$], 
+                    Nothing, 
+                    MenuItem[
+                    "Show " <> 
+                    Which[TypeSystem`NestedGrid`PackagePrivate`lastPathType$ == 
+                    "Item", "", 
+                    TypeSystem`NestedGrid`PackagePrivate`lastPathType$ == 
+                    "RowHeader", "Row", 
+                    TypeSystem`NestedGrid`PackagePrivate`lastPathType$ == 
+                    "ColumnHeader", "Column", True, ""], 
+                    KernelExecute[
+                    TypeSystem`NestedGrid`PackagePrivate`updateHiddenItems[
+                    TypeSystem`NestedGrid`PackagePrivate`$state$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$path$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$vPos$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$hPos$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$grid$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`localHold[
+                    TypeSystem`NestedGrid`PackagePrivate`localHold[
+                    TypeSystem`NestedGrid`PackagePrivate`$outputID$$]]][
+                    TypeSystem`NestedGrid`PackagePrivate`lastPath$, 
+                    "remove"]], MenuEvaluator -> Automatic]], 
+                    If[
+                    Or[
+                    Not[TypeSystem`NestedGrid`PackagePrivate`haveData$], 
+                    TypeSystem`NestedGrid`PackagePrivate`pathEmptyQ[
+                    TypeSystem`NestedGrid`PackagePrivate`$lastPath, 
+                    TypeSystem`NestedGrid`PackagePrivate`$state$$], 
+                    TypeSystem`NestedGrid`PackagePrivate`isKeyDummy$, 
+                    And[
+                    TypeSystem`NestedGrid`PackagePrivate`allHidden$, 
+                    TypeSystem`NestedGrid`PackagePrivate`headerHidden$]], 
+                    Nothing, 
+                    MenuItem[
+                    "Hide " <> 
+                    Which[TypeSystem`NestedGrid`PackagePrivate`lastPathType$ == 
+                    "Item", "", 
+                    TypeSystem`NestedGrid`PackagePrivate`lastPathType$ == 
+                    "RowHeader", "Row", 
+                    TypeSystem`NestedGrid`PackagePrivate`lastPathType$ == 
+                    "ColumnHeader", "Column", True, ""], 
+                    KernelExecute[
+                    TypeSystem`NestedGrid`PackagePrivate`updateHiddenItems[
+                    TypeSystem`NestedGrid`PackagePrivate`$state$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$path$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$vPos$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$hPos$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$grid$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`localHold[
+                    TypeSystem`NestedGrid`PackagePrivate`localHold[
+                    TypeSystem`NestedGrid`PackagePrivate`$outputID$$]]][
+                    TypeSystem`NestedGrid`PackagePrivate`lastPath$, "add"]], 
+                    MenuEvaluator -> Automatic]], Delimiter}, 
+                    If[
+                    And[TypeSystem`NestedGrid`PackagePrivate`haveData$, 
+                    MatchQ[TypeSystem`NestedGrid`PackagePrivate`lastPathType$, 
+                    Alternatives["ColumnHeader", "KeyDummy"]], 
+                    TypeSystem`NestedGrid`PackagePrivate`isLeafHeader$, 
+                    Not[TypeSystem`NestedGrid`PackagePrivate`allHidden$]], {
+                    If[TypeSystem`NestedGrid`PackagePrivate`sortDirection$ =!= 
+                    "Ascending", 
+                    MenuItem["Sort", 
+                    KernelExecute[
+                    TypeSystem`NestedGrid`PackagePrivate`updateSort[
+                    TypeSystem`NestedGrid`PackagePrivate`$state$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$path$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$vPos$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$hPos$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$grid$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`localHold[
+                    TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][
+                    TypeSystem`NestedGrid`PackagePrivate`lastPath$, 
+                    "Ascending"]], MenuEvaluator -> Automatic], Nothing], 
+                    If[
+                    TypeSystem`NestedGrid`PackagePrivate`sortDirection$ =!= 
+                    "Descending", 
+                    MenuItem["Reverse Sort", 
+                    KernelExecute[
+                    TypeSystem`NestedGrid`PackagePrivate`updateSort[
+                    TypeSystem`NestedGrid`PackagePrivate`$state$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$path$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$vPos$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$hPos$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$grid$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`localHold[
+                    TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][
+                    TypeSystem`NestedGrid`PackagePrivate`lastPath$, 
+                    "Descending"]], MenuEvaluator -> Automatic], Nothing], 
+                    If[
+                    TypeSystem`NestedGrid`PackagePrivate`sortDirection$ =!= 
+                    None, 
+                    MenuItem["Unsort", 
+                    KernelExecute[
+                    TypeSystem`NestedGrid`PackagePrivate`updateSort[
+                    TypeSystem`NestedGrid`PackagePrivate`$state$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$path$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$vPos$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$hPos$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$grid$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`localHold[
+                    TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][
+                    TypeSystem`NestedGrid`PackagePrivate`lastPath$, None]], 
+                    MenuEvaluator -> Automatic], Nothing], Delimiter}, {}], {
+                    MenuItem["Copy Position to Clipboard", 
+                    KernelExecute[
+                    TypeSystem`NestedGrid`PackagePrivate`toCurrentPosition[
+                    TypeSystem`NestedGrid`PackagePrivate`copyClip]], 
+                    MenuEvaluator -> Automatic], 
+                    If[TypeSystem`NestedGrid`PackagePrivate`haveData$, 
+                    MenuItem["Copy Data to Clipboard", 
+                    KernelExecute[
+                    TypeSystem`NestedGrid`PackagePrivate`toCurrentData[
+                    TypeSystem`NestedGrid`PackagePrivate`$state$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`copyClip]], 
+                    MenuEvaluator -> Automatic], Nothing], Delimiter, 
+                    MenuItem["Paste Position in New Cell", 
+                    KernelExecute[
+                    TypeSystem`NestedGrid`PackagePrivate`toCurrentPosition[
+                    TypeSystem`NestedGrid`PackagePrivate`cellPaste]], 
+                    MenuEvaluator -> Automatic], 
+                    If[TypeSystem`NestedGrid`PackagePrivate`haveData$, 
+                    MenuItem["Paste Data in New Cell", 
+                    KernelExecute[
+                    TypeSystem`NestedGrid`PackagePrivate`toCurrentData[
+                    TypeSystem`NestedGrid`PackagePrivate`$state$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`cellPaste]], 
+                    MenuEvaluator -> Automatic], Nothing]}]]]]], FontFamily -> 
+            "Source Sans Pro", FontSize -> 14, FontWeight -> Plain}, Dividers -> 
+          All, FrameStyle -> GrayLevel[0.7490196078431373], 
+          Spacings -> {0, 0}, Alignment -> Left, 
+          BaseStyle -> {
+           FontFamily -> "Source Sans Pro", FontSize -> 14, FontWeight -> 
+            Plain}], LineBreakWithin -> False, ContextMenu -> {}, NumberMarks -> 
+         False, ShowAutoStyles -> False]], 
+      TypeSystem`NestedGrid`PackagePrivate`initialQ = True}, 
+     Dynamic[
+      TypeSystem`NestedGrid`PackagePrivate`setupViewPath[
+      TypeSystem`NestedGrid`PackagePrivate`$path$$, If[
+         Not[TypeSystem`NestedGrid`PackagePrivate`initialQ], 
+         Module[{
+          TypeSystem`NestedGrid`PackagePrivate`tmpGrid$ = $Failed, 
+           TypeSystem`NestedGrid`PackagePrivate`tmpData$ = 
+           TypeSystem`NestedGrid`PackagePrivate`datasetData[
+            TypeSystem`NestedGrid`PackagePrivate`$state$$]}, 
+          TypeSystem`NestedGrid`PackagePrivate`tmpGrid$ = If[
+             FailureQ[TypeSystem`NestedGrid`PackagePrivate`tmpData$], 
+             TypeSystem`NestedGrid`PackagePrivate`renderedGrid, 
+             TypeSystem`NestedGrid`PackagePrivate`renderGrid[
+             TypeSystem`NestedGrid`PackagePrivate`$state$$, 
+              TypeSystem`NestedGrid`PackagePrivate`$path$$, 
+              TypeSystem`NestedGrid`PackagePrivate`$vPos$$, 
+              TypeSystem`NestedGrid`PackagePrivate`$hPos$$, 
+              TypeSystem`NestedGrid`PackagePrivate`$grid$$, 
+              TypeSystem`NestedGrid`PackagePrivate`localHold[
+              TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][
+             TypeSystem`NestedGrid`PackagePrivate`tmpData$]]; If[
+            Not[
+             FailureQ[TypeSystem`NestedGrid`PackagePrivate`tmpGrid$]], 
+            TypeSystem`NestedGrid`PackagePrivate`renderedGrid = 
+            TypeSystem`NestedGrid`PackagePrivate`tmpGrid$]; Null]]; 
+       TypeSystem`NestedGrid`PackagePrivate`initialQ = False; 
+       TypeSystem`NestedGrid`PackagePrivate`$vPos$$; 
+       TypeSystem`NestedGrid`PackagePrivate`$hPos$$; If[
+         FailureQ[TypeSystem`NestedGrid`PackagePrivate`renderedGrid], 
+         TypeSystem`SparseGrid[
+          TypeSystem`H["(data no longer present)"]], 
+         TypeSystem`NestedGrid`PackagePrivate`renderedGrid]], 
+      TrackedSymbols :> {
+       TypeSystem`NestedGrid`PackagePrivate`$vPos$$, 
+        TypeSystem`NestedGrid`PackagePrivate`$hPos$$}], 
+     DynamicModuleValues :> {}], 
+    TypeSystem`NestedGrid`PackagePrivate`$topBar$$ = Dynamic[
+     TypeSystem`NestedGrid`PackagePrivate`makeFramedBar[
+      TypeSystem`PackageScope`SubViewPathbar[
+      TypeSystem`NestedGrid`PackagePrivate`$path$$, 
+       TypeSystem`NestedGrid`PackagePrivate`updateState[
+       TypeSystem`NestedGrid`PackagePrivate`$state$$, 
+        TypeSystem`NestedGrid`PackagePrivate`$path$$, 
+        TypeSystem`NestedGrid`PackagePrivate`$vPos$$, 
+        TypeSystem`NestedGrid`PackagePrivate`$hPos$$, 
+        TypeSystem`NestedGrid`PackagePrivate`$grid$$, 
+        TypeSystem`NestedGrid`PackagePrivate`localHold[
+        TypeSystem`NestedGrid`PackagePrivate`$outputID$$]]]], 
+     TrackedSymbols :> {TypeSystem`NestedGrid`PackagePrivate`$path$$}], 
+    TypeSystem`NestedGrid`PackagePrivate`$bottomBar$$ = Style[
+     Framed[
+      Dynamic[
+       Replace[
+       TypeSystem`NestedGrid`PackagePrivate`mouseAnnotation$$, {
+        TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+           TypeSystem`NestedGrid`PackagePrivate`localHold[
+           TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][Null, 
+           Blank[]] -> "", TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+           TypeSystem`NestedGrid`PackagePrivate`localHold[
+           TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][
+           Pattern[TypeSystem`NestedGrid`PackagePrivate`path$, 
+            Blank[]], 
+           Pattern[TypeSystem`NestedGrid`PackagePrivate`pathType$, 
+            Blank[]], 
+           Pattern[TypeSystem`NestedGrid`PackagePrivate`isLeafHeader$, 
+            Blank[]]] :> (
+          Increment[TypeSystem`NestedGrid`PackagePrivate`$contextMenuTrigger]; 
+          TypeSystem`NestedGrid`PackagePrivate`$lastPath = 
+           TypeSystem`NestedGrid`PackagePrivate`path$; 
+          TypeSystem`NestedGrid`PackagePrivate`$lastPathType = 
+           TypeSystem`NestedGrid`PackagePrivate`pathType$; 
+          TypeSystem`NestedGrid`PackagePrivate`$lastPathIsLeafHeader = 
+           TypeSystem`NestedGrid`PackagePrivate`isLeafHeader$; 
+          TypeSystem`NestedGrid`PackagePrivate`$lastOutputID = 
+           TypeSystem`NestedGrid`PackagePrivate`localHold[
+            TypeSystem`NestedGrid`PackagePrivate`$outputID$$]; 
+          TypeSystem`NestedGrid`PackagePrivate`makePathTrail[
+           TypeSystem`NestedGrid`PackagePrivate`path$, 
+            TypeSystem`NestedGrid`PackagePrivate`makePathElements]), Null :> 
+         Spacer[10], Blank[] :> Spacer[10]}], 
+       TrackedSymbols :> {
+        TypeSystem`NestedGrid`PackagePrivate`mouseAnnotation$$}], FrameStyle -> 
+      None, ImageMargins -> 0, FrameMargins -> 0, Alignment -> Top, 
+      ImageSize -> {Automatic, 15}], FontSize -> 1], 
+    TypeSystem`NestedGrid`PackagePrivate`mouseAnnotation$$ = Null}, 
+    DynamicWrapperBox[
+     DynamicBox[ToBoxes[
+       Dataset`DatasetContent[
+       2, "Path" -> Hold[TypeSystem`NestedGrid`PackagePrivate`$path$$], 
+        "Grid" -> Hold[TypeSystem`NestedGrid`PackagePrivate`$grid$$], "State" -> 
+        Hold[TypeSystem`NestedGrid`PackagePrivate`$state$$], "VPos" -> 
+        Hold[TypeSystem`NestedGrid`PackagePrivate`$vPos$$], "HPos" -> 
+        Hold[TypeSystem`NestedGrid`PackagePrivate`$hPos$$], "TopBar" -> 
+        Hold[TypeSystem`NestedGrid`PackagePrivate`$topBar$$], "BottomBar" -> 
+        Hold[TypeSystem`NestedGrid`PackagePrivate`$bottomBar$$], "OutputID" -> 
+        Hold[
+          TypeSystem`NestedGrid`PackagePrivate`localHold[
+          TypeSystem`NestedGrid`PackagePrivate`$outputID$$]]], StandardForm],
+      ImageSizeCache->{598., {252.693115234375, 259.306884765625}},
+      TrackedSymbols:>{
+       TypeSystem`NestedGrid`PackagePrivate`$state$$, 
+        TypeSystem`NestedGrid`PackagePrivate`$grid$$}], 
+     TypeSystem`NestedGrid`PackagePrivate`mouseAnnotation$$ = 
+     MouseAnnotation[],
+     ImageSizeCache->{598., {252.693115234375, 259.306884765625}}],
+    BaseStyle->{LineBreakWithin -> False},
+    DynamicModuleValues:>{},
+    Initialization:>(TypeSystem`NestedGrid`PackagePrivate`$outputID$$ = 
+     CreateUUID[]),
+    UnsavedVariables:>{TypeSystem`NestedGrid`PackagePrivate`$outputID$$}],
+   Deploy,
+   DefaultBaseStyle->"Deploy"],
+  Dataset`InterpretDataset[1],
+  Editable->False,
+  SelectWithContents->True,
+  Selectable->False]], "Output",
+ CellChangeTimes->{3.8850245108560333`*^9, 3.8850246215869627`*^9, 
+  3.885026398497053*^9, 3.885026628992817*^9},
+ CellLabel->"Out[100]=",
+ CellID->1622301065,ExpressionUUID->"28a3b88b-fbca-4a9b-9492-f5efa1e6a040"]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"info4031", "[", "\"\<Symmetry Factor\>\"", "]"}]], "Input",
+ CellChangeTimes->{3.885026644665408*^9},
+ CellLabel->"In[101]:=",
+ CellID->471534858,ExpressionUUID->"611a93c2-6103-4e9d-8e65-a32b94006f08"],
+
+Cell[BoxData[
+ TagBox[
+  TagBox[
+   DynamicModuleBox[{TypeSystem`NestedGrid`PackagePrivate`$state$$ = <|
+    "InitialData" -> {
+      Rational[4, 9] + Rational[2, 9] GSberveglieri`Phi4tools`NComponents[] + 
+       Rational[1, 27] GSberveglieri`Phi4tools`NComponents[]^2 + 
+       Rational[4, 3] 
+        GSberveglieri`Phi4tools`XCubicRatio[] + (Rational[1, 3] 
+         GSberveglieri`Phi4tools`NComponents[]) GSberveglieri`Phi4tools`XCubicRatio[] + 
+       GSberveglieri`Phi4tools`XCubicRatio[]^2, 
+       Rational[4, 27], 
+       Rational[4, 27], Rational[4, 3] GSberveglieri`Phi4tools`XCubicRatio[] + 
+       2 GSberveglieri`Phi4tools`XCubicRatio[]^2 + GSberveglieri`Phi4tools`XCubicRatio[]^3},
+      "AllowEmbedding" -> True, "InitialShape" -> 
+     TypeSystem`PackageScope`Limited[
+       TypeSystem`PackageScope`RowShape[{
+         TypeSystem`PackageScope`UnknownShape[False], 
+         TypeSystem`PackageScope`AtomShape[34], 
+         TypeSystem`PackageScope`AtomShape[34], 
+         TypeSystem`PackageScope`UnknownShape[False]}], 
+       DirectedInfinity[1], 4, {}], "InitialType" -> 
+     TypeSystem`Tuple[{TypeSystem`AnyType, 
+        TypeSystem`Atom[Rational], 
+        TypeSystem`Atom[Rational], TypeSystem`AnyType}], "Meta" -> <||>, 
+     "RowTarget" -> 20, "ColumnTarget" -> 10, "Shape" -> 
+     TypeSystem`PackageScope`Limited[
+       TypeSystem`PackageScope`RowShape[{
+         TypeSystem`PackageScope`UnknownShape[False], 
+         TypeSystem`PackageScope`AtomShape[34], 
+         TypeSystem`PackageScope`AtomShape[34], 
+         TypeSystem`PackageScope`UnknownShape[False]}], 
+       DirectedInfinity[1], 4, {}], "Type" -> 
+     TypeSystem`Tuple[{TypeSystem`AnyType, 
+        TypeSystem`Atom[Rational], 
+        TypeSystem`Atom[Rational], TypeSystem`AnyType}], "Path" -> {}, 
+     "DisplayedRowCount" -> DirectedInfinity[1], "DisplayedColumnCount" -> 4, 
+     "DataRowCount" -> 4, "DataColumnCount" -> 4, "SortPaths" -> {}, 
+     "SortDirections" -> {}, "HiddenItemsMap" -> Null, "UpdateType" -> 1|>, 
+    TypeSystem`NestedGrid`PackagePrivate`$outputID$$, 
+    TypeSystem`NestedGrid`PackagePrivate`$path$$ = {}, 
+    TypeSystem`NestedGrid`PackagePrivate`$vPos$$ = 1, 
+    TypeSystem`NestedGrid`PackagePrivate`$hPos$$ = 1, 
+    TypeSystem`NestedGrid`PackagePrivate`$grid$$ = 
+    DynamicModule[{
+     TypeSystem`NestedGrid`PackagePrivate`renderedGrid = Deploy[
+        Style[
+         Grid[{{
+            Item[
+             Pane[
+              Annotation[
+               RawBoxes[
+                StyleBox[
+                 RowBox[{
+                   FractionBox["4", "9"], "+", 
+                   FractionBox[
+                    RowBox[{"2", " ", 
+                    RowBox[{"\[CapitalNu]"}]}], "9"], "+", 
+                   FractionBox[
+                    SuperscriptBox[
+                    RowBox[{"\[CapitalNu]"}], "2"], "27"], "+", 
+                   FractionBox[
+                    RowBox[{"4", " ", 
+                    RowBox[{"\[CapitalChi]"}]}], "3"], "+", 
+                   FractionBox[
+                    RowBox[{
+                    RowBox[{"\[CapitalNu]"}], " ", 
+                    RowBox[{"\[CapitalChi]"}]}], "3"], "+", 
+                   SuperscriptBox[
+                    RowBox[{"\[CapitalChi]"}], "2"]}], FontFamily -> Dynamic[
+                   CurrentValue[{"StyleHints", "CodeFont"}]], 
+                 ShowStringCharacters -> True]], 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                TypeSystem`NestedGrid`PackagePrivate`localHold[
+                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{1}, 
+                "Item", False], "Mouse"], 
+              ImageSize -> {{60, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}], 
+            Item[
+             Pane[
+              Annotation[
+               RawBoxes["4/27"], 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                TypeSystem`NestedGrid`PackagePrivate`localHold[
+                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{2}, 
+                "Item", False], "Mouse"], 
+              ImageSize -> {{34, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}], 
+            Item[
+             Pane[
+              Annotation[
+               RawBoxes["4/27"], 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                TypeSystem`NestedGrid`PackagePrivate`localHold[
+                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{3}, 
+                "Item", False], "Mouse"], 
+              ImageSize -> {{34, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}], 
+            Item[
+             Pane[
+              Annotation[
+               RawBoxes[
+                StyleBox[
+                 RowBox[{
+                   FractionBox[
+                    RowBox[{"4", " ", 
+                    RowBox[{"\[CapitalChi]"}]}], "3"], "+", 
+                   RowBox[{"2", " ", 
+                    SuperscriptBox[
+                    RowBox[{"\[CapitalChi]"}], "2"]}], "+", 
+                   SuperscriptBox[
+                    RowBox[{"\[CapitalChi]"}], "3"]}], FontFamily -> Dynamic[
+                   CurrentValue[{"StyleHints", "CodeFont"}]], 
+                 ShowStringCharacters -> True]], 
+               TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+                TypeSystem`NestedGrid`PackagePrivate`localHold[
+                TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][{4}, 
+                "Item", False], "Mouse"], 
+              ImageSize -> {{60, Full}, Automatic}, 
+              ImageMargins -> {{5, 3}, {4, 5}}], 
+             ItemSize -> {Full, Automatic}]}}, 
+          BaseStyle -> {
+           ContextMenu -> 
+            Dynamic[TypeSystem`NestedGrid`PackagePrivate`$contextMenuTrigger; 
+              Which[TypeSystem`NestedGrid`PackagePrivate`$lastOutputID =!= 
+                TypeSystem`NestedGrid`PackagePrivate`localHold[
+                 TypeSystem`NestedGrid`PackagePrivate`$outputID$$], {}, 
+                TypeSystem`NestedGrid`PackagePrivate`$contextMenuTrigger === 
+                TypeSystem`NestedGrid`PackagePrivate`$lastContextMenuTrigger, 
+                TypeSystem`NestedGrid`PackagePrivate`$lastContextMenu, True, 
+                TypeSystem`NestedGrid`PackagePrivate`$lastContextMenuTrigger = 
+                 TypeSystem`NestedGrid`PackagePrivate`$contextMenuTrigger; 
+                TypeSystem`NestedGrid`PackagePrivate`$lastContextMenu = 
+                 Block[{TypeSystem`NestedGrid`PackagePrivate`$globalScrollPos = \
+{TypeSystem`NestedGrid`PackagePrivate`$vPos$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$hPos$$}}, 
+                   
+                   With[{TypeSystem`NestedGrid`PackagePrivate`lastPath$ = 
+                    TypeSystem`NestedGrid`PackagePrivate`$lastPath, 
+                    TypeSystem`NestedGrid`PackagePrivate`lastPathType$ = 
+                    TypeSystem`NestedGrid`PackagePrivate`$lastPathType, 
+                    TypeSystem`NestedGrid`PackagePrivate`isLeafHeader$ = 
+                    TypeSystem`NestedGrid`PackagePrivate`$\
+lastPathIsLeafHeader, TypeSystem`NestedGrid`PackagePrivate`headerHidden$ = And[
+                    MatchQ[TypeSystem`NestedGrid`PackagePrivate`$lastPathType, 
+                    Alternatives["RowHeader", "ColumnHeader"]], 
+                    TypeSystem`NestedGrid`PackagePrivate`headerHiddenQ[
+                    TypeSystem`NestedGrid`PackagePrivate`$lastPath, 
+                    TypeSystem`NestedGrid`PackagePrivate`$state$$]], 
+                    TypeSystem`NestedGrid`PackagePrivate`allHidden$ = 
+                    TypeSystem`NestedGrid`PackagePrivate`allHiddenQ[
+                    TypeSystem`NestedGrid`PackagePrivate`$lastPath, 
+                    TypeSystem`NestedGrid`PackagePrivate`$state$$], 
+                    TypeSystem`NestedGrid`PackagePrivate`anyHidden$ = 
+                    TypeSystem`NestedGrid`PackagePrivate`anyHiddenQ[
+                    TypeSystem`NestedGrid`PackagePrivate`$lastPath, 
+                    TypeSystem`NestedGrid`PackagePrivate`$state$$], 
+                    TypeSystem`NestedGrid`PackagePrivate`sortDirection$ = 
+                    TypeSystem`NestedGrid`PackagePrivate`columnSortDirection[
+                    TypeSystem`NestedGrid`PackagePrivate`$lastPath, 
+                    TypeSystem`NestedGrid`PackagePrivate`$state$$[
+                    "SortPaths"], 
+                    TypeSystem`NestedGrid`PackagePrivate`$state$$[
+                    "SortDirections"]], 
+                    TypeSystem`NestedGrid`PackagePrivate`haveData$ = Not[
+                    FailureQ[
+                    TypeSystem`NestedGrid`PackagePrivate`datasetInitialData[
+                    TypeSystem`NestedGrid`PackagePrivate`$state$$]]], 
+                    TypeSystem`NestedGrid`PackagePrivate`isKeyDummy$ = Not[
+                    FreeQ[
+                    TypeSystem`NestedGrid`PackagePrivate`$lastPath, Keys]]}, 
+                    Join[{
+                    If[
+                    Or[
+                    Not[TypeSystem`NestedGrid`PackagePrivate`haveData$], 
+                    Not[TypeSystem`NestedGrid`PackagePrivate`anyHidden$], 
+                    TypeSystem`NestedGrid`PackagePrivate`isKeyDummy$], 
+                    Nothing, 
+                    MenuItem[
+                    "Show " <> 
+                    Which[TypeSystem`NestedGrid`PackagePrivate`lastPathType$ == 
+                    "Item", "", 
+                    TypeSystem`NestedGrid`PackagePrivate`lastPathType$ == 
+                    "RowHeader", "Row", 
+                    TypeSystem`NestedGrid`PackagePrivate`lastPathType$ == 
+                    "ColumnHeader", "Column", True, ""], 
+                    KernelExecute[
+                    TypeSystem`NestedGrid`PackagePrivate`updateHiddenItems[
+                    TypeSystem`NestedGrid`PackagePrivate`$state$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$path$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$vPos$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$hPos$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$grid$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`localHold[
+                    TypeSystem`NestedGrid`PackagePrivate`localHold[
+                    TypeSystem`NestedGrid`PackagePrivate`$outputID$$]]][
+                    TypeSystem`NestedGrid`PackagePrivate`lastPath$, 
+                    "remove"]], MenuEvaluator -> Automatic]], 
+                    If[
+                    Or[
+                    Not[TypeSystem`NestedGrid`PackagePrivate`haveData$], 
+                    TypeSystem`NestedGrid`PackagePrivate`pathEmptyQ[
+                    TypeSystem`NestedGrid`PackagePrivate`$lastPath, 
+                    TypeSystem`NestedGrid`PackagePrivate`$state$$], 
+                    TypeSystem`NestedGrid`PackagePrivate`isKeyDummy$, 
+                    And[
+                    TypeSystem`NestedGrid`PackagePrivate`allHidden$, 
+                    TypeSystem`NestedGrid`PackagePrivate`headerHidden$]], 
+                    Nothing, 
+                    MenuItem[
+                    "Hide " <> 
+                    Which[TypeSystem`NestedGrid`PackagePrivate`lastPathType$ == 
+                    "Item", "", 
+                    TypeSystem`NestedGrid`PackagePrivate`lastPathType$ == 
+                    "RowHeader", "Row", 
+                    TypeSystem`NestedGrid`PackagePrivate`lastPathType$ == 
+                    "ColumnHeader", "Column", True, ""], 
+                    KernelExecute[
+                    TypeSystem`NestedGrid`PackagePrivate`updateHiddenItems[
+                    TypeSystem`NestedGrid`PackagePrivate`$state$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$path$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$vPos$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$hPos$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$grid$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`localHold[
+                    TypeSystem`NestedGrid`PackagePrivate`localHold[
+                    TypeSystem`NestedGrid`PackagePrivate`$outputID$$]]][
+                    TypeSystem`NestedGrid`PackagePrivate`lastPath$, "add"]], 
+                    MenuEvaluator -> Automatic]], Delimiter}, 
+                    If[
+                    And[TypeSystem`NestedGrid`PackagePrivate`haveData$, 
+                    MatchQ[TypeSystem`NestedGrid`PackagePrivate`lastPathType$, 
+                    Alternatives["ColumnHeader", "KeyDummy"]], 
+                    TypeSystem`NestedGrid`PackagePrivate`isLeafHeader$, 
+                    Not[TypeSystem`NestedGrid`PackagePrivate`allHidden$]], {
+                    If[
+                    TypeSystem`NestedGrid`PackagePrivate`sortDirection$ =!= 
+                    "Ascending", 
+                    MenuItem["Sort", 
+                    KernelExecute[
+                    TypeSystem`NestedGrid`PackagePrivate`updateSort[
+                    TypeSystem`NestedGrid`PackagePrivate`$state$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$path$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$vPos$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$hPos$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$grid$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`localHold[
+                    TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][
+                    TypeSystem`NestedGrid`PackagePrivate`lastPath$, 
+                    "Ascending"]], MenuEvaluator -> Automatic], Nothing], 
+                    If[
+                    TypeSystem`NestedGrid`PackagePrivate`sortDirection$ =!= 
+                    "Descending", 
+                    MenuItem["Reverse Sort", 
+                    KernelExecute[
+                    TypeSystem`NestedGrid`PackagePrivate`updateSort[
+                    TypeSystem`NestedGrid`PackagePrivate`$state$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$path$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$vPos$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$hPos$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$grid$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`localHold[
+                    TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][
+                    TypeSystem`NestedGrid`PackagePrivate`lastPath$, 
+                    "Descending"]], MenuEvaluator -> Automatic], Nothing], 
+                    If[
+                    TypeSystem`NestedGrid`PackagePrivate`sortDirection$ =!= 
+                    None, 
+                    MenuItem["Unsort", 
+                    KernelExecute[
+                    TypeSystem`NestedGrid`PackagePrivate`updateSort[
+                    TypeSystem`NestedGrid`PackagePrivate`$state$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$path$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$vPos$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$hPos$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`$grid$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`localHold[
+                    TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][
+                    TypeSystem`NestedGrid`PackagePrivate`lastPath$, None]], 
+                    MenuEvaluator -> Automatic], Nothing], Delimiter}, {}], {
+                    MenuItem["Copy Position to Clipboard", 
+                    KernelExecute[
+                    TypeSystem`NestedGrid`PackagePrivate`toCurrentPosition[
+                    TypeSystem`NestedGrid`PackagePrivate`copyClip]], 
+                    MenuEvaluator -> Automatic], 
+                    If[TypeSystem`NestedGrid`PackagePrivate`haveData$, 
+                    MenuItem["Copy Data to Clipboard", 
+                    KernelExecute[
+                    TypeSystem`NestedGrid`PackagePrivate`toCurrentData[
+                    TypeSystem`NestedGrid`PackagePrivate`$state$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`copyClip]], 
+                    MenuEvaluator -> Automatic], Nothing], Delimiter, 
+                    MenuItem["Paste Position in New Cell", 
+                    KernelExecute[
+                    TypeSystem`NestedGrid`PackagePrivate`toCurrentPosition[
+                    TypeSystem`NestedGrid`PackagePrivate`cellPaste]], 
+                    MenuEvaluator -> Automatic], 
+                    If[TypeSystem`NestedGrid`PackagePrivate`haveData$, 
+                    MenuItem["Paste Data in New Cell", 
+                    KernelExecute[
+                    TypeSystem`NestedGrid`PackagePrivate`toCurrentData[
+                    TypeSystem`NestedGrid`PackagePrivate`$state$$, 
+                    TypeSystem`NestedGrid`PackagePrivate`cellPaste]], 
+                    MenuEvaluator -> Automatic], Nothing]}]]]]], FontFamily -> 
+            "Source Sans Pro", FontSize -> 14, FontWeight -> Plain}, Dividers -> 
+          All, FrameStyle -> GrayLevel[0.7490196078431373], 
+          Spacings -> {0, 0}, Alignment -> Left, 
+          BaseStyle -> {
+           FontFamily -> "Source Sans Pro", FontSize -> 14, FontWeight -> 
+            Plain}], LineBreakWithin -> False, ContextMenu -> {}, NumberMarks -> 
+         False, ShowAutoStyles -> False]], 
+      TypeSystem`NestedGrid`PackagePrivate`initialQ = True}, 
+     Dynamic[
+      TypeSystem`NestedGrid`PackagePrivate`setupViewPath[
+      TypeSystem`NestedGrid`PackagePrivate`$path$$, If[
+         Not[TypeSystem`NestedGrid`PackagePrivate`initialQ], 
+         Module[{
+          TypeSystem`NestedGrid`PackagePrivate`tmpGrid$ = $Failed, 
+           TypeSystem`NestedGrid`PackagePrivate`tmpData$ = 
+           TypeSystem`NestedGrid`PackagePrivate`datasetData[
+            TypeSystem`NestedGrid`PackagePrivate`$state$$]}, 
+          TypeSystem`NestedGrid`PackagePrivate`tmpGrid$ = If[
+             FailureQ[TypeSystem`NestedGrid`PackagePrivate`tmpData$], 
+             TypeSystem`NestedGrid`PackagePrivate`renderedGrid, 
+             TypeSystem`NestedGrid`PackagePrivate`renderGrid[
+             TypeSystem`NestedGrid`PackagePrivate`$state$$, 
+              TypeSystem`NestedGrid`PackagePrivate`$path$$, 
+              TypeSystem`NestedGrid`PackagePrivate`$vPos$$, 
+              TypeSystem`NestedGrid`PackagePrivate`$hPos$$, 
+              TypeSystem`NestedGrid`PackagePrivate`$grid$$, 
+              TypeSystem`NestedGrid`PackagePrivate`localHold[
+              TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][
+             TypeSystem`NestedGrid`PackagePrivate`tmpData$]]; If[
+            Not[
+             FailureQ[TypeSystem`NestedGrid`PackagePrivate`tmpGrid$]], 
+            TypeSystem`NestedGrid`PackagePrivate`renderedGrid = 
+            TypeSystem`NestedGrid`PackagePrivate`tmpGrid$]; Null]]; 
+       TypeSystem`NestedGrid`PackagePrivate`initialQ = False; 
+       TypeSystem`NestedGrid`PackagePrivate`$vPos$$; 
+       TypeSystem`NestedGrid`PackagePrivate`$hPos$$; If[
+         FailureQ[TypeSystem`NestedGrid`PackagePrivate`renderedGrid], 
+         TypeSystem`SparseGrid[
+          TypeSystem`H["(data no longer present)"]], 
+         TypeSystem`NestedGrid`PackagePrivate`renderedGrid]], 
+      TrackedSymbols :> {
+       TypeSystem`NestedGrid`PackagePrivate`$vPos$$, 
+        TypeSystem`NestedGrid`PackagePrivate`$hPos$$}], 
+     DynamicModuleValues :> {}], 
+    TypeSystem`NestedGrid`PackagePrivate`$topBar$$ = Dynamic[
+     TypeSystem`NestedGrid`PackagePrivate`makeFramedBar[
+      TypeSystem`PackageScope`SubViewPathbar[
+      TypeSystem`NestedGrid`PackagePrivate`$path$$, 
+       TypeSystem`NestedGrid`PackagePrivate`updateState[
+       TypeSystem`NestedGrid`PackagePrivate`$state$$, 
+        TypeSystem`NestedGrid`PackagePrivate`$path$$, 
+        TypeSystem`NestedGrid`PackagePrivate`$vPos$$, 
+        TypeSystem`NestedGrid`PackagePrivate`$hPos$$, 
+        TypeSystem`NestedGrid`PackagePrivate`$grid$$, 
+        TypeSystem`NestedGrid`PackagePrivate`localHold[
+        TypeSystem`NestedGrid`PackagePrivate`$outputID$$]]]], 
+     TrackedSymbols :> {TypeSystem`NestedGrid`PackagePrivate`$path$$}], 
+    TypeSystem`NestedGrid`PackagePrivate`$bottomBar$$ = Style[
+     Framed[
+      Dynamic[
+       Replace[
+       TypeSystem`NestedGrid`PackagePrivate`mouseAnnotation$$, {
+        TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+           TypeSystem`NestedGrid`PackagePrivate`localHold[
+           TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][Null, 
+           Blank[]] -> "", TypeSystem`NestedGrid`PackagePrivate`$SliceMarker[
+           TypeSystem`NestedGrid`PackagePrivate`localHold[
+           TypeSystem`NestedGrid`PackagePrivate`$outputID$$]][
+           Pattern[TypeSystem`NestedGrid`PackagePrivate`path$, 
+            Blank[]], 
+           Pattern[TypeSystem`NestedGrid`PackagePrivate`pathType$, 
+            Blank[]], 
+           Pattern[TypeSystem`NestedGrid`PackagePrivate`isLeafHeader$, 
+            Blank[]]] :> (
+          Increment[TypeSystem`NestedGrid`PackagePrivate`$contextMenuTrigger]; 
+          TypeSystem`NestedGrid`PackagePrivate`$lastPath = 
+           TypeSystem`NestedGrid`PackagePrivate`path$; 
+          TypeSystem`NestedGrid`PackagePrivate`$lastPathType = 
+           TypeSystem`NestedGrid`PackagePrivate`pathType$; 
+          TypeSystem`NestedGrid`PackagePrivate`$lastPathIsLeafHeader = 
+           TypeSystem`NestedGrid`PackagePrivate`isLeafHeader$; 
+          TypeSystem`NestedGrid`PackagePrivate`$lastOutputID = 
+           TypeSystem`NestedGrid`PackagePrivate`localHold[
+            TypeSystem`NestedGrid`PackagePrivate`$outputID$$]; 
+          TypeSystem`NestedGrid`PackagePrivate`makePathTrail[
+           TypeSystem`NestedGrid`PackagePrivate`path$, 
+            TypeSystem`NestedGrid`PackagePrivate`makePathElements]), Null :> 
+         Spacer[10], Blank[] :> Spacer[10]}], 
+       TrackedSymbols :> {
+        TypeSystem`NestedGrid`PackagePrivate`mouseAnnotation$$}], FrameStyle -> 
+      None, ImageMargins -> 0, FrameMargins -> 0, Alignment -> Top, 
+      ImageSize -> {Automatic, 15}], FontSize -> 1], 
+    TypeSystem`NestedGrid`PackagePrivate`mouseAnnotation$$ = Null}, 
+    DynamicWrapperBox[
+     DynamicBox[ToBoxes[
+       Dataset`DatasetContent[
+       2, "Path" -> Hold[TypeSystem`NestedGrid`PackagePrivate`$path$$], 
+        "Grid" -> Hold[TypeSystem`NestedGrid`PackagePrivate`$grid$$], "State" -> 
+        Hold[TypeSystem`NestedGrid`PackagePrivate`$state$$], "VPos" -> 
+        Hold[TypeSystem`NestedGrid`PackagePrivate`$vPos$$], "HPos" -> 
+        Hold[TypeSystem`NestedGrid`PackagePrivate`$hPos$$], "TopBar" -> 
+        Hold[TypeSystem`NestedGrid`PackagePrivate`$topBar$$], "BottomBar" -> 
+        Hold[TypeSystem`NestedGrid`PackagePrivate`$bottomBar$$], "OutputID" -> 
+        Hold[
+          TypeSystem`NestedGrid`PackagePrivate`localHold[
+          TypeSystem`NestedGrid`PackagePrivate`$outputID$$]]], StandardForm],
+      ImageSizeCache->{450., {28.693115234375, 35.306884765625}},
+      TrackedSymbols:>{
+       TypeSystem`NestedGrid`PackagePrivate`$state$$, 
+        TypeSystem`NestedGrid`PackagePrivate`$grid$$}], 
+     TypeSystem`NestedGrid`PackagePrivate`mouseAnnotation$$ = 
+     MouseAnnotation[],
+     ImageSizeCache->{450., {28.693115234375, 35.306884765625}}],
+    BaseStyle->{LineBreakWithin -> False},
+    DynamicModuleValues:>{},
+    Initialization:>(TypeSystem`NestedGrid`PackagePrivate`$outputID$$ = 
+     CreateUUID[]),
+    UnsavedVariables:>{TypeSystem`NestedGrid`PackagePrivate`$outputID$$}],
+   Deploy,
+   DefaultBaseStyle->"Deploy"],
+  Dataset`InterpretDataset[1],
+  Editable->False,
+  SelectWithContents->True,
+  Selectable->False]], "Output",
+ CellChangeTimes->{3.885026645241907*^9},
+ CellLabel->"Out[101]=",
+ CellID->1471899032,ExpressionUUID->"1c2fd43c-318d-46e0-bba8-045f53ee3bd0"]
+}, Open  ]],
+
+Cell["\<\
+The four coefficients are those for the three channels of the 4-pt functions \
+of the O(N) model and for the tensorial structure of the anisotropic term, \
+respectively.\
+\>", "ExampleText",
+ CellChangeTimes->{{3.868943413568012*^9, 3.868943469961192*^9}, {
+   3.8848532267045794`*^9, 3.8848533414062843`*^9}, 3.88485676122222*^9, {
+   3.8848570851214237`*^9, 3.884857129152472*^9}, {3.884857263475752*^9, 
+   3.88485726456673*^9}, {3.8850240209343843`*^9, 3.885024046848819*^9}, {
+   3.885024079822653*^9, 3.885024087772521*^9}, {3.8850241427736692`*^9, 
+   3.88502418661038*^9}, {3.885024329997087*^9, 3.8850243505547523`*^9}, {
+   3.8850244084116497`*^9, 3.885024424744679*^9}, {3.8850244614475183`*^9, 
+   3.8850244775656977`*^9}, {3.885024784035232*^9, 3.885025059489936*^9}, {
+   3.8850251088399343`*^9, 3.885025185386572*^9}, {3.8850264593610287`*^9, 
+   3.885026470696622*^9}, {3.885026653256873*^9, 3.885026667218001*^9}, {
+   3.885026715156864*^9, 3.885026805542193*^9}, {3.885026866281294*^9, 
+   3.885027019579206*^9}},
+ CellID->2120176369,ExpressionUUID->"605792c4-de20-4760-89fc-02c9f87dcb7a"],
+
+Cell[TextData[{
+ "The actual contribution for a given Feynman diagram is given by the product \
+between the value of the diagram and symmetry factor that can be printed with \
+",
+ Cell[BoxData[
+  ButtonBox["ValueDiagram",
+   BaseStyle->"Link",
+   ButtonData->"paclet:GSberveglieri/Phi4tools/ref/ValueDiagram"]], "InlineFormula",
+  ExpressionUUID->"900518f7-c9b4-4c95-8fbe-07707368056e"],
+ " and ",
+ Cell[BoxData[
+  ButtonBox["SymmetryFactorDiagram",
+   BaseStyle->"Link",
+   ButtonData->"paclet:GSberveglieri/Phi4tools/ref/SymmetryFactorDiagram"]], 
+  "InlineFormula",ExpressionUUID->"2e9d1395-e71e-4fbf-8c2a-0c8803137f34"],
+ ", respectively. For example at the order  ",
+ Cell[BoxData[
+  SuperscriptBox[
+   StyleBox["\[Lambda]", "TI"], "4"]], "InlineFormula",ExpressionUUID->
+  "438c9cd2-668c-4f78-9273-f93298dc79bf"],
+ " for ",
+ Cell[BoxData[
+  FormBox[
+   SuperscriptBox["\[CapitalGamma]", 
+    RowBox[{"(", "2", ")"}]], TraditionalForm]],ExpressionUUID->
+  "a3b1375c-02b5-4d1d-a40a-d03e546f6469"],
+ " for the cubic model we have "
+}], "ExampleText",
+ CellChangeTimes->{{3.868943413568012*^9, 3.868943469961192*^9}, {
+   3.8848532267045794`*^9, 3.8848533414062843`*^9}, 3.88485676122222*^9, {
+   3.8848570851214237`*^9, 3.884857129152472*^9}, {3.884857263475752*^9, 
+   3.88485726456673*^9}, {3.8850240209343843`*^9, 3.885024046848819*^9}, {
+   3.885024079822653*^9, 3.885024087772521*^9}, {3.8850241427736692`*^9, 
+   3.88502418661038*^9}, {3.885024329997087*^9, 3.8850243505547523`*^9}, {
+   3.8850244084116497`*^9, 3.885024424744679*^9}, {3.8850244614475183`*^9, 
+   3.8850244775656977`*^9}, {3.885024784035232*^9, 3.885025059489936*^9}, {
+   3.8850251088399343`*^9, 3.885025185386572*^9}, {3.8850264593610287`*^9, 
+   3.885026470696622*^9}, {3.885808153265068*^9, 3.8858081583788548`*^9}},
+ CellID->2057669103,ExpressionUUID->"bb2c4b12-448c-4f08-a0f6-5e7c18c1a26e"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ RowBox[{"FullSimplify", "[", 
+  RowBox[{
+   RowBox[{"ValueDiagram", "[", 
+    RowBox[{"2", ",", "0", ",", "4"}], "]"}], ".", 
+   RowBox[{"SymmetryFactorDiagram", "[", 
+    RowBox[{"2", ",", "0", ",", "4", ",", 
+     RowBox[{"\"\<Tensor\>\"", "->", "\"\<Cubic\>\""}]}], "]"}]}], 
+  "]"}]], "Input",
+ CellChangeTimes->{{3.885025208673378*^9, 3.8850252436658077`*^9}, {
+  3.885026480394691*^9, 3.885026603469818*^9}},
+ CellLabel->"In[99]:=",
+ CellID->282579586,ExpressionUUID->"7ec0e1ae-6f58-41c7-95f6-d17537467fb4"],
+
+Cell[BoxData[
+ RowBox[{
+  FractionBox["1", "243"], " ", 
+  RowBox[{"(", 
+   RowBox[{
+    RowBox[{"(", 
+     InterpretationBox[
+      TemplateBox[{
+       "2594.54092727736820106461013283805880582516`20.9924565951911", 
+        "1.86676190233249237668`1.550228353055094*^-16"},
+       "Around"],
+      Around[
+      2594.54092727736820106461013283805880582516`20.9924565951911, 
+       1.8667619023324924`*^-16]], ")"}], "+", 
+    RowBox[{"\[CapitalNu]", " ", 
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{"(", 
+        InterpretationBox[
+         TemplateBox[{
+          "2119.89727713855838649173430355846058147956`21.043013583718025", 
+           "1.0252804494381088579601`1.550228353055094*^-16"},
+          "Around"],
+         Around[
+         2119.89727713855838649173430355846058147956`21.043013583718025, 
+          1.0252804494381089`*^-16]], ")"}], "+", 
+       RowBox[{"\[CapitalNu]", " ", 
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{"(", 
+           InterpretationBox[
+            
+            TemplateBox[{
+             "461.77171716230163025400675345731647711257`21.187306067395554", 
+              "2.121320343559668188621`1.550228353055094*^-17"},
+             "Around"],
+            Around[
+            461.77171716230163025400675345731647711257`21.187306067395554, 
+             2.1213203435596682`*^-17]], ")"}], "+", 
+          RowBox[{
+           RowBox[{"(", 
+            InterpretationBox[
+             
+             TemplateBox[{
+              "25.22915520618224363714606744380044391454`28.40190270848682", 
+               "3.`1.550228353055094*^-25"},
+              "Around"],
+             Around[
+             25.22915520618224363714606744380044391454`28.92478145376715, 
+              3.0000000000000002`*^-25]], ")"}], " ", "\[CapitalNu]"}]}], 
+         ")"}]}]}], ")"}]}], "+", 
+    RowBox[{
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{"(", 
+        InterpretationBox[
+         TemplateBox[{
+          "15567.24556366420920638766079702835283495093`20.9924565951911", 
+           "1.1200571413994954753118`1.550228353055094*^-15"},
+          "Around"],
+         Around[
+         15567.24556366420920638766079702835283495093`20.9924565951911, 
+          1.1200571413994955`*^-15]], ")"}], "+", 
+       RowBox[{"\[CapitalNu]", " ", 
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{"(", 
+           InterpretationBox[
+            
+            TemplateBox[{
+             "4935.76088099924571575657542283658707140188`21.13705160432329", 
+              "2.5455844122716013333074`1.550228353055094*^-16"},
+             "Around"],
+            Around[
+            4935.76088099924571575657542283658707140188`21.137051604323297, 
+             2.5455844122716013`*^-16]], ")"}], "+", 
+          RowBox[{
+           RowBox[{"(", 
+            InterpretationBox[
+             
+             TemplateBox[{
+              "302.74986247418692364575280932560532697451`27.481083954534444",
+                "3.6`1.550228353055094*^-24"},
+              "Around"],
+             Around[
+             302.74986247418692364575280932560532697451`28.92478145376716, 
+              3.6*^-24]], ")"}], " ", "\[CapitalNu]"}]}], ")"}]}]}], ")"}], 
+     " ", "\[CapitalChi]"}], "+", 
+    RowBox[{
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{"(", 
+        InterpretationBox[
+         TemplateBox[{
+          "28245.56009497875093408697976897588070612272`21.002553083528063", 
+           "1.98555584157183397273648`1.550228353055094*^-15"},
+          "Around"],
+         Around[
+         28245.56009497875093408697976897588070612272`21.002553083528063, 
+          1.985555841571834*^-15]], ")"}], "+", 
+       RowBox[{"\[CapitalNu]", " ", 
+        RowBox[{"(", 
+         RowBox[{
+          RowBox[{"(", 
+           InterpretationBox[
+            
+            TemplateBox[{
+             "2983.78747494424006137362754324149271893649`21.44134411806435", 
+              "7.636753236815056188893`1.550228353055094*^-17"},
+             "Around"],
+            Around[
+            2983.78747494424006137362754324149271893649`21.44134411806435, 
+             7.636753236815056*^-17]], ")"}], "-", 
+          RowBox[{"72", " ", 
+           RowBox[{"Log", "[", 
+            FractionBox["4", "3"], "]"}], " ", "\[CapitalNu]"}]}], ")"}]}]}], 
+      ")"}], " ", 
+     SuperscriptBox["\[CapitalChi]", "2"]}], "+", 
+    RowBox[{
+     RowBox[{"(", 
+      RowBox[{
+       RowBox[{"(", 
+        InterpretationBox[
+         TemplateBox[{
+          "20397.07632477798584102666912578656652242989`21.020871656070536", 
+           "1.37461558262665541142731`1.550228353055094*^-15"},
+          "Around"],
+         Around[
+         20397.07632477798584102666912578656652242989`21.020871656070536, 
+          1.3746155826266554`*^-15]], ")"}], "+", 
+       RowBox[{"54", " ", 
+        RowBox[{"(", 
+         RowBox[{
+          SuperscriptBox["\[Pi]", "2"], "-", 
+          RowBox[{"8", " ", 
+           RowBox[{"Log", "[", 
+            FractionBox["4", "3"], "]"}]}]}], ")"}], " ", "\[CapitalNu]"}]}], 
+      ")"}], " ", 
+     SuperscriptBox["\[CapitalChi]", "3"]}], "+", 
+    RowBox[{
+     RowBox[{"(", 
+      InterpretationBox[
+       TemplateBox[{
+        "5201.43907678441046144749725729763630833161`21.02948724246068", 
+         "3.4365389565666380355302`1.550228353055094*^-16"},
+        "Around"],
+       Around[
+       5201.43907678441046144749725729763630833161`21.02948724246068, 
+        3.436538956566638*^-16]], ")"}], " ", 
+     SuperscriptBox["\[CapitalChi]", "4"]}]}], ")"}]}]], "Output",
+ CellChangeTimes->{{3.8850252282609587`*^9, 3.885025244031973*^9}, {
+  3.885026481691654*^9, 3.8850265218413553`*^9}, {3.88502655462845*^9, 
+  3.8850266042630863`*^9}},
+ CellLabel->"Out[99]=",
+ CellID->1409703852,ExpressionUUID->"85cc9486-95b3-45a4-8ae3-a8010e19e16d"]
+}, Open  ]]
+}, Open  ]],
+
+Cell[CellGroupData[{
+
+Cell["More Examples", "ExtendedExamplesSection",
+ CellTags->"ExtendedExamples",
+ CellID->762112639,ExpressionUUID->"e1edf1e6-7494-4f91-bb2b-2aa208c8d3d7"],
+
+Cell[BoxData[
+ InterpretationBox[Cell[
+  "Scope", "ExampleSection",ExpressionUUID->
+   "787dea42-02cf-44e3-a60c-891e659e023b"],
+  $Line = 0; Null]], "ExampleSection",
+ CellID->1571910980,ExpressionUUID->"c4270b9b-338c-4ad2-b119-fcfe67eac9cd"],
+
+Cell[BoxData[
+ InterpretationBox[Cell[
+  "Generalizations & Extensions", "ExampleSection",ExpressionUUID->
+   "6f24e346-b13e-4e68-9e1e-777e9624e5a1"],
+  $Line = 0; Null]], "ExampleSection",
+ CellID->757326871,ExpressionUUID->"c5a258dd-1215-45da-a832-89b4406eb868"],
+
+Cell[CellGroupData[{
+
+Cell[BoxData[
+ InterpretationBox[Cell[
+  "Options", "ExampleSection",ExpressionUUID->
+   "5d2c9474-150f-4af2-9cc8-d0b917acba77"],
+  $Line = 0; Null]], "ExampleSection",
+ CellID->1767292292,ExpressionUUID->"02f6356b-5430-4433-ac5c-831f85512df0"],
+
+Cell[BoxData[
+ InterpretationBox[Cell[
+  "XXXX", "ExampleSubsection",ExpressionUUID->
+   "0477fa53-e0e0-402a-ab22-c142ff0eb2be"],
+  $Line = 0; Null]], "ExampleSubsection",
+ CellID->2045646209,ExpressionUUID->"5b9a2666-36b5-47d5-a65b-0e5b065b29e3"],
+
+Cell[BoxData[
+ InterpretationBox[Cell[
+  "XXXX", "ExampleSubsection",ExpressionUUID->
+   "ca21dcee-4417-42cf-b5ae-daf56c883aa8"],
+  $Line = 0; Null]], "ExampleSubsection",
+ CellID->1975332100,ExpressionUUID->"ca083738-2390-4155-9d8f-b461a0bdd5e8"]
+}, Open  ]],
+
+Cell[BoxData[
+ InterpretationBox[Cell[
+  "Applications", "ExampleSection",ExpressionUUID->
+   "9618be67-2ad9-4130-9faa-fb6f609958ca"],
+  $Line = 0; Null]], "ExampleSection",
+ CellID->1262312633,ExpressionUUID->"487f2ff0-237e-4747-9493-8c373000b17c"],
+
+Cell[BoxData[
+ InterpretationBox[Cell[
+  "Properties & Relations", "ExampleSection",ExpressionUUID->
+   "6794404d-ee14-4fb6-9626-241a4ccec502"],
+  $Line = 0; Null]], "ExampleSection",
+ CellID->592071914,ExpressionUUID->"be78f054-67c7-413d-a951-8cd3b073d05e"],
+
+Cell[BoxData[
+ InterpretationBox[Cell[
+  "Possible Issues", "ExampleSection",ExpressionUUID->
+   "eba72ae6-2a0d-40ea-bc7e-f749808b46a0"],
+  $Line = 0; Null]], "ExampleSection",
+ CellID->271936385,ExpressionUUID->"f823ba62-64c3-4f4e-8e82-53584fcb9fd6"],
+
+Cell[BoxData[
+ InterpretationBox[Cell[
+  "Interactive Examples", "ExampleSection",ExpressionUUID->
+   "23eaaa93-504d-445d-8c17-8277868a01bb"],
+  $Line = 0; Null]], "ExampleSection",
+ CellID->1862343346,ExpressionUUID->"d69ef262-031d-4b4a-8aa7-6ca97a832f63"],
+
+Cell[BoxData[
+ InterpretationBox[Cell[
+  "Neat Examples", "ExampleSection",ExpressionUUID->
+   "c70cfe84-1cc9-4c5c-b604-490dc280772c"],
+  $Line = 0; Null]], "ExampleSection",
+ CellID->923863177,ExpressionUUID->"66fd2313-3b20-46e1-bed4-af92d97419c3"]
+}, Open  ]]
+},
+WindowSize->{1098, 991},
+WindowMargins->{{Automatic, 224}, {17, Automatic}},
+TaggingRules-><|
+ "Author" -> "gabriele", "CreationDate" -> "01-05-2023 12:57:22", "Paclet" -> 
+  "None"|>,
+CellContext->"Global`",
+Magnification:>1.25 Inherited,
+FrontEndVersion->"13.1 for Mac OS X x86 (64-bit) (June 16, 2022)",
+StyleDefinitions->FrontEnd`FileName[{"Wolfram"}, "FunctionPageStylesExt.nb", 
+  CharacterEncoding -> "UTF-8"],
+ExpressionUUID->"61d6d547-3767-4ece-8aee-238a900a5643"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{
+ "ExtendedExamples"->{
+  Cell[98343, 2009, 154, 2, 72, "ExtendedExamplesSection",ExpressionUUID->"e1edf1e6-7494-4f91-bb2b-2aa208c8d3d7",
+   CellTags->"ExtendedExamples",
+   CellID->762112639]}
+ }
+*)
+(*CellTagsIndex
+CellTagsIndex->{
+ {"ExtendedExamples", 101680, 2104}
+ }
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[558, 20, 598, 14, 33, "History",ExpressionUUID->"b40f4740-9bc1-4e93-b8ff-eb1cf7e68cbf",
+ CellID->473735228],
+Cell[1159, 36, 140, 1, 27, "AuthorDate",ExpressionUUID->"123c398c-b14a-45c8-930f-7134e2952801",
+ CellID->236263411],
+Cell[CellGroupData[{
+Cell[1324, 41, 123, 1, 27, "CategorizationSection",ExpressionUUID->"ea7e12ed-4424-43fb-bb22-7ef8ceb22b7b",
+ CellID->1218005229],
+Cell[1450, 44, 135, 2, 45, "Categorization",ExpressionUUID->"9ca899b0-1175-4469-acec-0e5c73b64e41",
+ CellID->1642503988],
+Cell[1588, 48, 144, 2, 45, "Categorization",ExpressionUUID->"434ddc72-28e6-4002-a44a-eadd77ec3619",
+ CellID->693909353],
+Cell[1735, 52, 141, 2, 45, "Categorization",ExpressionUUID->"ae41759b-4a4b-40f7-a852-8ec98a869683",
+ CellID->444087933],
+Cell[1879, 56, 152, 2, 45, "Categorization",ExpressionUUID->"3cc66592-ba80-4bf5-945a-4f7b5fd0c5cc",
+ CellID->600030713]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[2068, 63, 110, 1, 39, "KeywordsSection",ExpressionUUID->"b7f137ae-4411-47c0-9e4d-cd2baedf8a14",
+ CellID->331791263],
+Cell[2181, 66, 100, 1, 27, "Keywords",ExpressionUUID->"64551716-ca2f-40e4-9ab5-7d73148da1d5",
+ CellID->2111810673]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[2318, 72, 119, 1, 39, "TemplatesSection",ExpressionUUID->"6df7992b-31a6-4d5c-bcf3-3214f765d1af",
+ CellID->537357677],
+Cell[2440, 75, 149, 2, 39, "Template",ExpressionUUID->"e8923f3a-509c-4dea-9f60-179983d1c743",
+ CellID->1238701851],
+Cell[2592, 79, 138, 2, 39, "Template",ExpressionUUID->"dbbe4fd8-649b-46e9-bcdc-0072360b3a7a",
+ CellID->1665047575],
+Cell[2733, 83, 136, 2, 39, "Template",ExpressionUUID->"ff18126d-9973-4185-a352-46e46a66eb24",
+ CellID->1620345841],
+Cell[2872, 87, 137, 2, 39, "Template",ExpressionUUID->"a77535fb-e824-443b-bd51-d6ff4ab5a6d0",
+ CellID->340640611]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[3046, 94, 108, 1, 92, "ObjectName",ExpressionUUID->"27da3949-faf0-4710-83c1-6c293e622fe1",
+ CellID->426280327],
+Cell[3157, 97, 726, 16, 101, "Usage",ExpressionUUID->"541c465e-82a6-4ebb-95e1-c8e419d84215",
+ CellID->1156025589],
+Cell[3886, 115, 762, 17, 34, "Notes",ExpressionUUID->"4ca96912-bc2b-445b-8b65-91f34e7dc6a1",
+ CellID->1517129543],
+Cell[4651, 134, 729, 15, 34, "Notes",ExpressionUUID->"d8bc644d-0e14-4bc4-b516-04dd25eacdf8",
+ CellID->1583640269],
+Cell[5383, 151, 961, 24, 34, "Notes",ExpressionUUID->"f8d22c8e-bdf3-46f4-97da-519c1bbc8d38",
+ CellID->452607685]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[6381, 180, 113, 1, 58, "TechNotesSection",ExpressionUUID->"3db68d62-404c-48ba-8917-0291f5e97461",
+ CellID->170598304],
+Cell[6497, 183, 365, 7, 24, "Tutorials",ExpressionUUID->"ba152364-7601-474e-bfc3-e05a7a79c72c",
+ CellID->761534299]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[6899, 195, 138, 1, 42, "RelatedDemonstrationsSection",ExpressionUUID->"536a6b72-e146-46ad-917b-e499561678b9",
+ CellID->1652949719],
+Cell[7040, 198, 112, 1, 24, "RelatedDemonstrations",ExpressionUUID->"98d715da-f121-4a4e-b681-1b3aaa9c7ef3",
+ CellID->168309502]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[7189, 204, 120, 1, 42, "RelatedLinksSection",ExpressionUUID->"fa33c1f9-e454-4d80-aa8c-eb7e2636aeae",
+ CellID->1666611191],
+Cell[7312, 207, 103, 1, 24, "RelatedLinks",ExpressionUUID->"7200f058-d3ee-4606-90a4-52922859f3a9",
+ CellID->510782083]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[7452, 213, 110, 1, 42, "SeeAlsoSection",ExpressionUUID->"dde46e93-b7c8-4a61-a621-318420a00540",
+ CellID->1074573111],
+Cell[7565, 216, 370, 8, 28, "SeeAlso",ExpressionUUID->"5c32956d-7c15-46d9-9c0e-c34477c10355",
+ CellID->1743208817],
+Cell[7938, 226, 389, 8, 28, "SeeAlso",ExpressionUUID->"59674118-f01f-459b-9a21-22d4740d929a",
+ CellID->252217375],
+Cell[8330, 236, 373, 8, 28, "SeeAlso",ExpressionUUID->"fa78c47e-d98f-4dc9-ab83-dcd62da864fe",
+ CellID->287811297],
+Cell[8706, 246, 384, 8, 28, "SeeAlso",ExpressionUUID->"b937fea8-d740-4517-ac89-50f261d65663",
+ CellID->1478579431]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[9127, 259, 183, 2, 42, "MoreAboutSection",ExpressionUUID->"8b663365-d8d7-47e6-ad00-ca503ac05ec1",
+ CellID->457333037],
+Cell[9313, 263, 100, 1, 24, "MoreAbout",ExpressionUUID->"a3ded9b7-2eac-43ba-aa83-3ee1f9603539",
+ CellID->922663556]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[9450, 269, 412, 11, 90, "PrimaryExamplesSection",ExpressionUUID->"92f09b22-7ca5-497e-a968-0decf3811024",
+ CellID->1541237679],
+Cell[9865, 282, 181, 3, 33, "Input",ExpressionUUID->"273f570d-715b-40db-9307-1cef982f8e32",
+ CellID->966237502],
+Cell[10049, 287, 1349, 30, 52, "ExampleText",ExpressionUUID->"2445b196-1295-4bd5-8f29-3bffb1bf0dc4",
+ CellID->1417942789],
+Cell[CellGroupData[{
+Cell[11423, 321, 585, 13, 58, "Input",ExpressionUUID->"80cecbe6-a13f-4544-8994-8b07eac8a777",
+ CellID->629955954],
+Cell[12011, 336, 3607, 75, 243, "Output",ExpressionUUID->"086446ce-bbb6-432d-90cb-2d406aed7aa0",
+ CellID->1163577027]
+}, Open  ]],
+Cell[15633, 414, 1061, 19, 54, "ExampleText",ExpressionUUID->"baabe812-de91-40eb-b1dc-5803104f4488",
+ CellID->1541095987],
+Cell[CellGroupData[{
+Cell[16719, 437, 494, 9, 33, "Input",ExpressionUUID->"07fbe36f-ceb1-46a6-97ae-8a903b92f6b0",
+ CellID->139081936],
+Cell[17216, 448, 47599, 879, 528, "Output",ExpressionUUID->"28a3b88b-fbca-4a9b-9492-f5efa1e6a040",
+ CellID->1622301065]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[64852, 1332, 225, 4, 33, "Input",ExpressionUUID->"611a93c2-6103-4e9d-8e65-a32b94006f08",
+ CellID->471534858],
+Cell[65080, 1338, 23888, 433, 80, "Output",ExpressionUUID->"1c2fd43c-318d-46e0-bba8-045f53ee3bd0",
+ CellID->1471899032]
+}, Open  ]],
+Cell[88983, 1774, 1117, 17, 52, "ExampleText",ExpressionUUID->"605792c4-de20-4760-89fc-02c9f87dcb7a",
+ CellID->2120176369],
+Cell[90103, 1793, 1858, 38, 98, "ExampleText",ExpressionUUID->"bb2c4b12-448c-4f08-a0f6-5e7c18c1a26e",
+ CellID->2057669103],
+Cell[CellGroupData[{
+Cell[91986, 1835, 528, 12, 58, "Input",ExpressionUUID->"7ec0e1ae-6f58-41c7-95f6-d17537467fb4",
+ CellID->282579586],
+Cell[92517, 1849, 5777, 154, 354, "Output",ExpressionUUID->"85cc9486-95b3-45a4-8ae3-a8010e19e16d",
+ CellID->1409703852]
+}, Open  ]]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[98343, 2009, 154, 2, 72, "ExtendedExamplesSection",ExpressionUUID->"e1edf1e6-7494-4f91-bb2b-2aa208c8d3d7",
+ CellTags->"ExtendedExamples",
+ CellID->762112639],
+Cell[98500, 2013, 242, 5, 43, "ExampleSection",ExpressionUUID->"c4270b9b-338c-4ad2-b119-fcfe67eac9cd",
+ CellID->1571910980],
+Cell[98745, 2020, 264, 5, 27, "ExampleSection",ExpressionUUID->"c5a258dd-1215-45da-a832-89b4406eb868",
+ CellID->757326871],
+Cell[CellGroupData[{
+Cell[99034, 2029, 244, 5, 27, "ExampleSection",ExpressionUUID->"02f6356b-5430-4433-ac5c-831f85512df0",
+ CellID->1767292292],
+Cell[99281, 2036, 247, 5, 32, "ExampleSubsection",ExpressionUUID->"5b9a2666-36b5-47d5-a65b-0e5b065b29e3",
+ CellID->2045646209],
+Cell[99531, 2043, 247, 5, 26, "ExampleSubsection",ExpressionUUID->"ca083738-2390-4155-9d8f-b461a0bdd5e8",
+ CellID->1975332100]
+}, Open  ]],
+Cell[99793, 2051, 249, 5, 43, "ExampleSection",ExpressionUUID->"487f2ff0-237e-4747-9493-8c373000b17c",
+ CellID->1262312633],
+Cell[100045, 2058, 258, 5, 27, "ExampleSection",ExpressionUUID->"be78f054-67c7-413d-a951-8cd3b073d05e",
+ CellID->592071914],
+Cell[100306, 2065, 251, 5, 27, "ExampleSection",ExpressionUUID->"f823ba62-64c3-4f4e-8e82-53584fcb9fd6",
+ CellID->271936385],
+Cell[100560, 2072, 257, 5, 27, "ExampleSection",ExpressionUUID->"d69ef262-031d-4b4a-8aa7-6ca97a832f63",
+ CellID->1862343346],
+Cell[100820, 2079, 249, 5, 27, "ExampleSection",ExpressionUUID->"66fd2313-3b20-46e1-bed4-af92d97419c3",
+ CellID->923863177]
+}, Open  ]]
+}
+]
+*)
+
