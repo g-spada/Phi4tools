@@ -44,7 +44,7 @@ Needs["GSberveglieri`Phi4tools`"]
 <!-- LICENSE -->
 ## License
 
-Distributed under the MIT License. See `paclet/LICENSE` for more information.
+Distributed under the MIT License. See [paclet/LICENSE](paclet/LICENSE) for more information.
 
 <!-- CONTRIBUTORS -->
 ## Contributors
