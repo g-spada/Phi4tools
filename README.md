@@ -38,10 +38,10 @@ PacletInstall["GSberveglieri/Phi4tools"]
 Alternatively, it is possible to get the compiled paclet from the directory `paclet/build` and install it with
 
 ```mathematica
-PacletInstall["path/to/Gspada__Phi4tools-x.y.z.paclet"]
+PacletInstall["path/to/GSberveglieri__Phi4tools-x.y.z.paclet"]
 ```
 
-with `path/to/Gspada__Phi4tools-x.y.z.paclet` pointing to the downloaded resource.
+with `path/to/GSberveglieri__Phi4tools-x.y.z.paclet` pointing to the downloaded resource.
 
 <!-- USAGE -->
 
