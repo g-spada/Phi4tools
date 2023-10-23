@@ -61,7 +61,7 @@ Useful usage examples are provided in the `Tech Notes`.
 
 ## License
 
-Distributed under the MIT License. See [paclet/LICENSE](paclet/LICENSE) for more information.
+Distributed under the [MIT License](LICENSE).
 
 <!-- CONTRIBUTORS -->
 
