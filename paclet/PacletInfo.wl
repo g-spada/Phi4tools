@@ -4,10 +4,10 @@ PacletObject[
   <|
     "Name" -> "GSberveglieri/Phi4tools",
     "Description" -> "A collection of tools for Feynman diagrams in scalar field theories",
-    "Creator" -> "{Giacomo Sberveglieri, Gabriele Spada}",
+    "Creator" -> "Giacomo Sberveglieri, Gabriele Spada",
     "License" -> "MIT",
     "PublisherID" -> "GSberveglieri",
-    "Version" -> "1.0.0",
+    "Version" -> "1.0.1",
     "WolframVersion" -> "13.0+",
     "PrimaryContext" -> "GSberveglieri`Phi4tools`",
     "Extensions" -> {
