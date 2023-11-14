@@ -17,7 +17,9 @@ Development files for the Phi4tools paclet.
 
 ## About
 
-Phi4tools is an intuitive interface for visualizing, simplifying, and calculating Feynman diagrams in scalar field theories. In more detail, it is possible, using various commands, to display Nickel labels, symmetry factors, integrands, and numerical results associated with diagrams of scalar theories with quartic and cubic interactions.
+
+
+Phi4tools is an intuitive interface for visualizing, simplifying, and manipulating Feynman diagrams for the Landau-Ginzburg-Wilson theory. In more detail, it allows displaying detailed information about the diagrams, including their Nickel indices, the integrands, and numerical results. It also provides the symmetry factors for the O(N)-symmetric model and the N-component model with cubic anisotropy. Diagrams with cubic vertices are also implemented but not computed.
 
 <div align="center">
   <img src="images/hero-image.png" width="490">
