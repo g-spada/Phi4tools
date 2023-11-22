@@ -1,4 +1,4 @@
-[![DOI](https://zenodo.org/badge/707118129.svg)](https://zenodo.org/doi/10.5281/zenodo.10021884)
+[![DOI](https://zenodo.org/badge/707118129.svg)](https://zenodo.org/doi/10.5281/zenodo.10021884)  [![arXiv](https://img.shields.io/badge/arXiv-2311.12576-b31b1b.svg)](https://arxiv.org/abs/2311.12576)
 
 # # Phi4tools Wolfram Language Paclet
 
