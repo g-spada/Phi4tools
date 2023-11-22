@@ -8,7 +8,7 @@ PacletObject[
     "License" -> "MIT",
     "PublisherID" -> "GSberveglieri",
     "Version" -> "1.0.1",
-    "WolframVersion" -> "13.0+",
+    "WolframVersion" -> "13+",
     "PrimaryContext" -> "GSberveglieri`Phi4tools`",
     "Extensions" -> {
       {
