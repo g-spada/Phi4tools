@@ -4,8 +4,8 @@
 cff-version: 1.2.0
 title: Phi4tools Wolfram Language Paclet
 message: >-
-  If you use this software, please cite it as below, as well
-  as the corresponding publication
+  If you use this software, please cite it as below, together with
+  the corresponding publication at https://arxiv.org/abs/2311.12576
 type: software
 authors:
   - given-names: Giacomo
