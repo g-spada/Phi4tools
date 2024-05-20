@@ -7,7 +7,7 @@ PacletObject[
     "Creator" -> "Giacomo Sberveglieri, Gabriele Spada",
     "License" -> "MIT",
     "PublisherID" -> "GSberveglieri",
-    "Version" -> "1.0.1",
+    "Version" -> "1.0.2",
     "WolframVersion" -> "13+",
     "PrimaryContext" -> "GSberveglieri`Phi4tools`",
     "Extensions" -> {
